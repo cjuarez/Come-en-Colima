@@ -23,11 +23,16 @@
 	<head>
     	<title><?php echo $title_for_layout; ?></title>
 		<meta name="generator" content="flavorPHP" />
-        <?php echo $this->html->charsetTag("UTF-8"); ?>		
+        <?php echo $this->html->charsetTag("UTF-8"); ?>
+ 		<?php echo $this->html->includeCss("style"); ?>
+		<?php echo $this->html->includeJs("script"); ?>
 	</head>
     <body>
-        <div>
+	<div id="wrapper">
+		<div id="header"></div>
+        <div id="content">
             <?php echo $content_for_layout ?>
         </div>
+	</div>
     </body>
 </html>

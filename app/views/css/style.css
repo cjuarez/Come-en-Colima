@@ -1,0 +1,15 @@
+#wrapper{
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+select,input.txtDatos,#btnRegistrar {
+	width:200px;
+}
+
+#datosRestaurante, #datosEnComun, #datosCliente, 
+{
+	display:none;
+}
