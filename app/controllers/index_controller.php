@@ -5,11 +5,11 @@
 		}
 		
 		public function index ($id=null) {
-			
       		$this->render();
 		}
 		
 		public function registro($id = null) {
+			$this->isLoggedIn();
 			$this->view->titulo = "Registro";
 			$tipo = new type();
 			$this->view->tipos = $tipo->findAll();
@@ -17,6 +17,7 @@
 		}
 		
 		public function login($id = null) {
+			$this->isLoggedIn();
 			if ($this->data != NULL){
 				var_dump($this->data);
 				$user = new user();
@@ -67,6 +68,12 @@
 				$client->save();
 			}
 			$this->redirect("index");
+		}
+	
+		private function isLoggedIn() {
+			if (isset($_SESSION["idUser"])){
+				$this->redirect("index");
+			}
 		}
 	}
 ?>

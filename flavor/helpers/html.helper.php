@@ -180,7 +180,6 @@ class html extends singleton {
 		return "<img src=\"".$this->path.APPDIR.'/'.$this->type."/images/".$name."\" alt=\"".$alt."\" title=\"".$alt."\" />";
 	}
 
-
 	public function imagePars($name, $extra=""){
 		return "<img src=\"".$this->path.APPDIR.'/'.$this->type."/images/".$name."\" ".$extra." />";
 	}

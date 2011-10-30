@@ -29,10 +29,21 @@
 	</head>
     <body>
 	<div id="wrapper">
-		<div id="header"></div>
+		<div id="header">
+			<h1>Come en Colima</h1>
+		</div>
         <div id="content">
-            <?php echo $content_for_layout ?>
-        </div>
+			<div id="menu">
+				<ul type="square">
+					<li><?php echo $this->html->linkTo("Iniciar Sesi&oacute;n","index/login"); ?></li>
+					<li><?php echo $this->html->linkTo("Crear una Cuenta","index/registro");   ?></li>
+					<li><?php echo $this->html->linkTo("Cerrar Sesi&oacute;n","index/logout"); ?></li>
+				</ul>
+			</div>
+			<div id="mainContent">
+            	<?php echo $content_for_layout ?>
+        	</div>
+		</div>
 	</div>
     </body>
 </html>

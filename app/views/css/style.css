@@ -13,3 +13,22 @@ select,input.txtDatos,#btnRegistrar {
 {
 	display:none;
 }
+
+#menu {
+	width:199px;
+	float:left;
+}
+
+#mainContent {
+	width:600px;
+	float:right;
+}
+
+#menu ul{
+	list-style-type:none;
+	text-align:left;
+}
+
+#menu {
+	border-right: 1px solid;
+}
