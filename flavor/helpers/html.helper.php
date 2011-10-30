@@ -184,6 +184,7 @@ class html extends singleton {
 		return "<img src=\"".$this->path.APPDIR.'/'.$this->type."/images/".$name."\" ".$extra." />";
 	}
 	
+	
 	public function acceptCancelButtons($text, $url="#", $wrapper="div") {
 		$html = "<".$wrapper." class=\"buttons\">";		
 		$html .= $this->cancelButton($text[1], $url);
@@ -191,6 +192,7 @@ class html extends singleton {
 		$html .= "</".$wrapper.">";
 		return $html;
 	}
+	
 	
 	public function acceptButton($text) {
 		if (!$this->readOnly) {
