@@ -32,3 +32,18 @@ select,input.txtDatos,#btnRegistrar {
 #menu {
 	border-right: 1px solid;
 }
+
+table{
+	text-align:center;
+	border:1px solid;
+	width:500px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px;
+	border-radius:10px;
+}
+
+ th{
+	font-size:20px;
+	border-bottom:1px solid;
+}

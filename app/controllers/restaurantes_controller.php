@@ -14,7 +14,7 @@
 					$orderBy = " ORDER BY restaurant";
 				}
 			}
-			$this->view->restaurantes = $restaurant->findAllBySql(" SELECT * FROM  
+			$this->view->restaurantes = $restaurant->findAllBySql("SELECT * FROM  
 																		restaurants 
 																	INNER JOIN 
 																		types 
@@ -23,7 +23,23 @@
 		}
 		
 		public function detalles ($id=null) {
-			
+			if ($id!=null) {
+				$restaurant = new restaurant();
+				$this->view->restaurantes = $restaurant->find($id);
+				$sql = "SELECT * 
+						FROM (
+							SELECT dishes.idDish, dishes.dish, dishes.price, dishes.image, dishes.idRestaurant, categories.category
+							FROM dishes
+							INNER JOIN categories ON dishes.idCategory = categories.idCategory
+							) AS D
+						WHERE D.idRestaurant =$id
+						ORDER BY category";
+				$platillo = new dish();
+				$this->view->menu = $platillo->findAllBySql($sql);
+				$this->render();
+			} else {
+				$this->redirect("restaurantes");
+			}
 		}
 	}
 ?>

@@ -36,6 +36,7 @@
 			<div id="menu">
 				<ul type="square">
 					<li><?php echo $this->html->linkTo("Iniciar Sesi&oacute;n","index/login"); ?></li>
+					<li><?php echo $this->html->linkTo("Restaurantes","restaurantes"); 		   ?></li>
 					<li><?php echo $this->html->linkTo("Crear una Cuenta","index/registro");   ?></li>
 					<li><?php echo $this->html->linkTo("Cerrar Sesi&oacute;n","index/logout"); ?></li>
 				</ul>
