@@ -20,10 +20,10 @@
 </div>
 <div id="datosRestaurante">
 	<label for="restaurant">Nombre del Restaurante:</label><br/>
-	<input class="txtDatos" type="text" id="restaurant" name="restaurant"></br>
+	<input class="txtDatos" type="text" id="restaurant" name="restaurant"><br/>
 	
 	<label for="idType">Tipo de Restaurante:</label><br/>
-	<select name="idType">
+	<select id="idType" name="idType">
 		<option value="-1">Seleccione un tipo.</option>
 		<?php foreach ($tipos as $key=>$tipo){ ?>
 			<option value="<?php echo $tipo['idType']; ?>"><?php echo $tipo["type"]; ?></option>
@@ -49,10 +49,17 @@
 	<input class="txtDatos" type="text" id="city" name="city" value=""/><br/>
 	
 	<label for="cp">Código Postal:</label><br/>
-	<input class="txtDatos" type="text" name="cp" value=""/><br/>
+	<input id="cp" class="txtDatos" type="text" name="cp" value=""/><br/>
 	
 	<label for="telephone">Teléfono:</label><br/>
 	<input class="txtDatos" type="text" id="telephone" name="telephone" value=""/><br/>
-<div>
-<input id="btnRegistrar" type="submit" value="Registrar" />
+	<div id="buttons">
+		<div id="left">
+			<input id="btnBorrar" type="button" value="Borrar Datos" />
+		</div>
+		<div id="right">
+			<input id="btnRegistrar" type="submit" value="Registrar" />
+		</div>
+	</div>
+</div>
 </form>

@@ -1,3 +1,9 @@
+body {
+	font-family: 'Quicksand', sans-serif;
+	/*background: #F4FFDD;
+	background:#EFFEEF;*/
+	background:#D8F2EF;
+}
 #wrapper{
 	width:800px;
 	margin-left:auto;
@@ -5,33 +11,36 @@
 	text-align:center;
 }
 
-select,input.txtDatos,#btnRegistrar {
-	width:200px;
-}
-
-#datosRestaurante, #datosEnComun, #datosCliente, 
-{
+#datosRestaurante, #datosEnComun, #datosCliente{
 	display:none;
 }
 
-#menu {
-	width:199px;
-	float:left;
-}
-
-#mainContent {
-	width:600px;
-	float:right;
-}
 
 #menu ul{
-	list-style-type:none;
-	text-align:left;
+	margin-left: 0;
+	padding-left: 0;
+	display: inline;
+	border: none;
 }
 
 #menu {
-	border-right: 1px solid;
-}
+	padding: 3px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid;
+	}
+ 
+
+#menu ul li {
+	margin-left: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: none;
+	list-style: none;
+	display: inline;
+	border-left:1px solid;
+	border-right:1px solid;
+	}
+
 
 table{
 	text-align:center;
@@ -46,4 +55,173 @@ table{
  th{
 	font-size:20px;
 	border-bottom:1px solid;
+}
+
+/*DE RAPIDO*/
+label {
+	font-size:30px;
+}
+
+input.login {
+	width:300px;
+}
+
+#btnLogin{
+	width:150px;
+	margin-left:150px;
+	margin-top:20px;
+}
+
+.txtDatos{
+	width:300px;
+}
+
+
+div#buttons{
+	width:300px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+div#buttons div#left input{
+	width:140px;
+	float:left;
+	margin-right:10px;
+}
+
+div#buttons div#right input{
+	width:140px;
+	float:right;
+	margin-left:10px;
+}
+
+div#busqueda{
+	padding:10px;	
+}
+
+div.restaurant{
+	text-align:center;
+	border:1px solid;
+	width:500px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px;
+	border-radius:10px;
+	margin-bottom:10px;
+}
+
+div.restaurant div.left {
+	width:250px;
+	float:left;
+}
+
+div.restaurant div.right {
+		width:250px;
+	float:left;
+}
+
+div.restaurant div.masInfo,div#clear {
+	clear:both;
+}
+
+div#comments {
+	border:1px solid;
+}
+
+div#comments input{
+	width:200px;
+	margin-left:500px;
+	margin-bottom:10px;
+}
+
+div#platillo{
+	width:500px;
+	margin-left:auto;
+	margin-right:auto;
+	border:1px solid;
+	margin-bottom:10px;
+}
+
+div#nav {
+	width:200px;
+	float:left;
+	border-right:1px solid;
+}
+
+div#subContent {
+	width:599px;
+	float:right;
+}
+
+ul.verticalMenu{
+	text-align:left;
+}
+
+/*misPedidos.php*/
+div.pedido{
+	width:400px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+	border-bottom:1px solid;
+	text-align:left;
+	border-radius:10px;
+}
+
+
+div.timestamp{
+	text-align:right;
+}
+
+div.notas{
+	border:1px solid;
+	padding:5px;
+}
+
+big.alert{
+	color:red;
+}
+
+div.atendido{
+	text-align:right;
+	margin-top:5px;
+}
+
+i.right{
+	text-align:right;
+}
+
+i.left{
+	text-align:left;
+}
+
+div.item{
+	margin-top:5px;
+	margin-bottom:5px;
+	width:300px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+div.item div.left{
+	float:left;
+	width:50%;
+}
+
+div.item div.right{
+	float:right;
+	width:50%;
+	text-align:right;
+}
+
+div.total{
+	text-align:right;
+	width:300px;
+	margin-left:auto;
+	margin-right:auto;
+	border-top:1px solid;
 }

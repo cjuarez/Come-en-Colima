@@ -1,18 +1,21 @@
-<table border="0" width="100%" cellpadding="0" cellspacing="0">
-<tr>
-	<th>No.</th>
-	<th>Nombre</th>
-	<th>Tipo</th>
-	<th>Opciones</th>
-</tr>
+<?php header( 'Content-type: text/html; charset=iso-8859-1' );?>
+<div id="busqueda">
+	<input type="text" class="login" name="buscar" /> <input type="button" name="btnBuscar" value="Buscar"> 
+</div>
+<div id="listado">
 	<?php 
-	$i = 1;
 	foreach ($restaurantes as $key => $restaurant) { ?>
-		<tr>
-			<td><?php echo $this->html->image($restaurant['logo']); ?></td>
-			<td><?php echo $restaurant["restaurant"]; ?></td>
-			<td><?php echo $restaurant["type"]; ?></td>
-			<td><?php echo $this->html->linkTo("Ver Detalles", "restaurantes/detalles/".$restaurant['idRestaurant']); ?></td>
-		</tr>
+		<div class="restaurant">
+			<div class="left">
+				<?php echo $this->html->imagePars($restaurant['logo'].".jpg",'alt="logo" width="100"'); ?>
+			</div>
+			<div class="right">
+				<h3><?php echo $restaurant["restaurant"]; ?></h3>
+				<h4><?php echo $restaurant["type"]; ?></h4>
+				<h4><?php echo $this->html->linkTo("Ver Detalles", "restaurantes/detalles/".$restaurant['idRestaurant']); ?></h4>
+			</div>
+			<div class="masInfo">
+			</div>
+		</div>
 	<?php } ?>
-</table>
+</div>

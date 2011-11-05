@@ -19,11 +19,13 @@
 		public function login($id = null) {
 			$this->isLoggedIn();
 			if ($this->data != NULL){
-				var_dump($this->data);
 				$user = new user();
 				$auth = $user->identifyUser($this->data["username"],$this->data["password"]);
 				if ($auth!=false) {
-					$_SESSION["idUser"]=$auth["idUser"];
+					$_SESSION["idUser"]	  = $auth["idUser"];
+					$_SESSION["userType"] = (isset($auth["idRestaurant"])) ? "restaurant" : "client";
+					$_SESSION["idClient"] = $auth["idClient"];
+					$_SESSION["idRestaurant"] = $auth["idRestaurant"];
 					$this->redirect("index");
 				} 
 			}
