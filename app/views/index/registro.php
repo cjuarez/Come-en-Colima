@@ -1,29 +1,33 @@
 <?php echo $this->html->form("index/register/"); ?>
 <div id="datosUser">
 	<label for="username">Nombre de Usuario</label><br/>
-	<input class="txtDatos" type="text" id="username" name="username" /> <br/>
+	<input type="text" id="username" dojoType="dijit.form.TextBox" name="username"/>
+	<!--  <div id="usernameTooltip" dojoType="dijit.Tooltip" connectId="username" showDelay="2000">
+		<span id="isAvailable"></span>
+	</div>-->
+	<br/>
 
 	<label for="password">Contraseña</label><br/>
-	<input class="txtDatos" type="password" id="password" name="password" /><br/>
+	<input type="password" id="password" dojoType="dijit.form.TextBox" name="password" /><br/>
 
 	<label for="password1">Repita la Contraseña</label><br/>
-	<input class="txtDatos" type="password" id="password1" name="password1" /><br/>
+	<input type="password" id="password1" dojoType="dijit.form.TextBox" name="password1" /><br/>
 
 	<label for="email">Correo Electrónico</label><br/>
-	<input class="txtDatos" type="email" id="email" name="email" /><br/>
+	<input type="email" id="email" dojoType="dijit.form.TextBox" name="email" /><br/>
 
 	<label for="radioRestaurante">Restaurante</label>
-	<input type="radio" class="radioTipoUser" name="tipoDeUsuario" id="radioRestaurante" value="1" onclick="hideInputsForRegistration(this);">
+	<input type="radio" name="tipoDeUsuario" id="radioRestaurante" value="1" onclick="hideInputsForRegistration(this);">
 
 	<label for="radioCliente">Cliente</label>
-	<input type="radio" class="radioTipoUser" name="tipoDeUsuario" id="radioCliente" value="2" onclick="hideInputsForRegistration(this);"><br/>
+	<input type="radio" name="tipoDeUsuario" id="radioCliente" value="2" onclick="hideInputsForRegistration(this);"><br/>
 </div>
 <div id="datosRestaurante">
 	<label for="restaurant">Nombre del Restaurante:</label><br/>
-	<input class="txtDatos" type="text" id="restaurant" name="restaurant"><br/>
+	<input type="text" id="restaurant" dojoType="dijit.form.TextBox" name="restaurant"><br/>
 	
 	<label for="idType">Tipo de Restaurante:</label><br/>
-	<select id="idType" name="idType">
+	<select id="idType" dojoType="dijit.form.FilteringSelect" name="idType">
 		<option value="-1">Seleccione un tipo.</option>
 		<?php foreach ($tipos as $key=>$tipo){ ?>
 			<option value="<?php echo $tipo['idType']; ?>"><?php echo $tipo["type"]; ?></option>
@@ -35,24 +39,24 @@
 
 <div id="datosCliente">
 	<label for="firstName">Nombre(s):</label><br/>
-	<input class="txtDatos" type="text" id="firstName" name="firstName" value="" /> <br/>
+	<input type="text" id="firstName" dojoType="dijit.form.TextBox" name="firstName"/> <br/>
 	
 	<label for="lastName">Apellido:</label><br/>
-	<input class="txtDatos" type="text" id="lastName" name="lastName" value="" /><br/>
+	<input type="text" id="lastName" dojoType="dijit.form.TextBox" name="lastName"/><br/>
 </div>
 
 <div id="datosEnComun">
 	<label for="address">Dirección:</label><br/>
-	<input class="txtDatos" type="text" id="address" name="address"/><br/>
+	<input type="text" id="address" dojoType="dijit.form.TextBox" name="address"/><br/>
 	
 	<label for="city">Ciudad:</label><br/>
-	<input class="txtDatos" type="text" id="city" name="city" value=""/><br/>
+	<input type="text" id="city" dojoType="dijit.form.TextBox" name="city"/><br/>
 	
 	<label for="cp">Código Postal:</label><br/>
-	<input id="cp" class="txtDatos" type="text" name="cp" value=""/><br/>
+	<input id="cp" dojoType="dijit.form.NumberTextBox" type="text" name="cp"/><br/>
 	
 	<label for="telephone">Teléfono:</label><br/>
-	<input class="txtDatos" type="text" id="telephone" name="telephone" value=""/><br/>
+	<input type="text" id="telephone" name="telephone"  dojoType="dijit.form.TextBox"/><br/>
 	<div id="buttons">
 		<div id="left">
 			<input id="btnBorrar" type="button" value="Borrar Datos" />

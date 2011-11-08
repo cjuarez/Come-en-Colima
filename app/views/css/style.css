@@ -11,6 +11,10 @@ body {
 	text-align:center;
 }
 
+span#isAvailable{
+
+}
+
 #datosRestaurante, #datosEnComun, #datosCliente{
 	display:none;
 }
@@ -42,21 +46,6 @@ body {
 	}
 
 
-table{
-	text-align:center;
-	border:1px solid;
-	width:500px;
-	margin-left:auto;
-	margin-right:auto;
-	padding:10px;
-	border-radius:10px;
-}
-
- th{
-	font-size:20px;
-	border-bottom:1px solid;
-}
-
 /*DE RAPIDO*/
 label {
 	font-size:30px;
@@ -71,11 +60,6 @@ input.login {
 	margin-left:150px;
 	margin-top:20px;
 }
-
-.txtDatos{
-	width:300px;
-}
-
 
 div#buttons{
 	width:300px;
@@ -224,4 +208,26 @@ div.total{
 	margin-left:auto;
 	margin-right:auto;
 	border-top:1px solid;
+}
+
+/* editarMenu.php */
+div#menuRestaurant{
+	text-align:center;
+}
+
+div#menuRestaurant table{
+	width:400px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:30px;
+}
+
+div#menuRestaurant td,div#menuRestaurant th{
+	border-bottom:1px solid;
+}
+
+div#edicion{
+	border-bottom: 2px dotted;
+	margin-bottom: 20px;
+	padding:10px;
 }

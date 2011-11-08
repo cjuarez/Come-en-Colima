@@ -17,21 +17,14 @@
 		
 		public function index ($id=null) {
 			if ($_SESSION["userType"] == "restaurant") {
-				$this->restaurantDashboard();
+				$this->view->menu = $this->_menuRestaurant;
 			} else {
-				$this->clientDashboard();
+				$this->view->menu = $this->_menuClient;
 			}
 			$this->render();
 		}
 		
-		public function restaurantDashboard($id = null) {
-			$this->view->menu = $this->_menuRestaurant;
-		}
-		
-		public function clientDashboard($id = null) {
-			$this->view->menu = $this->_menuClient;
-		}
-		
+		//Dashboard para Clientes
 		public function editarDatos($id = null) {
 			$this->view->menu = $this->_menuClient;
 			$cliente = new client();
@@ -65,6 +58,7 @@
 			$this->render();
 		}
 		
+		//Dashboard para restaurantes
 		public function editarRestaurante($id = null) {
 			$this->view->menu = $this->_menuRestaurant;
 			$restaurant = new restaurant();
@@ -77,6 +71,66 @@
 			$this->view->tipos = $tipo->findAll();
 			$this->view->restaurante = $restaurant->find($_SESSION["idRestaurant"]);
 			$this->render();
+		}
+		
+		public function editarMenu($id = null) {
+			$this->view->menu = $this->_menuRestaurant;
+			$dish = new dish();
+			if ($id != null){
+				if ($id=="platillo") {
+					$this->view->add = true;
+				} elseif ($id == "categoria") {
+					$this->view->cat = true;
+				} else {
+					$this->view->dishAEditar = $dish->find($id);
+				}
+				$cat = new category();
+				$this->view->categories = $cat->findAllBy("idRestaurant",$_SESSION["idRestaurant"]);
+			}
+			$sql = "SELECT dishes.*,categories.category,categories.idRestaurant 
+					FROM dishes 
+					INNER JOIN categories 
+					ON dishes.idCategory=categories.idCategory
+					WHERE idRestaurant=" . $_SESSION['idRestaurant'] . " ORDER BY dishes.idCategory";
+			$this->view->platillos = $dish->findAllBySql($sql);
+			$this->render();
+		}
+		
+		public function editDish($id = null){
+			if ($this->data){
+				$dish = new dish();
+				$dish->find($this->data["idDish"]);
+				$dish->prepareFromArray($this->data);
+				$dish->save();
+			}
+			$this->redirect("dashboard/editarMenu");
+		}
+		
+		public function delDish($id = null){
+			if ($id != null) {
+				$dish = new dish();
+				$dish->find($id);
+				$dish->delete();
+			}
+			$this->redirect("dashboard/editarMenu");
+		}
+		
+		public function addDish($id = null){
+			if ($this->data){
+				$dish = new dish();
+				$dish->prepareFromArray($this->data);
+				$dish->save();
+			}
+			$this->redirect("dashboard/editarMenu");
+		}
+		
+		public function addCategory($id = null){
+			if ($this->data){
+				$cat = new category();
+				$cat->prepareFromArray($this->data);
+				$cat->save();
+			}
+			$this->redirect("dashboard/editarMenu");
 		}
 	}
 ?>

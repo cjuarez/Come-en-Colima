@@ -5,6 +5,7 @@
 		}
 		
 		public function index ($id=null) {
+			
       		$this->render();
 		}
 		
@@ -38,6 +39,7 @@
 		}
 		
 		public function register($id = null) {
+			if ($this->data){
 			$user = new user();
 			$idUser = $user->registerUser($this->data["username"],$this->data["password"]);
 			if ($this->data["tipoDeUsuario"] == "1") {
@@ -69,12 +71,24 @@
 				$client->prepareFromArray($datosCliente);
 				$client->save();
 			}
-			$this->redirect("index");
+		} else{
+			$this->redirect("index/registro");
+		}
 		}
 	
 		private function isLoggedIn() {
 			if (isset($_SESSION["idUser"])){
 				$this->redirect("index");
+			}
+		}
+		
+		public function checkIfAvailable($id = null){
+			if ($this->data) {
+				$usuario = new user();
+				$usuarios = $usuario->findAllBy("username",$this->data["username"]);
+				echo (count($usuarios)>0) ? "no disponible" : "disponible";
+			} else {
+				$this->redirect("index/registro");
 			}
 		}
 	}
