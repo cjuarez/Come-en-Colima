@@ -12,8 +12,10 @@
 	<div id="masInfo">
 	</div>
 </div>
+<?php echo $this->html->form("dashboard/hacerPedido/$idRestaurant","POST","name=\"pedido\""); ?>
 <table id="food-menu">
 <tr>
+	<?php echo (isset($_SESSION["idUser"])) ? "<th>Seleccionar</th>" : "" ?>
 	<th>Platillo</th>
 	<th>Precio</th>
 </tr>
@@ -23,15 +25,18 @@ foreach ($menu as $key => $dish) {
 	if ($categoria != $dish["category"]) {
 		$categoria = $dish["category"]; ?>
 		<tr>
-			<th colspan="2"><?php echo $categoria ?></th>
+			<th colspan="3"><?php echo $categoria ?></th>
 		</tr>
 	<?php } ?>
 	<tr>
+		<?php echo (isset($_SESSION["idUser"])) ? "<td>".$this->html->checkBox($dish["idDish"]) . "</td>" : "" ?>
 		<td><?php echo $this->html->linkTo($dish["dish"],"platillo/".$dish["idDish"]); ?></td>
 		<td><?php echo "$" . $dish["price"]; ?></td>
 	</tr>
 <?php } ?>
 </table>
+<button type="submit" value="Realizar Pedido"> Realizar Pedido </button>
+</form>
 <br/>
 <div id="comments">
 	<div id="comment">

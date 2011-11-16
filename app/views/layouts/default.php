@@ -1,13 +1,12 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-    		<title><?php echo $title_for_layout; ?></title>
-		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dijit/themes/tundra/tundra.css" type="text/css">
+   		<title><?php echo $title_for_layout; ?></title>
 		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
         <?php echo $this->html->charsetTag("UTF-8"); ?>
  		<?php echo $this->html->includeCss("style"); ?>
-		<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/dojo.xd.js" type="text/javascript" data-dojo-config="isDebug:true, parseOnLoad:true"></script>
 		<?php echo $this->html->includeJs("script"); ?>
+		<?php echo $this->html->includeJs("jquery"); ?>
 		
 	</head>
     <body class="tundra">

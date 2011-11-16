@@ -24,11 +24,10 @@
 		
 		public function detalles ($id=null) {
 			if ($id!=null) {
-				$restaurant = new restaurant();
-				$this->view->restaurantes = $restaurant->find($id);
+				$this->view->idRestaurant = $id;
 				$sql = "SELECT * 
 						FROM (
-							SELECT dishes.idDish, dishes.dish, dishes.price, dishes.image, dishes.idRestaurant, categories.category
+							SELECT dishes.idDish, dishes.dish, dishes.price, dishes.image, categories.idRestaurant, categories.category
 							FROM dishes
 							INNER JOIN categories ON dishes.idCategory = categories.idCategory
 							) AS D

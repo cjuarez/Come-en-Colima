@@ -3,7 +3,7 @@
 		private $_menuRestaurant = array(
 			array ("Editar Datos de Restaurante","dashboard/editarRestaurante"),
 			array ("Editar el Men&uacute;","dashboard/editarMenu"),
-			array ("Pedidos Recibidos","dashboard/misPedidos")
+			array ("Pedidos Recibidos","dashboard/pedidos")
 		);
 		
 		private $_menuClient = array(
@@ -132,5 +132,35 @@
 			}
 			$this->redirect("dashboard/editarMenu");
 		}
+		
+		public function pedidos($id = null) {
+			$pedido = new bill();
+		}
+		
+		public function hacerPedido($id = null) {
+			if ($this->data) {
+				$this->view->idRestaurant = $id;
+				$platillo = new dish();
+				$platillos = array();
+				foreach ($this->data as $key => $on) {
+					$platillos[] = $platillo->find($key);
+				}
+				$this->view->platillos = $platillos;
+				$this->render();
+			}
+		}
+		
+		public function completarPedido($id = null) {
+			if ($this->data){
+				$cuenta = new bill();
+				$elemento = new billitem();
+				$this->data["idClient"] = $_SESSION["idClient"];
+				var_dump($this->data);
+				foreach ($this->data as $idDish => $cantidad) {
+					
+				}
+			}
+		}
+		
 	}
 ?>

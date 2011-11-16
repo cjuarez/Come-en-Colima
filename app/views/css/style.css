@@ -1,8 +1,9 @@
 body {
 	font-family: 'Quicksand', sans-serif;
+	background-image:url('../images/bg.png');
 	/*background: #F4FFDD;
 	background:#EFFEEF;*/
-	background:#D8F2EF;
+	/*background:#D8F2EF;*/
 }
 #wrapper{
 	width:800px;
@@ -230,4 +231,10 @@ div#edicion{
 	border-bottom: 2px dotted;
 	margin-bottom: 20px;
 	padding:10px;
+}
+
+table#food-menu{
+	width:400px;
+	margin-left:auto;
+	margin-right:auto;
 }
