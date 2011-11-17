@@ -1,13 +1,19 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.9.2
+-- version 3.3.9
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 17-11-2011 a las 12:38:11
--- Versión del servidor: 5.5.9
--- Versión de PHP: 5.3.6
+-- Tiempo de generaciÃ³n: 17-11-2011 a las 22:05:49
+-- VersiÃ³n del servidor: 5.5.8
+-- VersiÃ³n de PHP: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `integrador`
@@ -18,10 +24,8 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Estructura de tabla para la tabla `billitems`
 --
--- Creación: 04-11-2011 a las 15:46:19
---
 
-CREATE TABLE `billitems` (
+CREATE TABLE IF NOT EXISTS `billitems` (
   `idBillitem` int(11) NOT NULL AUTO_INCREMENT,
   `idDish` int(11) NOT NULL,
   `idBill` int(11) NOT NULL,
@@ -34,2162 +38,2161 @@ CREATE TABLE `billitems` (
 -- Volcar la base de datos para la tabla `billitems`
 --
 
-INSERT INTO `billitems` VALUES(16, 7, 10);
-INSERT INTO `billitems` VALUES(17, 7, 10);
-INSERT INTO `billitems` VALUES(18, 7, 10);
-INSERT INTO `billitems` VALUES(19, 7, 10);
-INSERT INTO `billitems` VALUES(20, 7, 10);
-INSERT INTO `billitems` VALUES(21, 7, 10);
-INSERT INTO `billitems` VALUES(22, 7, 10);
-INSERT INTO `billitems` VALUES(23, 7, 10);
-INSERT INTO `billitems` VALUES(24, 7, 10);
-INSERT INTO `billitems` VALUES(25, 7, 10);
-INSERT INTO `billitems` VALUES(26, 7, 10);
-INSERT INTO `billitems` VALUES(27, 7, 10);
-INSERT INTO `billitems` VALUES(28, 7, 10);
-INSERT INTO `billitems` VALUES(29, 4, 10);
-INSERT INTO `billitems` VALUES(30, 4, 10);
-INSERT INTO `billitems` VALUES(31, 4, 10);
-INSERT INTO `billitems` VALUES(32, 4, 10);
-INSERT INTO `billitems` VALUES(33, 4, 10);
-INSERT INTO `billitems` VALUES(34, 4, 10);
-INSERT INTO `billitems` VALUES(35, 4, 10);
-INSERT INTO `billitems` VALUES(36, 4, 10);
-INSERT INTO `billitems` VALUES(37, 4, 10);
-INSERT INTO `billitems` VALUES(38, 4, 10);
-INSERT INTO `billitems` VALUES(39, 4, 10);
-INSERT INTO `billitems` VALUES(40, 4, 10);
-INSERT INTO `billitems` VALUES(41, 4, 10);
-INSERT INTO `billitems` VALUES(42, 4, 10);
-INSERT INTO `billitems` VALUES(43, 6, 10);
-INSERT INTO `billitems` VALUES(44, 6, 10);
-INSERT INTO `billitems` VALUES(45, 6, 10);
-INSERT INTO `billitems` VALUES(46, 6, 10);
-INSERT INTO `billitems` VALUES(47, 6, 10);
-INSERT INTO `billitems` VALUES(48, 6, 10);
-INSERT INTO `billitems` VALUES(49, 6, 10);
-INSERT INTO `billitems` VALUES(50, 6, 10);
-INSERT INTO `billitems` VALUES(51, 6, 10);
-INSERT INTO `billitems` VALUES(52, 6, 10);
-INSERT INTO `billitems` VALUES(53, 6, 10);
-INSERT INTO `billitems` VALUES(54, 6, 10);
-INSERT INTO `billitems` VALUES(55, 1, 11);
-INSERT INTO `billitems` VALUES(56, 1, 11);
-INSERT INTO `billitems` VALUES(57, 1, 11);
-INSERT INTO `billitems` VALUES(58, 1, 11);
-INSERT INTO `billitems` VALUES(59, 1, 11);
-INSERT INTO `billitems` VALUES(60, 1, 11);
-INSERT INTO `billitems` VALUES(61, 1, 11);
-INSERT INTO `billitems` VALUES(62, 1, 11);
-INSERT INTO `billitems` VALUES(63, 1, 11);
-INSERT INTO `billitems` VALUES(64, 1, 11);
-INSERT INTO `billitems` VALUES(65, 1, 11);
-INSERT INTO `billitems` VALUES(66, 1, 11);
-INSERT INTO `billitems` VALUES(67, 1, 11);
-INSERT INTO `billitems` VALUES(68, 1, 11);
-INSERT INTO `billitems` VALUES(69, 1, 11);
-INSERT INTO `billitems` VALUES(70, 1, 11);
-INSERT INTO `billitems` VALUES(71, 1, 11);
-INSERT INTO `billitems` VALUES(72, 1, 11);
-INSERT INTO `billitems` VALUES(73, 1, 11);
-INSERT INTO `billitems` VALUES(74, 1, 11);
-INSERT INTO `billitems` VALUES(75, 1, 11);
-INSERT INTO `billitems` VALUES(76, 1, 11);
-INSERT INTO `billitems` VALUES(77, 1, 11);
-INSERT INTO `billitems` VALUES(78, 1, 11);
-INSERT INTO `billitems` VALUES(79, 1, 11);
-INSERT INTO `billitems` VALUES(80, 1, 11);
-INSERT INTO `billitems` VALUES(81, 1, 11);
-INSERT INTO `billitems` VALUES(82, 1, 11);
-INSERT INTO `billitems` VALUES(83, 1, 11);
-INSERT INTO `billitems` VALUES(84, 1, 11);
-INSERT INTO `billitems` VALUES(85, 1, 11);
-INSERT INTO `billitems` VALUES(86, 1, 11);
-INSERT INTO `billitems` VALUES(87, 1, 11);
-INSERT INTO `billitems` VALUES(88, 1, 11);
-INSERT INTO `billitems` VALUES(89, 1, 11);
-INSERT INTO `billitems` VALUES(90, 1, 11);
-INSERT INTO `billitems` VALUES(91, 1, 11);
-INSERT INTO `billitems` VALUES(92, 1, 11);
-INSERT INTO `billitems` VALUES(93, 1, 11);
-INSERT INTO `billitems` VALUES(94, 1, 11);
-INSERT INTO `billitems` VALUES(95, 1, 11);
-INSERT INTO `billitems` VALUES(96, 1, 11);
-INSERT INTO `billitems` VALUES(97, 1, 11);
-INSERT INTO `billitems` VALUES(98, 1, 11);
-INSERT INTO `billitems` VALUES(99, 1, 11);
-INSERT INTO `billitems` VALUES(100, 1, 11);
-INSERT INTO `billitems` VALUES(101, 1, 11);
-INSERT INTO `billitems` VALUES(102, 1, 11);
-INSERT INTO `billitems` VALUES(103, 1, 11);
-INSERT INTO `billitems` VALUES(104, 1, 11);
-INSERT INTO `billitems` VALUES(105, 1, 11);
-INSERT INTO `billitems` VALUES(106, 1, 11);
-INSERT INTO `billitems` VALUES(107, 1, 11);
-INSERT INTO `billitems` VALUES(108, 1, 11);
-INSERT INTO `billitems` VALUES(109, 1, 11);
-INSERT INTO `billitems` VALUES(110, 1, 11);
-INSERT INTO `billitems` VALUES(111, 1, 11);
-INSERT INTO `billitems` VALUES(112, 1, 11);
-INSERT INTO `billitems` VALUES(113, 1, 11);
-INSERT INTO `billitems` VALUES(114, 1, 11);
-INSERT INTO `billitems` VALUES(115, 1, 11);
-INSERT INTO `billitems` VALUES(116, 1, 11);
-INSERT INTO `billitems` VALUES(117, 1, 11);
-INSERT INTO `billitems` VALUES(118, 1, 11);
-INSERT INTO `billitems` VALUES(119, 1, 11);
-INSERT INTO `billitems` VALUES(120, 1, 11);
-INSERT INTO `billitems` VALUES(121, 1, 11);
-INSERT INTO `billitems` VALUES(122, 1, 11);
-INSERT INTO `billitems` VALUES(123, 1, 11);
-INSERT INTO `billitems` VALUES(124, 1, 11);
-INSERT INTO `billitems` VALUES(125, 1, 11);
-INSERT INTO `billitems` VALUES(126, 1, 11);
-INSERT INTO `billitems` VALUES(127, 1, 11);
-INSERT INTO `billitems` VALUES(128, 1, 11);
-INSERT INTO `billitems` VALUES(129, 1, 11);
-INSERT INTO `billitems` VALUES(130, 1, 11);
-INSERT INTO `billitems` VALUES(131, 1, 11);
-INSERT INTO `billitems` VALUES(132, 1, 11);
-INSERT INTO `billitems` VALUES(133, 1, 11);
-INSERT INTO `billitems` VALUES(134, 1, 11);
-INSERT INTO `billitems` VALUES(135, 1, 11);
-INSERT INTO `billitems` VALUES(136, 1, 11);
-INSERT INTO `billitems` VALUES(137, 1, 11);
-INSERT INTO `billitems` VALUES(138, 1, 11);
-INSERT INTO `billitems` VALUES(139, 1, 11);
-INSERT INTO `billitems` VALUES(140, 1, 11);
-INSERT INTO `billitems` VALUES(141, 1, 11);
-INSERT INTO `billitems` VALUES(142, 1, 11);
-INSERT INTO `billitems` VALUES(143, 1, 11);
-INSERT INTO `billitems` VALUES(144, 1, 11);
-INSERT INTO `billitems` VALUES(145, 1, 11);
-INSERT INTO `billitems` VALUES(146, 1, 11);
-INSERT INTO `billitems` VALUES(147, 1, 11);
-INSERT INTO `billitems` VALUES(148, 1, 11);
-INSERT INTO `billitems` VALUES(149, 1, 11);
-INSERT INTO `billitems` VALUES(150, 1, 11);
-INSERT INTO `billitems` VALUES(151, 1, 11);
-INSERT INTO `billitems` VALUES(152, 1, 11);
-INSERT INTO `billitems` VALUES(153, 1, 11);
-INSERT INTO `billitems` VALUES(154, 1, 11);
-INSERT INTO `billitems` VALUES(155, 1, 11);
-INSERT INTO `billitems` VALUES(156, 1, 11);
-INSERT INTO `billitems` VALUES(157, 1, 11);
-INSERT INTO `billitems` VALUES(158, 1, 11);
-INSERT INTO `billitems` VALUES(159, 1, 11);
-INSERT INTO `billitems` VALUES(160, 1, 11);
-INSERT INTO `billitems` VALUES(161, 1, 11);
-INSERT INTO `billitems` VALUES(162, 1, 11);
-INSERT INTO `billitems` VALUES(163, 1, 11);
-INSERT INTO `billitems` VALUES(164, 1, 11);
-INSERT INTO `billitems` VALUES(165, 1, 11);
-INSERT INTO `billitems` VALUES(166, 1, 11);
-INSERT INTO `billitems` VALUES(167, 1, 11);
-INSERT INTO `billitems` VALUES(168, 1, 11);
-INSERT INTO `billitems` VALUES(169, 1, 11);
-INSERT INTO `billitems` VALUES(170, 1, 11);
-INSERT INTO `billitems` VALUES(171, 1, 11);
-INSERT INTO `billitems` VALUES(172, 1, 11);
-INSERT INTO `billitems` VALUES(173, 1, 11);
-INSERT INTO `billitems` VALUES(174, 1, 11);
-INSERT INTO `billitems` VALUES(175, 1, 11);
-INSERT INTO `billitems` VALUES(176, 1, 11);
-INSERT INTO `billitems` VALUES(177, 1, 11);
-INSERT INTO `billitems` VALUES(178, 5, 11);
-INSERT INTO `billitems` VALUES(179, 5, 11);
-INSERT INTO `billitems` VALUES(180, 5, 11);
-INSERT INTO `billitems` VALUES(181, 5, 11);
-INSERT INTO `billitems` VALUES(182, 5, 11);
-INSERT INTO `billitems` VALUES(183, 5, 11);
-INSERT INTO `billitems` VALUES(184, 5, 11);
-INSERT INTO `billitems` VALUES(185, 5, 11);
-INSERT INTO `billitems` VALUES(186, 5, 11);
-INSERT INTO `billitems` VALUES(187, 5, 11);
-INSERT INTO `billitems` VALUES(188, 5, 11);
-INSERT INTO `billitems` VALUES(189, 5, 11);
-INSERT INTO `billitems` VALUES(190, 5, 11);
-INSERT INTO `billitems` VALUES(191, 5, 11);
-INSERT INTO `billitems` VALUES(192, 5, 11);
-INSERT INTO `billitems` VALUES(193, 5, 11);
-INSERT INTO `billitems` VALUES(194, 5, 11);
-INSERT INTO `billitems` VALUES(195, 5, 11);
-INSERT INTO `billitems` VALUES(196, 5, 11);
-INSERT INTO `billitems` VALUES(197, 5, 11);
-INSERT INTO `billitems` VALUES(198, 5, 11);
-INSERT INTO `billitems` VALUES(199, 5, 11);
-INSERT INTO `billitems` VALUES(200, 5, 11);
-INSERT INTO `billitems` VALUES(201, 5, 11);
-INSERT INTO `billitems` VALUES(202, 5, 11);
-INSERT INTO `billitems` VALUES(203, 5, 11);
-INSERT INTO `billitems` VALUES(204, 5, 11);
-INSERT INTO `billitems` VALUES(205, 5, 11);
-INSERT INTO `billitems` VALUES(206, 5, 11);
-INSERT INTO `billitems` VALUES(207, 5, 11);
-INSERT INTO `billitems` VALUES(208, 5, 11);
-INSERT INTO `billitems` VALUES(209, 5, 11);
-INSERT INTO `billitems` VALUES(210, 5, 11);
-INSERT INTO `billitems` VALUES(211, 5, 11);
-INSERT INTO `billitems` VALUES(212, 5, 11);
-INSERT INTO `billitems` VALUES(213, 5, 11);
-INSERT INTO `billitems` VALUES(214, 5, 11);
-INSERT INTO `billitems` VALUES(215, 5, 11);
-INSERT INTO `billitems` VALUES(216, 5, 11);
-INSERT INTO `billitems` VALUES(217, 5, 11);
-INSERT INTO `billitems` VALUES(218, 5, 11);
-INSERT INTO `billitems` VALUES(219, 5, 11);
-INSERT INTO `billitems` VALUES(220, 5, 11);
-INSERT INTO `billitems` VALUES(221, 5, 11);
-INSERT INTO `billitems` VALUES(222, 5, 11);
-INSERT INTO `billitems` VALUES(223, 5, 11);
-INSERT INTO `billitems` VALUES(224, 5, 11);
-INSERT INTO `billitems` VALUES(225, 5, 11);
-INSERT INTO `billitems` VALUES(226, 5, 11);
-INSERT INTO `billitems` VALUES(227, 5, 11);
-INSERT INTO `billitems` VALUES(228, 5, 11);
-INSERT INTO `billitems` VALUES(229, 5, 11);
-INSERT INTO `billitems` VALUES(230, 5, 11);
-INSERT INTO `billitems` VALUES(231, 5, 11);
-INSERT INTO `billitems` VALUES(232, 5, 11);
-INSERT INTO `billitems` VALUES(233, 5, 11);
-INSERT INTO `billitems` VALUES(234, 5, 11);
-INSERT INTO `billitems` VALUES(235, 5, 11);
-INSERT INTO `billitems` VALUES(236, 5, 11);
-INSERT INTO `billitems` VALUES(237, 5, 11);
-INSERT INTO `billitems` VALUES(238, 5, 11);
-INSERT INTO `billitems` VALUES(239, 5, 11);
-INSERT INTO `billitems` VALUES(240, 5, 11);
-INSERT INTO `billitems` VALUES(241, 5, 11);
-INSERT INTO `billitems` VALUES(242, 5, 11);
-INSERT INTO `billitems` VALUES(243, 5, 11);
-INSERT INTO `billitems` VALUES(244, 5, 11);
-INSERT INTO `billitems` VALUES(245, 5, 11);
-INSERT INTO `billitems` VALUES(246, 5, 11);
-INSERT INTO `billitems` VALUES(247, 5, 11);
-INSERT INTO `billitems` VALUES(248, 5, 11);
-INSERT INTO `billitems` VALUES(249, 5, 11);
-INSERT INTO `billitems` VALUES(250, 5, 11);
-INSERT INTO `billitems` VALUES(251, 5, 11);
-INSERT INTO `billitems` VALUES(252, 5, 11);
-INSERT INTO `billitems` VALUES(253, 5, 11);
-INSERT INTO `billitems` VALUES(254, 5, 11);
-INSERT INTO `billitems` VALUES(255, 5, 11);
-INSERT INTO `billitems` VALUES(256, 5, 11);
-INSERT INTO `billitems` VALUES(257, 5, 11);
-INSERT INTO `billitems` VALUES(258, 5, 11);
-INSERT INTO `billitems` VALUES(259, 5, 11);
-INSERT INTO `billitems` VALUES(260, 5, 11);
-INSERT INTO `billitems` VALUES(261, 5, 11);
-INSERT INTO `billitems` VALUES(262, 5, 11);
-INSERT INTO `billitems` VALUES(263, 5, 11);
-INSERT INTO `billitems` VALUES(264, 5, 11);
-INSERT INTO `billitems` VALUES(265, 5, 11);
-INSERT INTO `billitems` VALUES(266, 5, 11);
-INSERT INTO `billitems` VALUES(267, 5, 11);
-INSERT INTO `billitems` VALUES(268, 5, 11);
-INSERT INTO `billitems` VALUES(269, 5, 11);
-INSERT INTO `billitems` VALUES(270, 5, 11);
-INSERT INTO `billitems` VALUES(271, 5, 11);
-INSERT INTO `billitems` VALUES(272, 5, 11);
-INSERT INTO `billitems` VALUES(273, 5, 11);
-INSERT INTO `billitems` VALUES(274, 5, 11);
-INSERT INTO `billitems` VALUES(275, 5, 11);
-INSERT INTO `billitems` VALUES(276, 5, 11);
-INSERT INTO `billitems` VALUES(277, 5, 11);
-INSERT INTO `billitems` VALUES(278, 5, 11);
-INSERT INTO `billitems` VALUES(279, 5, 11);
-INSERT INTO `billitems` VALUES(280, 5, 11);
-INSERT INTO `billitems` VALUES(281, 5, 11);
-INSERT INTO `billitems` VALUES(282, 5, 11);
-INSERT INTO `billitems` VALUES(283, 5, 11);
-INSERT INTO `billitems` VALUES(284, 5, 11);
-INSERT INTO `billitems` VALUES(285, 5, 11);
-INSERT INTO `billitems` VALUES(286, 5, 11);
-INSERT INTO `billitems` VALUES(287, 5, 11);
-INSERT INTO `billitems` VALUES(288, 5, 11);
-INSERT INTO `billitems` VALUES(289, 5, 11);
-INSERT INTO `billitems` VALUES(290, 5, 11);
-INSERT INTO `billitems` VALUES(291, 5, 11);
-INSERT INTO `billitems` VALUES(292, 5, 11);
-INSERT INTO `billitems` VALUES(293, 5, 11);
-INSERT INTO `billitems` VALUES(294, 5, 11);
-INSERT INTO `billitems` VALUES(295, 5, 11);
-INSERT INTO `billitems` VALUES(296, 5, 11);
-INSERT INTO `billitems` VALUES(297, 5, 11);
-INSERT INTO `billitems` VALUES(298, 5, 11);
-INSERT INTO `billitems` VALUES(299, 5, 11);
-INSERT INTO `billitems` VALUES(300, 5, 11);
-INSERT INTO `billitems` VALUES(301, 5, 11);
-INSERT INTO `billitems` VALUES(302, 5, 11);
-INSERT INTO `billitems` VALUES(303, 5, 11);
-INSERT INTO `billitems` VALUES(304, 5, 11);
-INSERT INTO `billitems` VALUES(305, 5, 11);
-INSERT INTO `billitems` VALUES(306, 5, 11);
-INSERT INTO `billitems` VALUES(307, 5, 11);
-INSERT INTO `billitems` VALUES(308, 5, 11);
-INSERT INTO `billitems` VALUES(309, 5, 11);
-INSERT INTO `billitems` VALUES(310, 5, 11);
-INSERT INTO `billitems` VALUES(311, 5, 11);
-INSERT INTO `billitems` VALUES(312, 5, 11);
-INSERT INTO `billitems` VALUES(313, 5, 11);
-INSERT INTO `billitems` VALUES(314, 5, 11);
-INSERT INTO `billitems` VALUES(315, 5, 11);
-INSERT INTO `billitems` VALUES(316, 5, 11);
-INSERT INTO `billitems` VALUES(317, 5, 11);
-INSERT INTO `billitems` VALUES(318, 5, 11);
-INSERT INTO `billitems` VALUES(319, 5, 11);
-INSERT INTO `billitems` VALUES(320, 5, 11);
-INSERT INTO `billitems` VALUES(321, 5, 11);
-INSERT INTO `billitems` VALUES(322, 5, 11);
-INSERT INTO `billitems` VALUES(323, 5, 11);
-INSERT INTO `billitems` VALUES(324, 5, 11);
-INSERT INTO `billitems` VALUES(325, 5, 11);
-INSERT INTO `billitems` VALUES(326, 5, 11);
-INSERT INTO `billitems` VALUES(327, 5, 11);
-INSERT INTO `billitems` VALUES(328, 5, 11);
-INSERT INTO `billitems` VALUES(329, 5, 11);
-INSERT INTO `billitems` VALUES(330, 5, 11);
-INSERT INTO `billitems` VALUES(331, 5, 11);
-INSERT INTO `billitems` VALUES(332, 5, 11);
-INSERT INTO `billitems` VALUES(333, 5, 11);
-INSERT INTO `billitems` VALUES(334, 5, 11);
-INSERT INTO `billitems` VALUES(335, 5, 11);
-INSERT INTO `billitems` VALUES(336, 5, 11);
-INSERT INTO `billitems` VALUES(337, 5, 11);
-INSERT INTO `billitems` VALUES(338, 5, 11);
-INSERT INTO `billitems` VALUES(339, 5, 11);
-INSERT INTO `billitems` VALUES(340, 5, 11);
-INSERT INTO `billitems` VALUES(341, 5, 11);
-INSERT INTO `billitems` VALUES(342, 5, 11);
-INSERT INTO `billitems` VALUES(343, 5, 11);
-INSERT INTO `billitems` VALUES(344, 5, 11);
-INSERT INTO `billitems` VALUES(345, 5, 11);
-INSERT INTO `billitems` VALUES(346, 5, 11);
-INSERT INTO `billitems` VALUES(347, 5, 11);
-INSERT INTO `billitems` VALUES(348, 5, 11);
-INSERT INTO `billitems` VALUES(349, 5, 11);
-INSERT INTO `billitems` VALUES(350, 5, 11);
-INSERT INTO `billitems` VALUES(351, 5, 11);
-INSERT INTO `billitems` VALUES(352, 5, 11);
-INSERT INTO `billitems` VALUES(353, 5, 11);
-INSERT INTO `billitems` VALUES(354, 5, 11);
-INSERT INTO `billitems` VALUES(355, 5, 11);
-INSERT INTO `billitems` VALUES(356, 5, 11);
-INSERT INTO `billitems` VALUES(357, 5, 11);
-INSERT INTO `billitems` VALUES(358, 5, 11);
-INSERT INTO `billitems` VALUES(359, 5, 11);
-INSERT INTO `billitems` VALUES(360, 5, 11);
-INSERT INTO `billitems` VALUES(361, 5, 11);
-INSERT INTO `billitems` VALUES(362, 5, 11);
-INSERT INTO `billitems` VALUES(363, 5, 11);
-INSERT INTO `billitems` VALUES(364, 5, 11);
-INSERT INTO `billitems` VALUES(365, 5, 11);
-INSERT INTO `billitems` VALUES(366, 5, 11);
-INSERT INTO `billitems` VALUES(367, 5, 11);
-INSERT INTO `billitems` VALUES(368, 5, 11);
-INSERT INTO `billitems` VALUES(369, 5, 11);
-INSERT INTO `billitems` VALUES(370, 5, 11);
-INSERT INTO `billitems` VALUES(371, 5, 11);
-INSERT INTO `billitems` VALUES(372, 5, 11);
-INSERT INTO `billitems` VALUES(373, 5, 11);
-INSERT INTO `billitems` VALUES(374, 5, 11);
-INSERT INTO `billitems` VALUES(375, 5, 11);
-INSERT INTO `billitems` VALUES(376, 5, 11);
-INSERT INTO `billitems` VALUES(377, 5, 11);
-INSERT INTO `billitems` VALUES(378, 5, 11);
-INSERT INTO `billitems` VALUES(379, 5, 11);
-INSERT INTO `billitems` VALUES(380, 5, 11);
-INSERT INTO `billitems` VALUES(381, 5, 11);
-INSERT INTO `billitems` VALUES(382, 5, 11);
-INSERT INTO `billitems` VALUES(383, 5, 11);
-INSERT INTO `billitems` VALUES(384, 5, 11);
-INSERT INTO `billitems` VALUES(385, 5, 11);
-INSERT INTO `billitems` VALUES(386, 5, 11);
-INSERT INTO `billitems` VALUES(387, 5, 11);
-INSERT INTO `billitems` VALUES(388, 5, 11);
-INSERT INTO `billitems` VALUES(389, 5, 11);
-INSERT INTO `billitems` VALUES(390, 5, 11);
-INSERT INTO `billitems` VALUES(391, 5, 11);
-INSERT INTO `billitems` VALUES(392, 5, 11);
-INSERT INTO `billitems` VALUES(393, 5, 11);
-INSERT INTO `billitems` VALUES(394, 5, 11);
-INSERT INTO `billitems` VALUES(395, 5, 11);
-INSERT INTO `billitems` VALUES(396, 5, 11);
-INSERT INTO `billitems` VALUES(397, 5, 11);
-INSERT INTO `billitems` VALUES(398, 5, 11);
-INSERT INTO `billitems` VALUES(399, 5, 11);
-INSERT INTO `billitems` VALUES(400, 5, 11);
-INSERT INTO `billitems` VALUES(401, 5, 11);
-INSERT INTO `billitems` VALUES(402, 5, 11);
-INSERT INTO `billitems` VALUES(403, 5, 11);
-INSERT INTO `billitems` VALUES(404, 5, 11);
-INSERT INTO `billitems` VALUES(405, 5, 11);
-INSERT INTO `billitems` VALUES(406, 5, 11);
-INSERT INTO `billitems` VALUES(407, 5, 11);
-INSERT INTO `billitems` VALUES(408, 5, 11);
-INSERT INTO `billitems` VALUES(409, 5, 11);
-INSERT INTO `billitems` VALUES(410, 5, 11);
-INSERT INTO `billitems` VALUES(411, 5, 11);
-INSERT INTO `billitems` VALUES(412, 5, 11);
-INSERT INTO `billitems` VALUES(413, 5, 11);
-INSERT INTO `billitems` VALUES(414, 5, 11);
-INSERT INTO `billitems` VALUES(415, 5, 11);
-INSERT INTO `billitems` VALUES(416, 5, 11);
-INSERT INTO `billitems` VALUES(417, 5, 11);
-INSERT INTO `billitems` VALUES(418, 5, 11);
-INSERT INTO `billitems` VALUES(419, 5, 11);
-INSERT INTO `billitems` VALUES(420, 5, 11);
-INSERT INTO `billitems` VALUES(421, 5, 11);
-INSERT INTO `billitems` VALUES(422, 5, 11);
-INSERT INTO `billitems` VALUES(423, 5, 11);
-INSERT INTO `billitems` VALUES(424, 5, 11);
-INSERT INTO `billitems` VALUES(425, 5, 11);
-INSERT INTO `billitems` VALUES(426, 5, 11);
-INSERT INTO `billitems` VALUES(427, 5, 11);
-INSERT INTO `billitems` VALUES(428, 5, 11);
-INSERT INTO `billitems` VALUES(429, 5, 11);
-INSERT INTO `billitems` VALUES(430, 5, 11);
-INSERT INTO `billitems` VALUES(431, 5, 11);
-INSERT INTO `billitems` VALUES(432, 5, 11);
-INSERT INTO `billitems` VALUES(433, 5, 11);
-INSERT INTO `billitems` VALUES(434, 5, 11);
-INSERT INTO `billitems` VALUES(435, 5, 11);
-INSERT INTO `billitems` VALUES(436, 5, 11);
-INSERT INTO `billitems` VALUES(437, 5, 11);
-INSERT INTO `billitems` VALUES(438, 5, 11);
-INSERT INTO `billitems` VALUES(439, 5, 11);
-INSERT INTO `billitems` VALUES(440, 5, 11);
-INSERT INTO `billitems` VALUES(441, 5, 11);
-INSERT INTO `billitems` VALUES(442, 5, 11);
-INSERT INTO `billitems` VALUES(443, 5, 11);
-INSERT INTO `billitems` VALUES(444, 5, 11);
-INSERT INTO `billitems` VALUES(445, 5, 11);
-INSERT INTO `billitems` VALUES(446, 5, 11);
-INSERT INTO `billitems` VALUES(447, 5, 11);
-INSERT INTO `billitems` VALUES(448, 5, 11);
-INSERT INTO `billitems` VALUES(449, 5, 11);
-INSERT INTO `billitems` VALUES(450, 5, 11);
-INSERT INTO `billitems` VALUES(451, 5, 11);
-INSERT INTO `billitems` VALUES(452, 5, 11);
-INSERT INTO `billitems` VALUES(453, 5, 11);
-INSERT INTO `billitems` VALUES(454, 5, 11);
-INSERT INTO `billitems` VALUES(455, 5, 11);
-INSERT INTO `billitems` VALUES(456, 5, 11);
-INSERT INTO `billitems` VALUES(457, 5, 11);
-INSERT INTO `billitems` VALUES(458, 5, 11);
-INSERT INTO `billitems` VALUES(459, 5, 11);
-INSERT INTO `billitems` VALUES(460, 5, 11);
-INSERT INTO `billitems` VALUES(461, 5, 11);
-INSERT INTO `billitems` VALUES(462, 5, 11);
-INSERT INTO `billitems` VALUES(463, 5, 11);
-INSERT INTO `billitems` VALUES(464, 5, 11);
-INSERT INTO `billitems` VALUES(465, 5, 11);
-INSERT INTO `billitems` VALUES(466, 5, 11);
-INSERT INTO `billitems` VALUES(467, 5, 11);
-INSERT INTO `billitems` VALUES(468, 5, 11);
-INSERT INTO `billitems` VALUES(469, 5, 11);
-INSERT INTO `billitems` VALUES(470, 5, 11);
-INSERT INTO `billitems` VALUES(471, 5, 11);
-INSERT INTO `billitems` VALUES(472, 5, 11);
-INSERT INTO `billitems` VALUES(473, 5, 11);
-INSERT INTO `billitems` VALUES(474, 5, 11);
-INSERT INTO `billitems` VALUES(475, 5, 11);
-INSERT INTO `billitems` VALUES(476, 5, 11);
-INSERT INTO `billitems` VALUES(477, 5, 11);
-INSERT INTO `billitems` VALUES(478, 5, 11);
-INSERT INTO `billitems` VALUES(479, 5, 11);
-INSERT INTO `billitems` VALUES(480, 5, 11);
-INSERT INTO `billitems` VALUES(481, 5, 11);
-INSERT INTO `billitems` VALUES(482, 5, 11);
-INSERT INTO `billitems` VALUES(483, 5, 11);
-INSERT INTO `billitems` VALUES(484, 5, 11);
-INSERT INTO `billitems` VALUES(485, 5, 11);
-INSERT INTO `billitems` VALUES(486, 5, 11);
-INSERT INTO `billitems` VALUES(487, 5, 11);
-INSERT INTO `billitems` VALUES(488, 5, 11);
-INSERT INTO `billitems` VALUES(489, 5, 11);
-INSERT INTO `billitems` VALUES(490, 5, 11);
-INSERT INTO `billitems` VALUES(491, 5, 11);
-INSERT INTO `billitems` VALUES(492, 5, 11);
-INSERT INTO `billitems` VALUES(493, 5, 11);
-INSERT INTO `billitems` VALUES(494, 5, 11);
-INSERT INTO `billitems` VALUES(495, 5, 11);
-INSERT INTO `billitems` VALUES(496, 5, 11);
-INSERT INTO `billitems` VALUES(497, 5, 11);
-INSERT INTO `billitems` VALUES(498, 5, 11);
-INSERT INTO `billitems` VALUES(499, 5, 11);
-INSERT INTO `billitems` VALUES(500, 5, 11);
-INSERT INTO `billitems` VALUES(501, 5, 11);
-INSERT INTO `billitems` VALUES(502, 5, 11);
-INSERT INTO `billitems` VALUES(503, 5, 11);
-INSERT INTO `billitems` VALUES(504, 5, 11);
-INSERT INTO `billitems` VALUES(505, 5, 11);
-INSERT INTO `billitems` VALUES(506, 5, 11);
-INSERT INTO `billitems` VALUES(507, 5, 11);
-INSERT INTO `billitems` VALUES(508, 5, 11);
-INSERT INTO `billitems` VALUES(509, 5, 11);
-INSERT INTO `billitems` VALUES(510, 5, 11);
-INSERT INTO `billitems` VALUES(511, 5, 11);
-INSERT INTO `billitems` VALUES(512, 5, 11);
-INSERT INTO `billitems` VALUES(513, 5, 11);
-INSERT INTO `billitems` VALUES(514, 5, 11);
-INSERT INTO `billitems` VALUES(515, 5, 11);
-INSERT INTO `billitems` VALUES(516, 5, 11);
-INSERT INTO `billitems` VALUES(517, 5, 11);
-INSERT INTO `billitems` VALUES(518, 5, 11);
-INSERT INTO `billitems` VALUES(519, 5, 11);
-INSERT INTO `billitems` VALUES(520, 5, 11);
-INSERT INTO `billitems` VALUES(521, 5, 11);
-INSERT INTO `billitems` VALUES(522, 5, 11);
-INSERT INTO `billitems` VALUES(523, 5, 11);
-INSERT INTO `billitems` VALUES(524, 5, 11);
-INSERT INTO `billitems` VALUES(525, 5, 11);
-INSERT INTO `billitems` VALUES(526, 5, 11);
-INSERT INTO `billitems` VALUES(527, 5, 11);
-INSERT INTO `billitems` VALUES(528, 5, 11);
-INSERT INTO `billitems` VALUES(529, 5, 11);
-INSERT INTO `billitems` VALUES(530, 5, 11);
-INSERT INTO `billitems` VALUES(531, 5, 11);
-INSERT INTO `billitems` VALUES(532, 5, 11);
-INSERT INTO `billitems` VALUES(533, 5, 11);
-INSERT INTO `billitems` VALUES(534, 5, 11);
-INSERT INTO `billitems` VALUES(535, 5, 11);
-INSERT INTO `billitems` VALUES(536, 5, 11);
-INSERT INTO `billitems` VALUES(537, 5, 11);
-INSERT INTO `billitems` VALUES(538, 5, 11);
-INSERT INTO `billitems` VALUES(539, 5, 11);
-INSERT INTO `billitems` VALUES(540, 5, 11);
-INSERT INTO `billitems` VALUES(541, 5, 11);
-INSERT INTO `billitems` VALUES(542, 5, 11);
-INSERT INTO `billitems` VALUES(543, 5, 11);
-INSERT INTO `billitems` VALUES(544, 5, 11);
-INSERT INTO `billitems` VALUES(545, 5, 11);
-INSERT INTO `billitems` VALUES(546, 5, 11);
-INSERT INTO `billitems` VALUES(547, 5, 11);
-INSERT INTO `billitems` VALUES(548, 5, 11);
-INSERT INTO `billitems` VALUES(549, 5, 11);
-INSERT INTO `billitems` VALUES(550, 5, 11);
-INSERT INTO `billitems` VALUES(551, 5, 11);
-INSERT INTO `billitems` VALUES(552, 5, 11);
-INSERT INTO `billitems` VALUES(553, 5, 11);
-INSERT INTO `billitems` VALUES(554, 5, 11);
-INSERT INTO `billitems` VALUES(555, 5, 11);
-INSERT INTO `billitems` VALUES(556, 5, 11);
-INSERT INTO `billitems` VALUES(557, 5, 11);
-INSERT INTO `billitems` VALUES(558, 5, 11);
-INSERT INTO `billitems` VALUES(559, 5, 11);
-INSERT INTO `billitems` VALUES(560, 5, 11);
-INSERT INTO `billitems` VALUES(561, 5, 11);
-INSERT INTO `billitems` VALUES(562, 5, 11);
-INSERT INTO `billitems` VALUES(563, 5, 11);
-INSERT INTO `billitems` VALUES(564, 5, 11);
-INSERT INTO `billitems` VALUES(565, 5, 11);
-INSERT INTO `billitems` VALUES(566, 5, 11);
-INSERT INTO `billitems` VALUES(567, 5, 11);
-INSERT INTO `billitems` VALUES(568, 5, 11);
-INSERT INTO `billitems` VALUES(569, 5, 11);
-INSERT INTO `billitems` VALUES(570, 5, 11);
-INSERT INTO `billitems` VALUES(571, 5, 11);
-INSERT INTO `billitems` VALUES(572, 5, 11);
-INSERT INTO `billitems` VALUES(573, 5, 11);
-INSERT INTO `billitems` VALUES(574, 5, 11);
-INSERT INTO `billitems` VALUES(575, 5, 11);
-INSERT INTO `billitems` VALUES(576, 5, 11);
-INSERT INTO `billitems` VALUES(577, 5, 11);
-INSERT INTO `billitems` VALUES(578, 5, 11);
-INSERT INTO `billitems` VALUES(579, 5, 11);
-INSERT INTO `billitems` VALUES(580, 5, 11);
-INSERT INTO `billitems` VALUES(581, 5, 11);
-INSERT INTO `billitems` VALUES(582, 5, 11);
-INSERT INTO `billitems` VALUES(583, 5, 11);
-INSERT INTO `billitems` VALUES(584, 5, 11);
-INSERT INTO `billitems` VALUES(585, 5, 11);
-INSERT INTO `billitems` VALUES(586, 5, 11);
-INSERT INTO `billitems` VALUES(587, 5, 11);
-INSERT INTO `billitems` VALUES(588, 5, 11);
-INSERT INTO `billitems` VALUES(589, 5, 11);
-INSERT INTO `billitems` VALUES(590, 5, 11);
-INSERT INTO `billitems` VALUES(591, 5, 11);
-INSERT INTO `billitems` VALUES(592, 5, 11);
-INSERT INTO `billitems` VALUES(593, 5, 11);
-INSERT INTO `billitems` VALUES(594, 5, 11);
-INSERT INTO `billitems` VALUES(595, 5, 11);
-INSERT INTO `billitems` VALUES(596, 5, 11);
-INSERT INTO `billitems` VALUES(597, 5, 11);
-INSERT INTO `billitems` VALUES(598, 5, 11);
-INSERT INTO `billitems` VALUES(599, 5, 11);
-INSERT INTO `billitems` VALUES(600, 5, 11);
-INSERT INTO `billitems` VALUES(601, 5, 11);
-INSERT INTO `billitems` VALUES(602, 5, 11);
-INSERT INTO `billitems` VALUES(603, 5, 11);
-INSERT INTO `billitems` VALUES(604, 5, 11);
-INSERT INTO `billitems` VALUES(605, 5, 11);
-INSERT INTO `billitems` VALUES(606, 5, 11);
-INSERT INTO `billitems` VALUES(607, 5, 11);
-INSERT INTO `billitems` VALUES(608, 5, 11);
-INSERT INTO `billitems` VALUES(609, 5, 11);
-INSERT INTO `billitems` VALUES(610, 5, 11);
-INSERT INTO `billitems` VALUES(611, 5, 11);
-INSERT INTO `billitems` VALUES(612, 5, 11);
-INSERT INTO `billitems` VALUES(613, 5, 11);
-INSERT INTO `billitems` VALUES(614, 5, 11);
-INSERT INTO `billitems` VALUES(615, 5, 11);
-INSERT INTO `billitems` VALUES(616, 5, 11);
-INSERT INTO `billitems` VALUES(617, 5, 11);
-INSERT INTO `billitems` VALUES(618, 5, 11);
-INSERT INTO `billitems` VALUES(619, 5, 11);
-INSERT INTO `billitems` VALUES(620, 5, 11);
-INSERT INTO `billitems` VALUES(621, 5, 11);
-INSERT INTO `billitems` VALUES(622, 5, 11);
-INSERT INTO `billitems` VALUES(623, 5, 11);
-INSERT INTO `billitems` VALUES(624, 5, 11);
-INSERT INTO `billitems` VALUES(625, 5, 11);
-INSERT INTO `billitems` VALUES(626, 5, 11);
-INSERT INTO `billitems` VALUES(627, 5, 11);
-INSERT INTO `billitems` VALUES(628, 5, 11);
-INSERT INTO `billitems` VALUES(629, 5, 11);
-INSERT INTO `billitems` VALUES(630, 5, 11);
-INSERT INTO `billitems` VALUES(631, 5, 11);
-INSERT INTO `billitems` VALUES(632, 5, 11);
-INSERT INTO `billitems` VALUES(633, 5, 11);
-INSERT INTO `billitems` VALUES(634, 5, 11);
-INSERT INTO `billitems` VALUES(635, 5, 11);
-INSERT INTO `billitems` VALUES(636, 5, 11);
-INSERT INTO `billitems` VALUES(637, 5, 11);
-INSERT INTO `billitems` VALUES(638, 5, 11);
-INSERT INTO `billitems` VALUES(639, 5, 11);
-INSERT INTO `billitems` VALUES(640, 5, 11);
-INSERT INTO `billitems` VALUES(641, 5, 11);
-INSERT INTO `billitems` VALUES(642, 5, 11);
-INSERT INTO `billitems` VALUES(643, 5, 11);
-INSERT INTO `billitems` VALUES(644, 5, 11);
-INSERT INTO `billitems` VALUES(645, 5, 11);
-INSERT INTO `billitems` VALUES(646, 5, 11);
-INSERT INTO `billitems` VALUES(647, 5, 11);
-INSERT INTO `billitems` VALUES(648, 5, 11);
-INSERT INTO `billitems` VALUES(649, 5, 11);
-INSERT INTO `billitems` VALUES(650, 5, 11);
-INSERT INTO `billitems` VALUES(651, 5, 11);
-INSERT INTO `billitems` VALUES(652, 5, 11);
-INSERT INTO `billitems` VALUES(653, 5, 11);
-INSERT INTO `billitems` VALUES(654, 5, 11);
-INSERT INTO `billitems` VALUES(655, 5, 11);
-INSERT INTO `billitems` VALUES(656, 5, 11);
-INSERT INTO `billitems` VALUES(657, 5, 11);
-INSERT INTO `billitems` VALUES(658, 5, 11);
-INSERT INTO `billitems` VALUES(659, 5, 11);
-INSERT INTO `billitems` VALUES(660, 5, 11);
-INSERT INTO `billitems` VALUES(661, 5, 11);
-INSERT INTO `billitems` VALUES(662, 5, 11);
-INSERT INTO `billitems` VALUES(663, 5, 11);
-INSERT INTO `billitems` VALUES(664, 5, 11);
-INSERT INTO `billitems` VALUES(665, 5, 11);
-INSERT INTO `billitems` VALUES(666, 5, 11);
-INSERT INTO `billitems` VALUES(667, 5, 11);
-INSERT INTO `billitems` VALUES(668, 5, 11);
-INSERT INTO `billitems` VALUES(669, 5, 11);
-INSERT INTO `billitems` VALUES(670, 5, 11);
-INSERT INTO `billitems` VALUES(671, 5, 11);
-INSERT INTO `billitems` VALUES(672, 5, 11);
-INSERT INTO `billitems` VALUES(673, 5, 11);
-INSERT INTO `billitems` VALUES(674, 5, 11);
-INSERT INTO `billitems` VALUES(675, 5, 11);
-INSERT INTO `billitems` VALUES(676, 5, 11);
-INSERT INTO `billitems` VALUES(677, 5, 11);
-INSERT INTO `billitems` VALUES(678, 5, 11);
-INSERT INTO `billitems` VALUES(679, 5, 11);
-INSERT INTO `billitems` VALUES(680, 5, 11);
-INSERT INTO `billitems` VALUES(681, 5, 11);
-INSERT INTO `billitems` VALUES(682, 5, 11);
-INSERT INTO `billitems` VALUES(683, 5, 11);
-INSERT INTO `billitems` VALUES(684, 5, 11);
-INSERT INTO `billitems` VALUES(685, 5, 11);
-INSERT INTO `billitems` VALUES(686, 5, 11);
-INSERT INTO `billitems` VALUES(687, 5, 11);
-INSERT INTO `billitems` VALUES(688, 5, 11);
-INSERT INTO `billitems` VALUES(689, 5, 11);
-INSERT INTO `billitems` VALUES(690, 5, 11);
-INSERT INTO `billitems` VALUES(691, 5, 11);
-INSERT INTO `billitems` VALUES(692, 5, 11);
-INSERT INTO `billitems` VALUES(693, 5, 11);
-INSERT INTO `billitems` VALUES(694, 5, 11);
-INSERT INTO `billitems` VALUES(695, 5, 11);
-INSERT INTO `billitems` VALUES(696, 5, 11);
-INSERT INTO `billitems` VALUES(697, 5, 11);
-INSERT INTO `billitems` VALUES(698, 5, 11);
-INSERT INTO `billitems` VALUES(699, 5, 11);
-INSERT INTO `billitems` VALUES(700, 5, 11);
-INSERT INTO `billitems` VALUES(701, 5, 11);
-INSERT INTO `billitems` VALUES(702, 5, 11);
-INSERT INTO `billitems` VALUES(703, 5, 11);
-INSERT INTO `billitems` VALUES(704, 5, 11);
-INSERT INTO `billitems` VALUES(705, 5, 11);
-INSERT INTO `billitems` VALUES(706, 5, 11);
-INSERT INTO `billitems` VALUES(707, 5, 11);
-INSERT INTO `billitems` VALUES(708, 5, 11);
-INSERT INTO `billitems` VALUES(709, 5, 11);
-INSERT INTO `billitems` VALUES(710, 5, 11);
-INSERT INTO `billitems` VALUES(711, 5, 11);
-INSERT INTO `billitems` VALUES(712, 5, 11);
-INSERT INTO `billitems` VALUES(713, 5, 11);
-INSERT INTO `billitems` VALUES(714, 5, 11);
-INSERT INTO `billitems` VALUES(715, 5, 11);
-INSERT INTO `billitems` VALUES(716, 5, 11);
-INSERT INTO `billitems` VALUES(717, 5, 11);
-INSERT INTO `billitems` VALUES(718, 5, 11);
-INSERT INTO `billitems` VALUES(719, 5, 11);
-INSERT INTO `billitems` VALUES(720, 5, 11);
-INSERT INTO `billitems` VALUES(721, 5, 11);
-INSERT INTO `billitems` VALUES(722, 5, 11);
-INSERT INTO `billitems` VALUES(723, 5, 11);
-INSERT INTO `billitems` VALUES(724, 5, 11);
-INSERT INTO `billitems` VALUES(725, 5, 11);
-INSERT INTO `billitems` VALUES(726, 5, 11);
-INSERT INTO `billitems` VALUES(727, 5, 11);
-INSERT INTO `billitems` VALUES(728, 5, 11);
-INSERT INTO `billitems` VALUES(729, 5, 11);
-INSERT INTO `billitems` VALUES(730, 5, 11);
-INSERT INTO `billitems` VALUES(731, 5, 11);
-INSERT INTO `billitems` VALUES(732, 5, 11);
-INSERT INTO `billitems` VALUES(733, 5, 11);
-INSERT INTO `billitems` VALUES(734, 5, 11);
-INSERT INTO `billitems` VALUES(735, 5, 11);
-INSERT INTO `billitems` VALUES(736, 5, 11);
-INSERT INTO `billitems` VALUES(737, 5, 11);
-INSERT INTO `billitems` VALUES(738, 5, 11);
-INSERT INTO `billitems` VALUES(739, 5, 11);
-INSERT INTO `billitems` VALUES(740, 5, 11);
-INSERT INTO `billitems` VALUES(741, 5, 11);
-INSERT INTO `billitems` VALUES(742, 5, 11);
-INSERT INTO `billitems` VALUES(743, 5, 11);
-INSERT INTO `billitems` VALUES(744, 5, 11);
-INSERT INTO `billitems` VALUES(745, 5, 11);
-INSERT INTO `billitems` VALUES(746, 5, 11);
-INSERT INTO `billitems` VALUES(747, 5, 11);
-INSERT INTO `billitems` VALUES(748, 5, 11);
-INSERT INTO `billitems` VALUES(749, 5, 11);
-INSERT INTO `billitems` VALUES(750, 5, 11);
-INSERT INTO `billitems` VALUES(751, 5, 11);
-INSERT INTO `billitems` VALUES(752, 5, 11);
-INSERT INTO `billitems` VALUES(753, 5, 11);
-INSERT INTO `billitems` VALUES(754, 5, 11);
-INSERT INTO `billitems` VALUES(755, 5, 11);
-INSERT INTO `billitems` VALUES(756, 5, 11);
-INSERT INTO `billitems` VALUES(757, 5, 11);
-INSERT INTO `billitems` VALUES(758, 5, 11);
-INSERT INTO `billitems` VALUES(759, 5, 11);
-INSERT INTO `billitems` VALUES(760, 5, 11);
-INSERT INTO `billitems` VALUES(761, 5, 11);
-INSERT INTO `billitems` VALUES(762, 5, 11);
-INSERT INTO `billitems` VALUES(763, 5, 11);
-INSERT INTO `billitems` VALUES(764, 5, 11);
-INSERT INTO `billitems` VALUES(765, 5, 11);
-INSERT INTO `billitems` VALUES(766, 5, 11);
-INSERT INTO `billitems` VALUES(767, 5, 11);
-INSERT INTO `billitems` VALUES(768, 5, 11);
-INSERT INTO `billitems` VALUES(769, 5, 11);
-INSERT INTO `billitems` VALUES(770, 5, 11);
-INSERT INTO `billitems` VALUES(771, 5, 11);
-INSERT INTO `billitems` VALUES(772, 5, 11);
-INSERT INTO `billitems` VALUES(773, 5, 11);
-INSERT INTO `billitems` VALUES(774, 5, 11);
-INSERT INTO `billitems` VALUES(775, 5, 11);
-INSERT INTO `billitems` VALUES(776, 5, 11);
-INSERT INTO `billitems` VALUES(777, 5, 11);
-INSERT INTO `billitems` VALUES(778, 5, 11);
-INSERT INTO `billitems` VALUES(779, 5, 11);
-INSERT INTO `billitems` VALUES(780, 5, 11);
-INSERT INTO `billitems` VALUES(781, 5, 11);
-INSERT INTO `billitems` VALUES(782, 5, 11);
-INSERT INTO `billitems` VALUES(783, 5, 11);
-INSERT INTO `billitems` VALUES(784, 5, 11);
-INSERT INTO `billitems` VALUES(785, 5, 11);
-INSERT INTO `billitems` VALUES(786, 5, 11);
-INSERT INTO `billitems` VALUES(787, 5, 11);
-INSERT INTO `billitems` VALUES(788, 5, 11);
-INSERT INTO `billitems` VALUES(789, 5, 11);
-INSERT INTO `billitems` VALUES(790, 5, 11);
-INSERT INTO `billitems` VALUES(791, 5, 11);
-INSERT INTO `billitems` VALUES(792, 5, 11);
-INSERT INTO `billitems` VALUES(793, 5, 11);
-INSERT INTO `billitems` VALUES(794, 5, 11);
-INSERT INTO `billitems` VALUES(795, 5, 11);
-INSERT INTO `billitems` VALUES(796, 5, 11);
-INSERT INTO `billitems` VALUES(797, 5, 11);
-INSERT INTO `billitems` VALUES(798, 5, 11);
-INSERT INTO `billitems` VALUES(799, 5, 11);
-INSERT INTO `billitems` VALUES(800, 5, 11);
-INSERT INTO `billitems` VALUES(801, 5, 11);
-INSERT INTO `billitems` VALUES(802, 5, 11);
-INSERT INTO `billitems` VALUES(803, 5, 11);
-INSERT INTO `billitems` VALUES(804, 5, 11);
-INSERT INTO `billitems` VALUES(805, 5, 11);
-INSERT INTO `billitems` VALUES(806, 5, 11);
-INSERT INTO `billitems` VALUES(807, 5, 11);
-INSERT INTO `billitems` VALUES(808, 5, 11);
-INSERT INTO `billitems` VALUES(809, 5, 11);
-INSERT INTO `billitems` VALUES(810, 5, 11);
-INSERT INTO `billitems` VALUES(811, 5, 11);
-INSERT INTO `billitems` VALUES(812, 5, 11);
-INSERT INTO `billitems` VALUES(813, 5, 11);
-INSERT INTO `billitems` VALUES(814, 5, 11);
-INSERT INTO `billitems` VALUES(815, 5, 11);
-INSERT INTO `billitems` VALUES(816, 5, 11);
-INSERT INTO `billitems` VALUES(817, 5, 11);
-INSERT INTO `billitems` VALUES(818, 5, 11);
-INSERT INTO `billitems` VALUES(819, 5, 11);
-INSERT INTO `billitems` VALUES(820, 5, 11);
-INSERT INTO `billitems` VALUES(821, 5, 11);
-INSERT INTO `billitems` VALUES(822, 5, 11);
-INSERT INTO `billitems` VALUES(823, 5, 11);
-INSERT INTO `billitems` VALUES(824, 5, 11);
-INSERT INTO `billitems` VALUES(825, 5, 11);
-INSERT INTO `billitems` VALUES(826, 5, 11);
-INSERT INTO `billitems` VALUES(827, 5, 11);
-INSERT INTO `billitems` VALUES(828, 5, 11);
-INSERT INTO `billitems` VALUES(829, 5, 11);
-INSERT INTO `billitems` VALUES(830, 5, 11);
-INSERT INTO `billitems` VALUES(831, 5, 11);
-INSERT INTO `billitems` VALUES(832, 5, 11);
-INSERT INTO `billitems` VALUES(833, 5, 11);
-INSERT INTO `billitems` VALUES(834, 5, 11);
-INSERT INTO `billitems` VALUES(835, 5, 11);
-INSERT INTO `billitems` VALUES(836, 5, 11);
-INSERT INTO `billitems` VALUES(837, 5, 11);
-INSERT INTO `billitems` VALUES(838, 5, 11);
-INSERT INTO `billitems` VALUES(839, 5, 11);
-INSERT INTO `billitems` VALUES(840, 5, 11);
-INSERT INTO `billitems` VALUES(841, 5, 11);
-INSERT INTO `billitems` VALUES(842, 5, 11);
-INSERT INTO `billitems` VALUES(843, 5, 11);
-INSERT INTO `billitems` VALUES(844, 5, 11);
-INSERT INTO `billitems` VALUES(845, 5, 11);
-INSERT INTO `billitems` VALUES(846, 5, 11);
-INSERT INTO `billitems` VALUES(847, 5, 11);
-INSERT INTO `billitems` VALUES(848, 5, 11);
-INSERT INTO `billitems` VALUES(849, 5, 11);
-INSERT INTO `billitems` VALUES(850, 5, 11);
-INSERT INTO `billitems` VALUES(851, 5, 11);
-INSERT INTO `billitems` VALUES(852, 5, 11);
-INSERT INTO `billitems` VALUES(853, 5, 11);
-INSERT INTO `billitems` VALUES(854, 5, 11);
-INSERT INTO `billitems` VALUES(855, 5, 11);
-INSERT INTO `billitems` VALUES(856, 5, 11);
-INSERT INTO `billitems` VALUES(857, 5, 11);
-INSERT INTO `billitems` VALUES(858, 5, 11);
-INSERT INTO `billitems` VALUES(859, 5, 11);
-INSERT INTO `billitems` VALUES(860, 5, 11);
-INSERT INTO `billitems` VALUES(861, 5, 11);
-INSERT INTO `billitems` VALUES(862, 5, 11);
-INSERT INTO `billitems` VALUES(863, 5, 11);
-INSERT INTO `billitems` VALUES(864, 5, 11);
-INSERT INTO `billitems` VALUES(865, 5, 11);
-INSERT INTO `billitems` VALUES(866, 5, 11);
-INSERT INTO `billitems` VALUES(867, 5, 11);
-INSERT INTO `billitems` VALUES(868, 5, 11);
-INSERT INTO `billitems` VALUES(869, 5, 11);
-INSERT INTO `billitems` VALUES(870, 5, 11);
-INSERT INTO `billitems` VALUES(871, 5, 11);
-INSERT INTO `billitems` VALUES(872, 5, 11);
-INSERT INTO `billitems` VALUES(873, 5, 11);
-INSERT INTO `billitems` VALUES(874, 5, 11);
-INSERT INTO `billitems` VALUES(875, 5, 11);
-INSERT INTO `billitems` VALUES(876, 5, 11);
-INSERT INTO `billitems` VALUES(877, 5, 11);
-INSERT INTO `billitems` VALUES(878, 5, 11);
-INSERT INTO `billitems` VALUES(879, 5, 11);
-INSERT INTO `billitems` VALUES(880, 5, 11);
-INSERT INTO `billitems` VALUES(881, 5, 11);
-INSERT INTO `billitems` VALUES(882, 5, 11);
-INSERT INTO `billitems` VALUES(883, 5, 11);
-INSERT INTO `billitems` VALUES(884, 5, 11);
-INSERT INTO `billitems` VALUES(885, 5, 11);
-INSERT INTO `billitems` VALUES(886, 5, 11);
-INSERT INTO `billitems` VALUES(887, 5, 11);
-INSERT INTO `billitems` VALUES(888, 5, 11);
-INSERT INTO `billitems` VALUES(889, 5, 11);
-INSERT INTO `billitems` VALUES(890, 5, 11);
-INSERT INTO `billitems` VALUES(891, 5, 11);
-INSERT INTO `billitems` VALUES(892, 5, 11);
-INSERT INTO `billitems` VALUES(893, 5, 11);
-INSERT INTO `billitems` VALUES(894, 5, 11);
-INSERT INTO `billitems` VALUES(895, 5, 11);
-INSERT INTO `billitems` VALUES(896, 5, 11);
-INSERT INTO `billitems` VALUES(897, 5, 11);
-INSERT INTO `billitems` VALUES(898, 5, 11);
-INSERT INTO `billitems` VALUES(899, 5, 11);
-INSERT INTO `billitems` VALUES(900, 5, 11);
-INSERT INTO `billitems` VALUES(901, 5, 11);
-INSERT INTO `billitems` VALUES(902, 5, 11);
-INSERT INTO `billitems` VALUES(903, 5, 11);
-INSERT INTO `billitems` VALUES(904, 5, 11);
-INSERT INTO `billitems` VALUES(905, 5, 11);
-INSERT INTO `billitems` VALUES(906, 5, 11);
-INSERT INTO `billitems` VALUES(907, 5, 11);
-INSERT INTO `billitems` VALUES(908, 5, 11);
-INSERT INTO `billitems` VALUES(909, 5, 11);
-INSERT INTO `billitems` VALUES(910, 5, 11);
-INSERT INTO `billitems` VALUES(911, 5, 11);
-INSERT INTO `billitems` VALUES(912, 5, 11);
-INSERT INTO `billitems` VALUES(913, 5, 11);
-INSERT INTO `billitems` VALUES(914, 5, 11);
-INSERT INTO `billitems` VALUES(915, 5, 11);
-INSERT INTO `billitems` VALUES(916, 5, 11);
-INSERT INTO `billitems` VALUES(917, 5, 11);
-INSERT INTO `billitems` VALUES(918, 5, 11);
-INSERT INTO `billitems` VALUES(919, 5, 11);
-INSERT INTO `billitems` VALUES(920, 5, 11);
-INSERT INTO `billitems` VALUES(921, 5, 11);
-INSERT INTO `billitems` VALUES(922, 5, 11);
-INSERT INTO `billitems` VALUES(923, 5, 11);
-INSERT INTO `billitems` VALUES(924, 5, 11);
-INSERT INTO `billitems` VALUES(925, 5, 11);
-INSERT INTO `billitems` VALUES(926, 5, 11);
-INSERT INTO `billitems` VALUES(927, 5, 11);
-INSERT INTO `billitems` VALUES(928, 5, 11);
-INSERT INTO `billitems` VALUES(929, 5, 11);
-INSERT INTO `billitems` VALUES(930, 5, 11);
-INSERT INTO `billitems` VALUES(931, 5, 11);
-INSERT INTO `billitems` VALUES(932, 5, 11);
-INSERT INTO `billitems` VALUES(933, 5, 11);
-INSERT INTO `billitems` VALUES(934, 5, 11);
-INSERT INTO `billitems` VALUES(935, 5, 11);
-INSERT INTO `billitems` VALUES(936, 5, 11);
-INSERT INTO `billitems` VALUES(937, 5, 11);
-INSERT INTO `billitems` VALUES(938, 5, 11);
-INSERT INTO `billitems` VALUES(939, 5, 11);
-INSERT INTO `billitems` VALUES(940, 5, 11);
-INSERT INTO `billitems` VALUES(941, 5, 11);
-INSERT INTO `billitems` VALUES(942, 5, 11);
-INSERT INTO `billitems` VALUES(943, 5, 11);
-INSERT INTO `billitems` VALUES(944, 5, 11);
-INSERT INTO `billitems` VALUES(945, 5, 11);
-INSERT INTO `billitems` VALUES(946, 5, 11);
-INSERT INTO `billitems` VALUES(947, 5, 11);
-INSERT INTO `billitems` VALUES(948, 5, 11);
-INSERT INTO `billitems` VALUES(949, 5, 11);
-INSERT INTO `billitems` VALUES(950, 5, 11);
-INSERT INTO `billitems` VALUES(951, 5, 11);
-INSERT INTO `billitems` VALUES(952, 5, 11);
-INSERT INTO `billitems` VALUES(953, 5, 11);
-INSERT INTO `billitems` VALUES(954, 5, 11);
-INSERT INTO `billitems` VALUES(955, 5, 11);
-INSERT INTO `billitems` VALUES(956, 5, 11);
-INSERT INTO `billitems` VALUES(957, 5, 11);
-INSERT INTO `billitems` VALUES(958, 5, 11);
-INSERT INTO `billitems` VALUES(959, 5, 11);
-INSERT INTO `billitems` VALUES(960, 5, 11);
-INSERT INTO `billitems` VALUES(961, 5, 11);
-INSERT INTO `billitems` VALUES(962, 5, 11);
-INSERT INTO `billitems` VALUES(963, 5, 11);
-INSERT INTO `billitems` VALUES(964, 5, 11);
-INSERT INTO `billitems` VALUES(965, 5, 11);
-INSERT INTO `billitems` VALUES(966, 5, 11);
-INSERT INTO `billitems` VALUES(967, 5, 11);
-INSERT INTO `billitems` VALUES(968, 5, 11);
-INSERT INTO `billitems` VALUES(969, 5, 11);
-INSERT INTO `billitems` VALUES(970, 5, 11);
-INSERT INTO `billitems` VALUES(971, 5, 11);
-INSERT INTO `billitems` VALUES(972, 5, 11);
-INSERT INTO `billitems` VALUES(973, 5, 11);
-INSERT INTO `billitems` VALUES(974, 5, 11);
-INSERT INTO `billitems` VALUES(975, 5, 11);
-INSERT INTO `billitems` VALUES(976, 5, 11);
-INSERT INTO `billitems` VALUES(977, 5, 11);
-INSERT INTO `billitems` VALUES(978, 5, 11);
-INSERT INTO `billitems` VALUES(979, 5, 11);
-INSERT INTO `billitems` VALUES(980, 5, 11);
-INSERT INTO `billitems` VALUES(981, 5, 11);
-INSERT INTO `billitems` VALUES(982, 5, 11);
-INSERT INTO `billitems` VALUES(983, 5, 11);
-INSERT INTO `billitems` VALUES(984, 5, 11);
-INSERT INTO `billitems` VALUES(985, 5, 11);
-INSERT INTO `billitems` VALUES(986, 5, 11);
-INSERT INTO `billitems` VALUES(987, 5, 11);
-INSERT INTO `billitems` VALUES(988, 5, 11);
-INSERT INTO `billitems` VALUES(989, 5, 11);
-INSERT INTO `billitems` VALUES(990, 5, 11);
-INSERT INTO `billitems` VALUES(991, 5, 11);
-INSERT INTO `billitems` VALUES(992, 5, 11);
-INSERT INTO `billitems` VALUES(993, 5, 11);
-INSERT INTO `billitems` VALUES(994, 5, 11);
-INSERT INTO `billitems` VALUES(995, 5, 11);
-INSERT INTO `billitems` VALUES(996, 5, 11);
-INSERT INTO `billitems` VALUES(997, 5, 11);
-INSERT INTO `billitems` VALUES(998, 5, 11);
-INSERT INTO `billitems` VALUES(999, 5, 11);
-INSERT INTO `billitems` VALUES(1000, 5, 11);
-INSERT INTO `billitems` VALUES(1001, 5, 11);
-INSERT INTO `billitems` VALUES(1002, 5, 11);
-INSERT INTO `billitems` VALUES(1003, 5, 11);
-INSERT INTO `billitems` VALUES(1004, 5, 11);
-INSERT INTO `billitems` VALUES(1005, 5, 11);
-INSERT INTO `billitems` VALUES(1006, 5, 11);
-INSERT INTO `billitems` VALUES(1007, 5, 11);
-INSERT INTO `billitems` VALUES(1008, 5, 11);
-INSERT INTO `billitems` VALUES(1009, 5, 11);
-INSERT INTO `billitems` VALUES(1010, 5, 11);
-INSERT INTO `billitems` VALUES(1011, 5, 11);
-INSERT INTO `billitems` VALUES(1012, 5, 11);
-INSERT INTO `billitems` VALUES(1013, 5, 11);
-INSERT INTO `billitems` VALUES(1014, 5, 11);
-INSERT INTO `billitems` VALUES(1015, 5, 11);
-INSERT INTO `billitems` VALUES(1016, 5, 11);
-INSERT INTO `billitems` VALUES(1017, 5, 11);
-INSERT INTO `billitems` VALUES(1018, 5, 11);
-INSERT INTO `billitems` VALUES(1019, 5, 11);
-INSERT INTO `billitems` VALUES(1020, 5, 11);
-INSERT INTO `billitems` VALUES(1021, 5, 11);
-INSERT INTO `billitems` VALUES(1022, 5, 11);
-INSERT INTO `billitems` VALUES(1023, 5, 11);
-INSERT INTO `billitems` VALUES(1024, 5, 11);
-INSERT INTO `billitems` VALUES(1025, 5, 11);
-INSERT INTO `billitems` VALUES(1026, 5, 11);
-INSERT INTO `billitems` VALUES(1027, 5, 11);
-INSERT INTO `billitems` VALUES(1028, 5, 11);
-INSERT INTO `billitems` VALUES(1029, 5, 11);
-INSERT INTO `billitems` VALUES(1030, 5, 11);
-INSERT INTO `billitems` VALUES(1031, 5, 11);
-INSERT INTO `billitems` VALUES(1032, 5, 11);
-INSERT INTO `billitems` VALUES(1033, 5, 11);
-INSERT INTO `billitems` VALUES(1034, 5, 11);
-INSERT INTO `billitems` VALUES(1035, 5, 11);
-INSERT INTO `billitems` VALUES(1036, 5, 11);
-INSERT INTO `billitems` VALUES(1037, 5, 11);
-INSERT INTO `billitems` VALUES(1038, 5, 11);
-INSERT INTO `billitems` VALUES(1039, 5, 11);
-INSERT INTO `billitems` VALUES(1040, 5, 11);
-INSERT INTO `billitems` VALUES(1041, 5, 11);
-INSERT INTO `billitems` VALUES(1042, 5, 11);
-INSERT INTO `billitems` VALUES(1043, 5, 11);
-INSERT INTO `billitems` VALUES(1044, 5, 11);
-INSERT INTO `billitems` VALUES(1045, 5, 11);
-INSERT INTO `billitems` VALUES(1046, 5, 11);
-INSERT INTO `billitems` VALUES(1047, 5, 11);
-INSERT INTO `billitems` VALUES(1048, 5, 11);
-INSERT INTO `billitems` VALUES(1049, 5, 11);
-INSERT INTO `billitems` VALUES(1050, 5, 11);
-INSERT INTO `billitems` VALUES(1051, 5, 11);
-INSERT INTO `billitems` VALUES(1052, 5, 11);
-INSERT INTO `billitems` VALUES(1053, 5, 11);
-INSERT INTO `billitems` VALUES(1054, 5, 11);
-INSERT INTO `billitems` VALUES(1055, 5, 11);
-INSERT INTO `billitems` VALUES(1056, 5, 11);
-INSERT INTO `billitems` VALUES(1057, 5, 11);
-INSERT INTO `billitems` VALUES(1058, 5, 11);
-INSERT INTO `billitems` VALUES(1059, 5, 11);
-INSERT INTO `billitems` VALUES(1060, 5, 11);
-INSERT INTO `billitems` VALUES(1061, 5, 11);
-INSERT INTO `billitems` VALUES(1062, 5, 11);
-INSERT INTO `billitems` VALUES(1063, 5, 11);
-INSERT INTO `billitems` VALUES(1064, 5, 11);
-INSERT INTO `billitems` VALUES(1065, 5, 11);
-INSERT INTO `billitems` VALUES(1066, 5, 11);
-INSERT INTO `billitems` VALUES(1067, 5, 11);
-INSERT INTO `billitems` VALUES(1068, 5, 11);
-INSERT INTO `billitems` VALUES(1069, 5, 11);
-INSERT INTO `billitems` VALUES(1070, 5, 11);
-INSERT INTO `billitems` VALUES(1071, 5, 11);
-INSERT INTO `billitems` VALUES(1072, 5, 11);
-INSERT INTO `billitems` VALUES(1073, 5, 11);
-INSERT INTO `billitems` VALUES(1074, 5, 11);
-INSERT INTO `billitems` VALUES(1075, 5, 11);
-INSERT INTO `billitems` VALUES(1076, 5, 11);
-INSERT INTO `billitems` VALUES(1077, 5, 11);
-INSERT INTO `billitems` VALUES(1078, 5, 11);
-INSERT INTO `billitems` VALUES(1079, 5, 11);
-INSERT INTO `billitems` VALUES(1080, 5, 11);
-INSERT INTO `billitems` VALUES(1081, 5, 11);
-INSERT INTO `billitems` VALUES(1082, 5, 11);
-INSERT INTO `billitems` VALUES(1083, 5, 11);
-INSERT INTO `billitems` VALUES(1084, 5, 11);
-INSERT INTO `billitems` VALUES(1085, 5, 11);
-INSERT INTO `billitems` VALUES(1086, 5, 11);
-INSERT INTO `billitems` VALUES(1087, 5, 11);
-INSERT INTO `billitems` VALUES(1088, 5, 11);
-INSERT INTO `billitems` VALUES(1089, 5, 11);
-INSERT INTO `billitems` VALUES(1090, 5, 11);
-INSERT INTO `billitems` VALUES(1091, 5, 11);
-INSERT INTO `billitems` VALUES(1092, 5, 11);
-INSERT INTO `billitems` VALUES(1093, 5, 11);
-INSERT INTO `billitems` VALUES(1094, 5, 11);
-INSERT INTO `billitems` VALUES(1095, 5, 11);
-INSERT INTO `billitems` VALUES(1096, 5, 11);
-INSERT INTO `billitems` VALUES(1097, 5, 11);
-INSERT INTO `billitems` VALUES(1098, 5, 11);
-INSERT INTO `billitems` VALUES(1099, 5, 11);
-INSERT INTO `billitems` VALUES(1100, 5, 11);
-INSERT INTO `billitems` VALUES(1101, 5, 11);
-INSERT INTO `billitems` VALUES(1102, 5, 11);
-INSERT INTO `billitems` VALUES(1103, 5, 11);
-INSERT INTO `billitems` VALUES(1104, 5, 11);
-INSERT INTO `billitems` VALUES(1105, 5, 11);
-INSERT INTO `billitems` VALUES(1106, 5, 11);
-INSERT INTO `billitems` VALUES(1107, 5, 11);
-INSERT INTO `billitems` VALUES(1108, 5, 11);
-INSERT INTO `billitems` VALUES(1109, 5, 11);
-INSERT INTO `billitems` VALUES(1110, 5, 11);
-INSERT INTO `billitems` VALUES(1111, 5, 11);
-INSERT INTO `billitems` VALUES(1112, 5, 11);
-INSERT INTO `billitems` VALUES(1113, 5, 11);
-INSERT INTO `billitems` VALUES(1114, 5, 11);
-INSERT INTO `billitems` VALUES(1115, 5, 11);
-INSERT INTO `billitems` VALUES(1116, 5, 11);
-INSERT INTO `billitems` VALUES(1117, 5, 11);
-INSERT INTO `billitems` VALUES(1118, 5, 11);
-INSERT INTO `billitems` VALUES(1119, 5, 11);
-INSERT INTO `billitems` VALUES(1120, 5, 11);
-INSERT INTO `billitems` VALUES(1121, 5, 11);
-INSERT INTO `billitems` VALUES(1122, 5, 11);
-INSERT INTO `billitems` VALUES(1123, 5, 11);
-INSERT INTO `billitems` VALUES(1124, 5, 11);
-INSERT INTO `billitems` VALUES(1125, 5, 11);
-INSERT INTO `billitems` VALUES(1126, 5, 11);
-INSERT INTO `billitems` VALUES(1127, 5, 11);
-INSERT INTO `billitems` VALUES(1128, 5, 11);
-INSERT INTO `billitems` VALUES(1129, 5, 11);
-INSERT INTO `billitems` VALUES(1130, 5, 11);
-INSERT INTO `billitems` VALUES(1131, 5, 11);
-INSERT INTO `billitems` VALUES(1132, 5, 11);
-INSERT INTO `billitems` VALUES(1133, 5, 11);
-INSERT INTO `billitems` VALUES(1134, 5, 11);
-INSERT INTO `billitems` VALUES(1135, 5, 11);
-INSERT INTO `billitems` VALUES(1136, 5, 11);
-INSERT INTO `billitems` VALUES(1137, 5, 11);
-INSERT INTO `billitems` VALUES(1138, 5, 11);
-INSERT INTO `billitems` VALUES(1139, 5, 11);
-INSERT INTO `billitems` VALUES(1140, 5, 11);
-INSERT INTO `billitems` VALUES(1141, 5, 11);
-INSERT INTO `billitems` VALUES(1142, 5, 11);
-INSERT INTO `billitems` VALUES(1143, 5, 11);
-INSERT INTO `billitems` VALUES(1144, 5, 11);
-INSERT INTO `billitems` VALUES(1145, 5, 11);
-INSERT INTO `billitems` VALUES(1146, 5, 11);
-INSERT INTO `billitems` VALUES(1147, 5, 11);
-INSERT INTO `billitems` VALUES(1148, 5, 11);
-INSERT INTO `billitems` VALUES(1149, 5, 11);
-INSERT INTO `billitems` VALUES(1150, 5, 11);
-INSERT INTO `billitems` VALUES(1151, 5, 11);
-INSERT INTO `billitems` VALUES(1152, 5, 11);
-INSERT INTO `billitems` VALUES(1153, 5, 11);
-INSERT INTO `billitems` VALUES(1154, 5, 11);
-INSERT INTO `billitems` VALUES(1155, 5, 11);
-INSERT INTO `billitems` VALUES(1156, 5, 11);
-INSERT INTO `billitems` VALUES(1157, 5, 11);
-INSERT INTO `billitems` VALUES(1158, 5, 11);
-INSERT INTO `billitems` VALUES(1159, 5, 11);
-INSERT INTO `billitems` VALUES(1160, 5, 11);
-INSERT INTO `billitems` VALUES(1161, 5, 11);
-INSERT INTO `billitems` VALUES(1162, 5, 11);
-INSERT INTO `billitems` VALUES(1163, 5, 11);
-INSERT INTO `billitems` VALUES(1164, 5, 11);
-INSERT INTO `billitems` VALUES(1165, 5, 11);
-INSERT INTO `billitems` VALUES(1166, 5, 11);
-INSERT INTO `billitems` VALUES(1167, 5, 11);
-INSERT INTO `billitems` VALUES(1168, 5, 11);
-INSERT INTO `billitems` VALUES(1169, 5, 11);
-INSERT INTO `billitems` VALUES(1170, 5, 11);
-INSERT INTO `billitems` VALUES(1171, 5, 11);
-INSERT INTO `billitems` VALUES(1172, 5, 11);
-INSERT INTO `billitems` VALUES(1173, 5, 11);
-INSERT INTO `billitems` VALUES(1174, 5, 11);
-INSERT INTO `billitems` VALUES(1175, 5, 11);
-INSERT INTO `billitems` VALUES(1176, 5, 11);
-INSERT INTO `billitems` VALUES(1177, 5, 11);
-INSERT INTO `billitems` VALUES(1178, 5, 11);
-INSERT INTO `billitems` VALUES(1179, 5, 11);
-INSERT INTO `billitems` VALUES(1180, 5, 11);
-INSERT INTO `billitems` VALUES(1181, 5, 11);
-INSERT INTO `billitems` VALUES(1182, 5, 11);
-INSERT INTO `billitems` VALUES(1183, 5, 11);
-INSERT INTO `billitems` VALUES(1184, 5, 11);
-INSERT INTO `billitems` VALUES(1185, 5, 11);
-INSERT INTO `billitems` VALUES(1186, 5, 11);
-INSERT INTO `billitems` VALUES(1187, 5, 11);
-INSERT INTO `billitems` VALUES(1188, 5, 11);
-INSERT INTO `billitems` VALUES(1189, 5, 11);
-INSERT INTO `billitems` VALUES(1190, 5, 11);
-INSERT INTO `billitems` VALUES(1191, 5, 11);
-INSERT INTO `billitems` VALUES(1192, 5, 11);
-INSERT INTO `billitems` VALUES(1193, 5, 11);
-INSERT INTO `billitems` VALUES(1194, 5, 11);
-INSERT INTO `billitems` VALUES(1195, 5, 11);
-INSERT INTO `billitems` VALUES(1196, 5, 11);
-INSERT INTO `billitems` VALUES(1197, 5, 11);
-INSERT INTO `billitems` VALUES(1198, 5, 11);
-INSERT INTO `billitems` VALUES(1199, 5, 11);
-INSERT INTO `billitems` VALUES(1200, 5, 11);
-INSERT INTO `billitems` VALUES(1201, 5, 11);
-INSERT INTO `billitems` VALUES(1202, 5, 11);
-INSERT INTO `billitems` VALUES(1203, 5, 11);
-INSERT INTO `billitems` VALUES(1204, 5, 11);
-INSERT INTO `billitems` VALUES(1205, 5, 11);
-INSERT INTO `billitems` VALUES(1206, 5, 11);
-INSERT INTO `billitems` VALUES(1207, 5, 11);
-INSERT INTO `billitems` VALUES(1208, 5, 11);
-INSERT INTO `billitems` VALUES(1209, 5, 11);
-INSERT INTO `billitems` VALUES(1210, 5, 11);
-INSERT INTO `billitems` VALUES(1211, 5, 11);
-INSERT INTO `billitems` VALUES(1212, 5, 11);
-INSERT INTO `billitems` VALUES(1213, 5, 11);
-INSERT INTO `billitems` VALUES(1214, 5, 11);
-INSERT INTO `billitems` VALUES(1215, 5, 11);
-INSERT INTO `billitems` VALUES(1216, 5, 11);
-INSERT INTO `billitems` VALUES(1217, 5, 11);
-INSERT INTO `billitems` VALUES(1218, 5, 11);
-INSERT INTO `billitems` VALUES(1219, 5, 11);
-INSERT INTO `billitems` VALUES(1220, 5, 11);
-INSERT INTO `billitems` VALUES(1221, 5, 11);
-INSERT INTO `billitems` VALUES(1222, 5, 11);
-INSERT INTO `billitems` VALUES(1223, 5, 11);
-INSERT INTO `billitems` VALUES(1224, 5, 11);
-INSERT INTO `billitems` VALUES(1225, 5, 11);
-INSERT INTO `billitems` VALUES(1226, 5, 11);
-INSERT INTO `billitems` VALUES(1227, 5, 11);
-INSERT INTO `billitems` VALUES(1228, 5, 11);
-INSERT INTO `billitems` VALUES(1229, 5, 11);
-INSERT INTO `billitems` VALUES(1230, 5, 11);
-INSERT INTO `billitems` VALUES(1231, 5, 11);
-INSERT INTO `billitems` VALUES(1232, 5, 11);
-INSERT INTO `billitems` VALUES(1233, 5, 11);
-INSERT INTO `billitems` VALUES(1234, 5, 11);
-INSERT INTO `billitems` VALUES(1235, 5, 11);
-INSERT INTO `billitems` VALUES(1236, 5, 11);
-INSERT INTO `billitems` VALUES(1237, 5, 11);
-INSERT INTO `billitems` VALUES(1238, 5, 11);
-INSERT INTO `billitems` VALUES(1239, 5, 11);
-INSERT INTO `billitems` VALUES(1240, 5, 11);
-INSERT INTO `billitems` VALUES(1241, 5, 11);
-INSERT INTO `billitems` VALUES(1242, 5, 11);
-INSERT INTO `billitems` VALUES(1243, 5, 11);
-INSERT INTO `billitems` VALUES(1244, 5, 11);
-INSERT INTO `billitems` VALUES(1245, 5, 11);
-INSERT INTO `billitems` VALUES(1246, 5, 11);
-INSERT INTO `billitems` VALUES(1247, 5, 11);
-INSERT INTO `billitems` VALUES(1248, 5, 11);
-INSERT INTO `billitems` VALUES(1249, 5, 11);
-INSERT INTO `billitems` VALUES(1250, 5, 11);
-INSERT INTO `billitems` VALUES(1251, 5, 11);
-INSERT INTO `billitems` VALUES(1252, 5, 11);
-INSERT INTO `billitems` VALUES(1253, 5, 11);
-INSERT INTO `billitems` VALUES(1254, 5, 11);
-INSERT INTO `billitems` VALUES(1255, 5, 11);
-INSERT INTO `billitems` VALUES(1256, 5, 11);
-INSERT INTO `billitems` VALUES(1257, 5, 11);
-INSERT INTO `billitems` VALUES(1258, 5, 11);
-INSERT INTO `billitems` VALUES(1259, 5, 11);
-INSERT INTO `billitems` VALUES(1260, 5, 11);
-INSERT INTO `billitems` VALUES(1261, 5, 11);
-INSERT INTO `billitems` VALUES(1262, 5, 11);
-INSERT INTO `billitems` VALUES(1263, 5, 11);
-INSERT INTO `billitems` VALUES(1264, 5, 11);
-INSERT INTO `billitems` VALUES(1265, 5, 11);
-INSERT INTO `billitems` VALUES(1266, 5, 11);
-INSERT INTO `billitems` VALUES(1267, 5, 11);
-INSERT INTO `billitems` VALUES(1268, 5, 11);
-INSERT INTO `billitems` VALUES(1269, 5, 11);
-INSERT INTO `billitems` VALUES(1270, 5, 11);
-INSERT INTO `billitems` VALUES(1271, 5, 11);
-INSERT INTO `billitems` VALUES(1272, 5, 11);
-INSERT INTO `billitems` VALUES(1273, 5, 11);
-INSERT INTO `billitems` VALUES(1274, 5, 11);
-INSERT INTO `billitems` VALUES(1275, 5, 11);
-INSERT INTO `billitems` VALUES(1276, 5, 11);
-INSERT INTO `billitems` VALUES(1277, 5, 11);
-INSERT INTO `billitems` VALUES(1278, 5, 11);
-INSERT INTO `billitems` VALUES(1279, 5, 11);
-INSERT INTO `billitems` VALUES(1280, 5, 11);
-INSERT INTO `billitems` VALUES(1281, 5, 11);
-INSERT INTO `billitems` VALUES(1282, 5, 11);
-INSERT INTO `billitems` VALUES(1283, 5, 11);
-INSERT INTO `billitems` VALUES(1284, 5, 11);
-INSERT INTO `billitems` VALUES(1285, 5, 11);
-INSERT INTO `billitems` VALUES(1286, 5, 11);
-INSERT INTO `billitems` VALUES(1287, 5, 11);
-INSERT INTO `billitems` VALUES(1288, 5, 11);
-INSERT INTO `billitems` VALUES(1289, 5, 11);
-INSERT INTO `billitems` VALUES(1290, 5, 11);
-INSERT INTO `billitems` VALUES(1291, 5, 11);
-INSERT INTO `billitems` VALUES(1292, 5, 11);
-INSERT INTO `billitems` VALUES(1293, 5, 11);
-INSERT INTO `billitems` VALUES(1294, 5, 11);
-INSERT INTO `billitems` VALUES(1295, 5, 11);
-INSERT INTO `billitems` VALUES(1296, 5, 11);
-INSERT INTO `billitems` VALUES(1297, 5, 11);
-INSERT INTO `billitems` VALUES(1298, 5, 11);
-INSERT INTO `billitems` VALUES(1299, 5, 11);
-INSERT INTO `billitems` VALUES(1300, 5, 11);
-INSERT INTO `billitems` VALUES(1301, 5, 11);
-INSERT INTO `billitems` VALUES(1302, 5, 11);
-INSERT INTO `billitems` VALUES(1303, 5, 11);
-INSERT INTO `billitems` VALUES(1304, 5, 11);
-INSERT INTO `billitems` VALUES(1305, 5, 11);
-INSERT INTO `billitems` VALUES(1306, 5, 11);
-INSERT INTO `billitems` VALUES(1307, 5, 11);
-INSERT INTO `billitems` VALUES(1308, 5, 11);
-INSERT INTO `billitems` VALUES(1309, 5, 11);
-INSERT INTO `billitems` VALUES(1310, 5, 11);
-INSERT INTO `billitems` VALUES(1311, 5, 11);
-INSERT INTO `billitems` VALUES(1312, 5, 11);
-INSERT INTO `billitems` VALUES(1313, 5, 11);
-INSERT INTO `billitems` VALUES(1314, 5, 11);
-INSERT INTO `billitems` VALUES(1315, 5, 11);
-INSERT INTO `billitems` VALUES(1316, 5, 11);
-INSERT INTO `billitems` VALUES(1317, 5, 11);
-INSERT INTO `billitems` VALUES(1318, 5, 11);
-INSERT INTO `billitems` VALUES(1319, 5, 11);
-INSERT INTO `billitems` VALUES(1320, 5, 11);
-INSERT INTO `billitems` VALUES(1321, 5, 11);
-INSERT INTO `billitems` VALUES(1322, 5, 11);
-INSERT INTO `billitems` VALUES(1323, 5, 11);
-INSERT INTO `billitems` VALUES(1324, 5, 11);
-INSERT INTO `billitems` VALUES(1325, 5, 11);
-INSERT INTO `billitems` VALUES(1326, 5, 11);
-INSERT INTO `billitems` VALUES(1327, 5, 11);
-INSERT INTO `billitems` VALUES(1328, 5, 11);
-INSERT INTO `billitems` VALUES(1329, 5, 11);
-INSERT INTO `billitems` VALUES(1330, 5, 11);
-INSERT INTO `billitems` VALUES(1331, 5, 11);
-INSERT INTO `billitems` VALUES(1332, 5, 11);
-INSERT INTO `billitems` VALUES(1333, 5, 11);
-INSERT INTO `billitems` VALUES(1334, 5, 11);
-INSERT INTO `billitems` VALUES(1335, 5, 11);
-INSERT INTO `billitems` VALUES(1336, 5, 11);
-INSERT INTO `billitems` VALUES(1337, 5, 11);
-INSERT INTO `billitems` VALUES(1338, 5, 11);
-INSERT INTO `billitems` VALUES(1339, 5, 11);
-INSERT INTO `billitems` VALUES(1340, 5, 11);
-INSERT INTO `billitems` VALUES(1341, 5, 11);
-INSERT INTO `billitems` VALUES(1342, 5, 11);
-INSERT INTO `billitems` VALUES(1343, 5, 11);
-INSERT INTO `billitems` VALUES(1344, 5, 11);
-INSERT INTO `billitems` VALUES(1345, 5, 11);
-INSERT INTO `billitems` VALUES(1346, 5, 11);
-INSERT INTO `billitems` VALUES(1347, 5, 11);
-INSERT INTO `billitems` VALUES(1348, 5, 11);
-INSERT INTO `billitems` VALUES(1349, 5, 11);
-INSERT INTO `billitems` VALUES(1350, 5, 11);
-INSERT INTO `billitems` VALUES(1351, 5, 11);
-INSERT INTO `billitems` VALUES(1352, 5, 11);
-INSERT INTO `billitems` VALUES(1353, 5, 11);
-INSERT INTO `billitems` VALUES(1354, 5, 11);
-INSERT INTO `billitems` VALUES(1355, 5, 11);
-INSERT INTO `billitems` VALUES(1356, 5, 11);
-INSERT INTO `billitems` VALUES(1357, 5, 11);
-INSERT INTO `billitems` VALUES(1358, 5, 11);
-INSERT INTO `billitems` VALUES(1359, 5, 11);
-INSERT INTO `billitems` VALUES(1360, 5, 11);
-INSERT INTO `billitems` VALUES(1361, 5, 11);
-INSERT INTO `billitems` VALUES(1362, 5, 11);
-INSERT INTO `billitems` VALUES(1363, 5, 11);
-INSERT INTO `billitems` VALUES(1364, 5, 11);
-INSERT INTO `billitems` VALUES(1365, 5, 11);
-INSERT INTO `billitems` VALUES(1366, 5, 11);
-INSERT INTO `billitems` VALUES(1367, 5, 11);
-INSERT INTO `billitems` VALUES(1368, 5, 11);
-INSERT INTO `billitems` VALUES(1369, 5, 11);
-INSERT INTO `billitems` VALUES(1370, 5, 11);
-INSERT INTO `billitems` VALUES(1371, 5, 11);
-INSERT INTO `billitems` VALUES(1372, 5, 11);
-INSERT INTO `billitems` VALUES(1373, 5, 11);
-INSERT INTO `billitems` VALUES(1374, 5, 11);
-INSERT INTO `billitems` VALUES(1375, 5, 11);
-INSERT INTO `billitems` VALUES(1376, 5, 11);
-INSERT INTO `billitems` VALUES(1377, 5, 11);
-INSERT INTO `billitems` VALUES(1378, 5, 11);
-INSERT INTO `billitems` VALUES(1379, 5, 11);
-INSERT INTO `billitems` VALUES(1380, 5, 11);
-INSERT INTO `billitems` VALUES(1381, 5, 11);
-INSERT INTO `billitems` VALUES(1382, 5, 11);
-INSERT INTO `billitems` VALUES(1383, 5, 11);
-INSERT INTO `billitems` VALUES(1384, 5, 11);
-INSERT INTO `billitems` VALUES(1385, 5, 11);
-INSERT INTO `billitems` VALUES(1386, 5, 11);
-INSERT INTO `billitems` VALUES(1387, 5, 11);
-INSERT INTO `billitems` VALUES(1388, 5, 11);
-INSERT INTO `billitems` VALUES(1389, 5, 11);
-INSERT INTO `billitems` VALUES(1390, 5, 11);
-INSERT INTO `billitems` VALUES(1391, 5, 11);
-INSERT INTO `billitems` VALUES(1392, 5, 11);
-INSERT INTO `billitems` VALUES(1393, 5, 11);
-INSERT INTO `billitems` VALUES(1394, 5, 11);
-INSERT INTO `billitems` VALUES(1395, 5, 11);
-INSERT INTO `billitems` VALUES(1396, 5, 11);
-INSERT INTO `billitems` VALUES(1397, 5, 11);
-INSERT INTO `billitems` VALUES(1398, 5, 11);
-INSERT INTO `billitems` VALUES(1399, 5, 11);
-INSERT INTO `billitems` VALUES(1400, 5, 11);
-INSERT INTO `billitems` VALUES(1401, 5, 11);
-INSERT INTO `billitems` VALUES(1402, 5, 11);
-INSERT INTO `billitems` VALUES(1403, 5, 11);
-INSERT INTO `billitems` VALUES(1404, 5, 11);
-INSERT INTO `billitems` VALUES(1405, 5, 11);
-INSERT INTO `billitems` VALUES(1406, 5, 11);
-INSERT INTO `billitems` VALUES(1407, 5, 11);
-INSERT INTO `billitems` VALUES(1408, 5, 11);
-INSERT INTO `billitems` VALUES(1409, 5, 11);
-INSERT INTO `billitems` VALUES(1410, 5, 11);
-INSERT INTO `billitems` VALUES(1411, 5, 11);
-INSERT INTO `billitems` VALUES(1412, 5, 11);
-INSERT INTO `billitems` VALUES(1413, 5, 11);
-INSERT INTO `billitems` VALUES(1414, 5, 11);
-INSERT INTO `billitems` VALUES(1415, 5, 11);
-INSERT INTO `billitems` VALUES(1416, 5, 11);
-INSERT INTO `billitems` VALUES(1417, 5, 11);
-INSERT INTO `billitems` VALUES(1418, 5, 11);
-INSERT INTO `billitems` VALUES(1419, 5, 11);
-INSERT INTO `billitems` VALUES(1420, 5, 11);
-INSERT INTO `billitems` VALUES(1421, 5, 11);
-INSERT INTO `billitems` VALUES(1422, 5, 11);
-INSERT INTO `billitems` VALUES(1423, 5, 11);
-INSERT INTO `billitems` VALUES(1424, 5, 11);
-INSERT INTO `billitems` VALUES(1425, 5, 11);
-INSERT INTO `billitems` VALUES(1426, 5, 11);
-INSERT INTO `billitems` VALUES(1427, 5, 11);
-INSERT INTO `billitems` VALUES(1428, 5, 11);
-INSERT INTO `billitems` VALUES(1429, 5, 11);
-INSERT INTO `billitems` VALUES(1430, 5, 11);
-INSERT INTO `billitems` VALUES(1431, 5, 11);
-INSERT INTO `billitems` VALUES(1432, 5, 11);
-INSERT INTO `billitems` VALUES(1433, 5, 11);
-INSERT INTO `billitems` VALUES(1434, 5, 11);
-INSERT INTO `billitems` VALUES(1435, 5, 11);
-INSERT INTO `billitems` VALUES(1436, 5, 11);
-INSERT INTO `billitems` VALUES(1437, 5, 11);
-INSERT INTO `billitems` VALUES(1438, 5, 11);
-INSERT INTO `billitems` VALUES(1439, 5, 11);
-INSERT INTO `billitems` VALUES(1440, 5, 11);
-INSERT INTO `billitems` VALUES(1441, 5, 11);
-INSERT INTO `billitems` VALUES(1442, 5, 11);
-INSERT INTO `billitems` VALUES(1443, 5, 11);
-INSERT INTO `billitems` VALUES(1444, 5, 11);
-INSERT INTO `billitems` VALUES(1445, 5, 11);
-INSERT INTO `billitems` VALUES(1446, 5, 11);
-INSERT INTO `billitems` VALUES(1447, 5, 11);
-INSERT INTO `billitems` VALUES(1448, 5, 11);
-INSERT INTO `billitems` VALUES(1449, 5, 11);
-INSERT INTO `billitems` VALUES(1450, 5, 11);
-INSERT INTO `billitems` VALUES(1451, 5, 11);
-INSERT INTO `billitems` VALUES(1452, 5, 11);
-INSERT INTO `billitems` VALUES(1453, 5, 11);
-INSERT INTO `billitems` VALUES(1454, 5, 11);
-INSERT INTO `billitems` VALUES(1455, 5, 11);
-INSERT INTO `billitems` VALUES(1456, 5, 11);
-INSERT INTO `billitems` VALUES(1457, 5, 11);
-INSERT INTO `billitems` VALUES(1458, 5, 11);
-INSERT INTO `billitems` VALUES(1459, 5, 11);
-INSERT INTO `billitems` VALUES(1460, 5, 11);
-INSERT INTO `billitems` VALUES(1461, 5, 11);
-INSERT INTO `billitems` VALUES(1462, 5, 11);
-INSERT INTO `billitems` VALUES(1463, 5, 11);
-INSERT INTO `billitems` VALUES(1464, 5, 11);
-INSERT INTO `billitems` VALUES(1465, 5, 11);
-INSERT INTO `billitems` VALUES(1466, 5, 11);
-INSERT INTO `billitems` VALUES(1467, 5, 11);
-INSERT INTO `billitems` VALUES(1468, 5, 11);
-INSERT INTO `billitems` VALUES(1469, 5, 11);
-INSERT INTO `billitems` VALUES(1470, 5, 11);
-INSERT INTO `billitems` VALUES(1471, 5, 11);
-INSERT INTO `billitems` VALUES(1472, 5, 11);
-INSERT INTO `billitems` VALUES(1473, 5, 11);
-INSERT INTO `billitems` VALUES(1474, 5, 11);
-INSERT INTO `billitems` VALUES(1475, 5, 11);
-INSERT INTO `billitems` VALUES(1476, 5, 11);
-INSERT INTO `billitems` VALUES(1477, 5, 11);
-INSERT INTO `billitems` VALUES(1478, 5, 11);
-INSERT INTO `billitems` VALUES(1479, 5, 11);
-INSERT INTO `billitems` VALUES(1480, 5, 11);
-INSERT INTO `billitems` VALUES(1481, 5, 11);
-INSERT INTO `billitems` VALUES(1482, 5, 11);
-INSERT INTO `billitems` VALUES(1483, 5, 11);
-INSERT INTO `billitems` VALUES(1484, 5, 11);
-INSERT INTO `billitems` VALUES(1485, 5, 11);
-INSERT INTO `billitems` VALUES(1486, 5, 11);
-INSERT INTO `billitems` VALUES(1487, 5, 11);
-INSERT INTO `billitems` VALUES(1488, 5, 11);
-INSERT INTO `billitems` VALUES(1489, 5, 11);
-INSERT INTO `billitems` VALUES(1490, 5, 11);
-INSERT INTO `billitems` VALUES(1491, 5, 11);
-INSERT INTO `billitems` VALUES(1492, 5, 11);
-INSERT INTO `billitems` VALUES(1493, 5, 11);
-INSERT INTO `billitems` VALUES(1494, 5, 11);
-INSERT INTO `billitems` VALUES(1495, 5, 11);
-INSERT INTO `billitems` VALUES(1496, 5, 11);
-INSERT INTO `billitems` VALUES(1497, 5, 11);
-INSERT INTO `billitems` VALUES(1498, 5, 11);
-INSERT INTO `billitems` VALUES(1499, 5, 11);
-INSERT INTO `billitems` VALUES(1500, 5, 11);
-INSERT INTO `billitems` VALUES(1501, 5, 11);
-INSERT INTO `billitems` VALUES(1502, 5, 11);
-INSERT INTO `billitems` VALUES(1503, 5, 11);
-INSERT INTO `billitems` VALUES(1504, 5, 11);
-INSERT INTO `billitems` VALUES(1505, 5, 11);
-INSERT INTO `billitems` VALUES(1506, 5, 11);
-INSERT INTO `billitems` VALUES(1507, 5, 11);
-INSERT INTO `billitems` VALUES(1508, 5, 11);
-INSERT INTO `billitems` VALUES(1509, 5, 11);
-INSERT INTO `billitems` VALUES(1510, 5, 11);
-INSERT INTO `billitems` VALUES(1511, 5, 11);
-INSERT INTO `billitems` VALUES(1512, 5, 11);
-INSERT INTO `billitems` VALUES(1513, 5, 11);
-INSERT INTO `billitems` VALUES(1514, 5, 11);
-INSERT INTO `billitems` VALUES(1515, 5, 11);
-INSERT INTO `billitems` VALUES(1516, 5, 11);
-INSERT INTO `billitems` VALUES(1517, 5, 11);
-INSERT INTO `billitems` VALUES(1518, 5, 11);
-INSERT INTO `billitems` VALUES(1519, 5, 11);
-INSERT INTO `billitems` VALUES(1520, 5, 11);
-INSERT INTO `billitems` VALUES(1521, 5, 11);
-INSERT INTO `billitems` VALUES(1522, 5, 11);
-INSERT INTO `billitems` VALUES(1523, 5, 11);
-INSERT INTO `billitems` VALUES(1524, 5, 11);
-INSERT INTO `billitems` VALUES(1525, 5, 11);
-INSERT INTO `billitems` VALUES(1526, 5, 11);
-INSERT INTO `billitems` VALUES(1527, 5, 11);
-INSERT INTO `billitems` VALUES(1528, 5, 11);
-INSERT INTO `billitems` VALUES(1529, 5, 11);
-INSERT INTO `billitems` VALUES(1530, 5, 11);
-INSERT INTO `billitems` VALUES(1531, 5, 11);
-INSERT INTO `billitems` VALUES(1532, 5, 11);
-INSERT INTO `billitems` VALUES(1533, 5, 11);
-INSERT INTO `billitems` VALUES(1534, 5, 11);
-INSERT INTO `billitems` VALUES(1535, 5, 11);
-INSERT INTO `billitems` VALUES(1536, 5, 11);
-INSERT INTO `billitems` VALUES(1537, 5, 11);
-INSERT INTO `billitems` VALUES(1538, 5, 11);
-INSERT INTO `billitems` VALUES(1539, 5, 11);
-INSERT INTO `billitems` VALUES(1540, 5, 11);
-INSERT INTO `billitems` VALUES(1541, 5, 11);
-INSERT INTO `billitems` VALUES(1542, 5, 11);
-INSERT INTO `billitems` VALUES(1543, 5, 11);
-INSERT INTO `billitems` VALUES(1544, 5, 11);
-INSERT INTO `billitems` VALUES(1545, 5, 11);
-INSERT INTO `billitems` VALUES(1546, 5, 11);
-INSERT INTO `billitems` VALUES(1547, 5, 11);
-INSERT INTO `billitems` VALUES(1548, 5, 11);
-INSERT INTO `billitems` VALUES(1549, 5, 11);
-INSERT INTO `billitems` VALUES(1550, 5, 11);
-INSERT INTO `billitems` VALUES(1551, 5, 11);
-INSERT INTO `billitems` VALUES(1552, 5, 11);
-INSERT INTO `billitems` VALUES(1553, 5, 11);
-INSERT INTO `billitems` VALUES(1554, 5, 11);
-INSERT INTO `billitems` VALUES(1555, 5, 11);
-INSERT INTO `billitems` VALUES(1556, 5, 11);
-INSERT INTO `billitems` VALUES(1557, 5, 11);
-INSERT INTO `billitems` VALUES(1558, 5, 11);
-INSERT INTO `billitems` VALUES(1559, 5, 11);
-INSERT INTO `billitems` VALUES(1560, 5, 11);
-INSERT INTO `billitems` VALUES(1561, 5, 11);
-INSERT INTO `billitems` VALUES(1562, 5, 11);
-INSERT INTO `billitems` VALUES(1563, 5, 11);
-INSERT INTO `billitems` VALUES(1564, 5, 11);
-INSERT INTO `billitems` VALUES(1565, 5, 11);
-INSERT INTO `billitems` VALUES(1566, 5, 11);
-INSERT INTO `billitems` VALUES(1567, 5, 11);
-INSERT INTO `billitems` VALUES(1568, 5, 11);
-INSERT INTO `billitems` VALUES(1569, 5, 11);
-INSERT INTO `billitems` VALUES(1570, 5, 11);
-INSERT INTO `billitems` VALUES(1571, 5, 11);
-INSERT INTO `billitems` VALUES(1572, 5, 11);
-INSERT INTO `billitems` VALUES(1573, 5, 11);
-INSERT INTO `billitems` VALUES(1574, 5, 11);
-INSERT INTO `billitems` VALUES(1575, 5, 11);
-INSERT INTO `billitems` VALUES(1576, 5, 11);
-INSERT INTO `billitems` VALUES(1577, 5, 11);
-INSERT INTO `billitems` VALUES(1578, 5, 11);
-INSERT INTO `billitems` VALUES(1579, 5, 11);
-INSERT INTO `billitems` VALUES(1580, 5, 11);
-INSERT INTO `billitems` VALUES(1581, 5, 11);
-INSERT INTO `billitems` VALUES(1582, 5, 11);
-INSERT INTO `billitems` VALUES(1583, 5, 11);
-INSERT INTO `billitems` VALUES(1584, 5, 11);
-INSERT INTO `billitems` VALUES(1585, 5, 11);
-INSERT INTO `billitems` VALUES(1586, 5, 11);
-INSERT INTO `billitems` VALUES(1587, 5, 11);
-INSERT INTO `billitems` VALUES(1588, 5, 11);
-INSERT INTO `billitems` VALUES(1589, 5, 11);
-INSERT INTO `billitems` VALUES(1590, 5, 11);
-INSERT INTO `billitems` VALUES(1591, 5, 11);
-INSERT INTO `billitems` VALUES(1592, 5, 11);
-INSERT INTO `billitems` VALUES(1593, 5, 11);
-INSERT INTO `billitems` VALUES(1594, 5, 11);
-INSERT INTO `billitems` VALUES(1595, 5, 11);
-INSERT INTO `billitems` VALUES(1596, 5, 11);
-INSERT INTO `billitems` VALUES(1597, 5, 11);
-INSERT INTO `billitems` VALUES(1598, 5, 11);
-INSERT INTO `billitems` VALUES(1599, 5, 11);
-INSERT INTO `billitems` VALUES(1600, 5, 11);
-INSERT INTO `billitems` VALUES(1601, 5, 11);
-INSERT INTO `billitems` VALUES(1602, 5, 11);
-INSERT INTO `billitems` VALUES(1603, 5, 11);
-INSERT INTO `billitems` VALUES(1604, 5, 11);
-INSERT INTO `billitems` VALUES(1605, 5, 11);
-INSERT INTO `billitems` VALUES(1606, 5, 11);
-INSERT INTO `billitems` VALUES(1607, 5, 11);
-INSERT INTO `billitems` VALUES(1608, 5, 11);
-INSERT INTO `billitems` VALUES(1609, 5, 11);
-INSERT INTO `billitems` VALUES(1610, 5, 11);
-INSERT INTO `billitems` VALUES(1611, 5, 11);
-INSERT INTO `billitems` VALUES(1612, 5, 11);
-INSERT INTO `billitems` VALUES(1613, 5, 11);
-INSERT INTO `billitems` VALUES(1614, 5, 11);
-INSERT INTO `billitems` VALUES(1615, 5, 11);
-INSERT INTO `billitems` VALUES(1616, 5, 11);
-INSERT INTO `billitems` VALUES(1617, 5, 11);
-INSERT INTO `billitems` VALUES(1618, 5, 11);
-INSERT INTO `billitems` VALUES(1619, 5, 11);
-INSERT INTO `billitems` VALUES(1620, 5, 11);
-INSERT INTO `billitems` VALUES(1621, 5, 11);
-INSERT INTO `billitems` VALUES(1622, 5, 11);
-INSERT INTO `billitems` VALUES(1623, 5, 11);
-INSERT INTO `billitems` VALUES(1624, 5, 11);
-INSERT INTO `billitems` VALUES(1625, 5, 11);
-INSERT INTO `billitems` VALUES(1626, 5, 11);
-INSERT INTO `billitems` VALUES(1627, 5, 11);
-INSERT INTO `billitems` VALUES(1628, 5, 11);
-INSERT INTO `billitems` VALUES(1629, 5, 11);
-INSERT INTO `billitems` VALUES(1630, 5, 11);
-INSERT INTO `billitems` VALUES(1631, 5, 11);
-INSERT INTO `billitems` VALUES(1632, 5, 11);
-INSERT INTO `billitems` VALUES(1633, 5, 11);
-INSERT INTO `billitems` VALUES(1634, 5, 11);
-INSERT INTO `billitems` VALUES(1635, 5, 11);
-INSERT INTO `billitems` VALUES(1636, 5, 11);
-INSERT INTO `billitems` VALUES(1637, 5, 11);
-INSERT INTO `billitems` VALUES(1638, 5, 11);
-INSERT INTO `billitems` VALUES(1639, 5, 11);
-INSERT INTO `billitems` VALUES(1640, 5, 11);
-INSERT INTO `billitems` VALUES(1641, 5, 11);
-INSERT INTO `billitems` VALUES(1642, 5, 11);
-INSERT INTO `billitems` VALUES(1643, 5, 11);
-INSERT INTO `billitems` VALUES(1644, 5, 11);
-INSERT INTO `billitems` VALUES(1645, 5, 11);
-INSERT INTO `billitems` VALUES(1646, 5, 11);
-INSERT INTO `billitems` VALUES(1647, 5, 11);
-INSERT INTO `billitems` VALUES(1648, 5, 11);
-INSERT INTO `billitems` VALUES(1649, 5, 11);
-INSERT INTO `billitems` VALUES(1650, 5, 11);
-INSERT INTO `billitems` VALUES(1651, 5, 11);
-INSERT INTO `billitems` VALUES(1652, 5, 11);
-INSERT INTO `billitems` VALUES(1653, 5, 11);
-INSERT INTO `billitems` VALUES(1654, 5, 11);
-INSERT INTO `billitems` VALUES(1655, 5, 11);
-INSERT INTO `billitems` VALUES(1656, 5, 11);
-INSERT INTO `billitems` VALUES(1657, 5, 11);
-INSERT INTO `billitems` VALUES(1658, 5, 11);
-INSERT INTO `billitems` VALUES(1659, 5, 11);
-INSERT INTO `billitems` VALUES(1660, 5, 11);
-INSERT INTO `billitems` VALUES(1661, 5, 11);
-INSERT INTO `billitems` VALUES(1662, 5, 11);
-INSERT INTO `billitems` VALUES(1663, 5, 11);
-INSERT INTO `billitems` VALUES(1664, 5, 11);
-INSERT INTO `billitems` VALUES(1665, 5, 11);
-INSERT INTO `billitems` VALUES(1666, 5, 11);
-INSERT INTO `billitems` VALUES(1667, 5, 11);
-INSERT INTO `billitems` VALUES(1668, 5, 11);
-INSERT INTO `billitems` VALUES(1669, 5, 11);
-INSERT INTO `billitems` VALUES(1670, 5, 11);
-INSERT INTO `billitems` VALUES(1671, 5, 11);
-INSERT INTO `billitems` VALUES(1672, 5, 11);
-INSERT INTO `billitems` VALUES(1673, 5, 11);
-INSERT INTO `billitems` VALUES(1674, 5, 11);
-INSERT INTO `billitems` VALUES(1675, 5, 11);
-INSERT INTO `billitems` VALUES(1676, 5, 11);
-INSERT INTO `billitems` VALUES(1677, 5, 11);
-INSERT INTO `billitems` VALUES(1678, 5, 11);
-INSERT INTO `billitems` VALUES(1679, 5, 11);
-INSERT INTO `billitems` VALUES(1680, 5, 11);
-INSERT INTO `billitems` VALUES(1681, 5, 11);
-INSERT INTO `billitems` VALUES(1682, 5, 11);
-INSERT INTO `billitems` VALUES(1683, 5, 11);
-INSERT INTO `billitems` VALUES(1684, 5, 11);
-INSERT INTO `billitems` VALUES(1685, 5, 11);
-INSERT INTO `billitems` VALUES(1686, 5, 11);
-INSERT INTO `billitems` VALUES(1687, 5, 11);
-INSERT INTO `billitems` VALUES(1688, 5, 11);
-INSERT INTO `billitems` VALUES(1689, 5, 11);
-INSERT INTO `billitems` VALUES(1690, 5, 11);
-INSERT INTO `billitems` VALUES(1691, 5, 11);
-INSERT INTO `billitems` VALUES(1692, 5, 11);
-INSERT INTO `billitems` VALUES(1693, 5, 11);
-INSERT INTO `billitems` VALUES(1694, 5, 11);
-INSERT INTO `billitems` VALUES(1695, 5, 11);
-INSERT INTO `billitems` VALUES(1696, 5, 11);
-INSERT INTO `billitems` VALUES(1697, 5, 11);
-INSERT INTO `billitems` VALUES(1698, 5, 11);
-INSERT INTO `billitems` VALUES(1699, 5, 11);
-INSERT INTO `billitems` VALUES(1700, 5, 11);
-INSERT INTO `billitems` VALUES(1701, 5, 11);
-INSERT INTO `billitems` VALUES(1702, 5, 11);
-INSERT INTO `billitems` VALUES(1703, 5, 11);
-INSERT INTO `billitems` VALUES(1704, 5, 11);
-INSERT INTO `billitems` VALUES(1705, 5, 11);
-INSERT INTO `billitems` VALUES(1706, 5, 11);
-INSERT INTO `billitems` VALUES(1707, 5, 11);
-INSERT INTO `billitems` VALUES(1708, 5, 11);
-INSERT INTO `billitems` VALUES(1709, 5, 11);
-INSERT INTO `billitems` VALUES(1710, 5, 11);
-INSERT INTO `billitems` VALUES(1711, 5, 11);
-INSERT INTO `billitems` VALUES(1712, 5, 11);
-INSERT INTO `billitems` VALUES(1713, 5, 11);
-INSERT INTO `billitems` VALUES(1714, 5, 11);
-INSERT INTO `billitems` VALUES(1715, 5, 11);
-INSERT INTO `billitems` VALUES(1716, 5, 11);
-INSERT INTO `billitems` VALUES(1717, 5, 11);
-INSERT INTO `billitems` VALUES(1718, 5, 11);
-INSERT INTO `billitems` VALUES(1719, 5, 11);
-INSERT INTO `billitems` VALUES(1720, 5, 11);
-INSERT INTO `billitems` VALUES(1721, 5, 11);
-INSERT INTO `billitems` VALUES(1722, 5, 11);
-INSERT INTO `billitems` VALUES(1723, 5, 11);
-INSERT INTO `billitems` VALUES(1724, 5, 11);
-INSERT INTO `billitems` VALUES(1725, 5, 11);
-INSERT INTO `billitems` VALUES(1726, 5, 11);
-INSERT INTO `billitems` VALUES(1727, 5, 11);
-INSERT INTO `billitems` VALUES(1728, 5, 11);
-INSERT INTO `billitems` VALUES(1729, 5, 11);
-INSERT INTO `billitems` VALUES(1730, 5, 11);
-INSERT INTO `billitems` VALUES(1731, 5, 11);
-INSERT INTO `billitems` VALUES(1732, 5, 11);
-INSERT INTO `billitems` VALUES(1733, 5, 11);
-INSERT INTO `billitems` VALUES(1734, 5, 11);
-INSERT INTO `billitems` VALUES(1735, 5, 11);
-INSERT INTO `billitems` VALUES(1736, 5, 11);
-INSERT INTO `billitems` VALUES(1737, 5, 11);
-INSERT INTO `billitems` VALUES(1738, 5, 11);
-INSERT INTO `billitems` VALUES(1739, 5, 11);
-INSERT INTO `billitems` VALUES(1740, 5, 11);
-INSERT INTO `billitems` VALUES(1741, 5, 11);
-INSERT INTO `billitems` VALUES(1742, 5, 11);
-INSERT INTO `billitems` VALUES(1743, 5, 11);
-INSERT INTO `billitems` VALUES(1744, 5, 11);
-INSERT INTO `billitems` VALUES(1745, 5, 11);
-INSERT INTO `billitems` VALUES(1746, 5, 11);
-INSERT INTO `billitems` VALUES(1747, 5, 11);
-INSERT INTO `billitems` VALUES(1748, 5, 11);
-INSERT INTO `billitems` VALUES(1749, 5, 11);
-INSERT INTO `billitems` VALUES(1750, 5, 11);
-INSERT INTO `billitems` VALUES(1751, 5, 11);
-INSERT INTO `billitems` VALUES(1752, 5, 11);
-INSERT INTO `billitems` VALUES(1753, 5, 11);
-INSERT INTO `billitems` VALUES(1754, 5, 11);
-INSERT INTO `billitems` VALUES(1755, 5, 11);
-INSERT INTO `billitems` VALUES(1756, 5, 11);
-INSERT INTO `billitems` VALUES(1757, 5, 11);
-INSERT INTO `billitems` VALUES(1758, 5, 11);
-INSERT INTO `billitems` VALUES(1759, 5, 11);
-INSERT INTO `billitems` VALUES(1760, 5, 11);
-INSERT INTO `billitems` VALUES(1761, 5, 11);
-INSERT INTO `billitems` VALUES(1762, 5, 11);
-INSERT INTO `billitems` VALUES(1763, 5, 11);
-INSERT INTO `billitems` VALUES(1764, 5, 11);
-INSERT INTO `billitems` VALUES(1765, 5, 11);
-INSERT INTO `billitems` VALUES(1766, 5, 11);
-INSERT INTO `billitems` VALUES(1767, 5, 11);
-INSERT INTO `billitems` VALUES(1768, 5, 11);
-INSERT INTO `billitems` VALUES(1769, 5, 11);
-INSERT INTO `billitems` VALUES(1770, 5, 11);
-INSERT INTO `billitems` VALUES(1771, 5, 11);
-INSERT INTO `billitems` VALUES(1772, 5, 11);
-INSERT INTO `billitems` VALUES(1773, 5, 11);
-INSERT INTO `billitems` VALUES(1774, 5, 11);
-INSERT INTO `billitems` VALUES(1775, 5, 11);
-INSERT INTO `billitems` VALUES(1776, 5, 11);
-INSERT INTO `billitems` VALUES(1777, 5, 11);
-INSERT INTO `billitems` VALUES(1778, 5, 11);
-INSERT INTO `billitems` VALUES(1779, 5, 11);
-INSERT INTO `billitems` VALUES(1780, 5, 11);
-INSERT INTO `billitems` VALUES(1781, 5, 11);
-INSERT INTO `billitems` VALUES(1782, 5, 11);
-INSERT INTO `billitems` VALUES(1783, 5, 11);
-INSERT INTO `billitems` VALUES(1784, 5, 11);
-INSERT INTO `billitems` VALUES(1785, 5, 11);
-INSERT INTO `billitems` VALUES(1786, 5, 11);
-INSERT INTO `billitems` VALUES(1787, 5, 11);
-INSERT INTO `billitems` VALUES(1788, 5, 11);
-INSERT INTO `billitems` VALUES(1789, 5, 11);
-INSERT INTO `billitems` VALUES(1790, 5, 11);
-INSERT INTO `billitems` VALUES(1791, 5, 11);
-INSERT INTO `billitems` VALUES(1792, 5, 11);
-INSERT INTO `billitems` VALUES(1793, 5, 11);
-INSERT INTO `billitems` VALUES(1794, 5, 11);
-INSERT INTO `billitems` VALUES(1795, 5, 11);
-INSERT INTO `billitems` VALUES(1796, 5, 11);
-INSERT INTO `billitems` VALUES(1797, 5, 11);
-INSERT INTO `billitems` VALUES(1798, 5, 11);
-INSERT INTO `billitems` VALUES(1799, 5, 11);
-INSERT INTO `billitems` VALUES(1800, 5, 11);
-INSERT INTO `billitems` VALUES(1801, 5, 11);
-INSERT INTO `billitems` VALUES(1802, 5, 11);
-INSERT INTO `billitems` VALUES(1803, 5, 11);
-INSERT INTO `billitems` VALUES(1804, 5, 11);
-INSERT INTO `billitems` VALUES(1805, 5, 11);
-INSERT INTO `billitems` VALUES(1806, 5, 11);
-INSERT INTO `billitems` VALUES(1807, 5, 11);
-INSERT INTO `billitems` VALUES(1808, 5, 11);
-INSERT INTO `billitems` VALUES(1809, 5, 11);
-INSERT INTO `billitems` VALUES(1810, 5, 11);
-INSERT INTO `billitems` VALUES(1811, 5, 11);
-INSERT INTO `billitems` VALUES(1812, 5, 11);
-INSERT INTO `billitems` VALUES(1813, 5, 11);
-INSERT INTO `billitems` VALUES(1814, 5, 11);
-INSERT INTO `billitems` VALUES(1815, 5, 11);
-INSERT INTO `billitems` VALUES(1816, 5, 11);
-INSERT INTO `billitems` VALUES(1817, 5, 11);
-INSERT INTO `billitems` VALUES(1818, 5, 11);
-INSERT INTO `billitems` VALUES(1819, 5, 11);
-INSERT INTO `billitems` VALUES(1820, 5, 11);
-INSERT INTO `billitems` VALUES(1821, 5, 11);
-INSERT INTO `billitems` VALUES(1822, 5, 11);
-INSERT INTO `billitems` VALUES(1823, 5, 11);
-INSERT INTO `billitems` VALUES(1824, 5, 11);
-INSERT INTO `billitems` VALUES(1825, 5, 11);
-INSERT INTO `billitems` VALUES(1826, 5, 11);
-INSERT INTO `billitems` VALUES(1827, 5, 11);
-INSERT INTO `billitems` VALUES(1828, 5, 11);
-INSERT INTO `billitems` VALUES(1829, 5, 11);
-INSERT INTO `billitems` VALUES(1830, 5, 11);
-INSERT INTO `billitems` VALUES(1831, 5, 11);
-INSERT INTO `billitems` VALUES(1832, 5, 11);
-INSERT INTO `billitems` VALUES(1833, 5, 11);
-INSERT INTO `billitems` VALUES(1834, 5, 11);
-INSERT INTO `billitems` VALUES(1835, 5, 11);
-INSERT INTO `billitems` VALUES(1836, 5, 11);
-INSERT INTO `billitems` VALUES(1837, 5, 11);
-INSERT INTO `billitems` VALUES(1838, 5, 11);
-INSERT INTO `billitems` VALUES(1839, 5, 11);
-INSERT INTO `billitems` VALUES(1840, 5, 11);
-INSERT INTO `billitems` VALUES(1841, 5, 11);
-INSERT INTO `billitems` VALUES(1842, 5, 11);
-INSERT INTO `billitems` VALUES(1843, 5, 11);
-INSERT INTO `billitems` VALUES(1844, 5, 11);
-INSERT INTO `billitems` VALUES(1845, 5, 11);
-INSERT INTO `billitems` VALUES(1846, 5, 11);
-INSERT INTO `billitems` VALUES(1847, 5, 11);
-INSERT INTO `billitems` VALUES(1848, 5, 11);
-INSERT INTO `billitems` VALUES(1849, 5, 11);
-INSERT INTO `billitems` VALUES(1850, 5, 11);
-INSERT INTO `billitems` VALUES(1851, 5, 11);
-INSERT INTO `billitems` VALUES(1852, 5, 11);
-INSERT INTO `billitems` VALUES(1853, 5, 11);
-INSERT INTO `billitems` VALUES(1854, 5, 11);
-INSERT INTO `billitems` VALUES(1855, 5, 11);
-INSERT INTO `billitems` VALUES(1856, 5, 11);
-INSERT INTO `billitems` VALUES(1857, 5, 11);
-INSERT INTO `billitems` VALUES(1858, 5, 11);
-INSERT INTO `billitems` VALUES(1859, 5, 11);
-INSERT INTO `billitems` VALUES(1860, 5, 11);
-INSERT INTO `billitems` VALUES(1861, 5, 11);
-INSERT INTO `billitems` VALUES(1862, 5, 11);
-INSERT INTO `billitems` VALUES(1863, 5, 11);
-INSERT INTO `billitems` VALUES(1864, 5, 11);
-INSERT INTO `billitems` VALUES(1865, 5, 11);
-INSERT INTO `billitems` VALUES(1866, 5, 11);
-INSERT INTO `billitems` VALUES(1867, 5, 11);
-INSERT INTO `billitems` VALUES(1868, 5, 11);
-INSERT INTO `billitems` VALUES(1869, 5, 11);
-INSERT INTO `billitems` VALUES(1870, 5, 11);
-INSERT INTO `billitems` VALUES(1871, 5, 11);
-INSERT INTO `billitems` VALUES(1872, 5, 11);
-INSERT INTO `billitems` VALUES(1873, 5, 11);
-INSERT INTO `billitems` VALUES(1874, 5, 11);
-INSERT INTO `billitems` VALUES(1875, 5, 11);
-INSERT INTO `billitems` VALUES(1876, 5, 11);
-INSERT INTO `billitems` VALUES(1877, 5, 11);
-INSERT INTO `billitems` VALUES(1878, 5, 11);
-INSERT INTO `billitems` VALUES(1879, 5, 11);
-INSERT INTO `billitems` VALUES(1880, 5, 11);
-INSERT INTO `billitems` VALUES(1881, 5, 11);
-INSERT INTO `billitems` VALUES(1882, 5, 11);
-INSERT INTO `billitems` VALUES(1883, 5, 11);
-INSERT INTO `billitems` VALUES(1884, 5, 11);
-INSERT INTO `billitems` VALUES(1885, 5, 11);
-INSERT INTO `billitems` VALUES(1886, 5, 11);
-INSERT INTO `billitems` VALUES(1887, 5, 11);
-INSERT INTO `billitems` VALUES(1888, 5, 11);
-INSERT INTO `billitems` VALUES(1889, 5, 11);
-INSERT INTO `billitems` VALUES(1890, 5, 11);
-INSERT INTO `billitems` VALUES(1891, 5, 11);
-INSERT INTO `billitems` VALUES(1892, 5, 11);
-INSERT INTO `billitems` VALUES(1893, 5, 11);
-INSERT INTO `billitems` VALUES(1894, 5, 11);
-INSERT INTO `billitems` VALUES(1895, 5, 11);
-INSERT INTO `billitems` VALUES(1896, 5, 11);
-INSERT INTO `billitems` VALUES(1897, 5, 11);
-INSERT INTO `billitems` VALUES(1898, 5, 11);
-INSERT INTO `billitems` VALUES(1899, 5, 11);
-INSERT INTO `billitems` VALUES(1900, 5, 11);
-INSERT INTO `billitems` VALUES(1901, 5, 11);
-INSERT INTO `billitems` VALUES(1902, 5, 11);
-INSERT INTO `billitems` VALUES(1903, 5, 11);
-INSERT INTO `billitems` VALUES(1904, 5, 11);
-INSERT INTO `billitems` VALUES(1905, 5, 11);
-INSERT INTO `billitems` VALUES(1906, 5, 11);
-INSERT INTO `billitems` VALUES(1907, 5, 11);
-INSERT INTO `billitems` VALUES(1908, 5, 11);
-INSERT INTO `billitems` VALUES(1909, 5, 11);
-INSERT INTO `billitems` VALUES(1910, 5, 11);
-INSERT INTO `billitems` VALUES(1911, 5, 11);
-INSERT INTO `billitems` VALUES(1912, 5, 11);
-INSERT INTO `billitems` VALUES(1913, 5, 11);
-INSERT INTO `billitems` VALUES(1914, 5, 11);
-INSERT INTO `billitems` VALUES(1915, 5, 11);
-INSERT INTO `billitems` VALUES(1916, 5, 11);
-INSERT INTO `billitems` VALUES(1917, 5, 11);
-INSERT INTO `billitems` VALUES(1918, 5, 11);
-INSERT INTO `billitems` VALUES(1919, 5, 11);
-INSERT INTO `billitems` VALUES(1920, 5, 11);
-INSERT INTO `billitems` VALUES(1921, 5, 11);
-INSERT INTO `billitems` VALUES(1922, 5, 11);
-INSERT INTO `billitems` VALUES(1923, 5, 11);
-INSERT INTO `billitems` VALUES(1924, 5, 11);
-INSERT INTO `billitems` VALUES(1925, 5, 11);
-INSERT INTO `billitems` VALUES(1926, 5, 11);
-INSERT INTO `billitems` VALUES(1927, 5, 11);
-INSERT INTO `billitems` VALUES(1928, 5, 11);
-INSERT INTO `billitems` VALUES(1929, 5, 11);
-INSERT INTO `billitems` VALUES(1930, 5, 11);
-INSERT INTO `billitems` VALUES(1931, 5, 11);
-INSERT INTO `billitems` VALUES(1932, 5, 11);
-INSERT INTO `billitems` VALUES(1933, 5, 11);
-INSERT INTO `billitems` VALUES(1934, 5, 11);
-INSERT INTO `billitems` VALUES(1935, 5, 11);
-INSERT INTO `billitems` VALUES(1936, 5, 11);
-INSERT INTO `billitems` VALUES(1937, 5, 11);
-INSERT INTO `billitems` VALUES(1938, 5, 11);
-INSERT INTO `billitems` VALUES(1939, 5, 11);
-INSERT INTO `billitems` VALUES(1940, 5, 11);
-INSERT INTO `billitems` VALUES(1941, 5, 11);
-INSERT INTO `billitems` VALUES(1942, 5, 11);
-INSERT INTO `billitems` VALUES(1943, 5, 11);
-INSERT INTO `billitems` VALUES(1944, 5, 11);
-INSERT INTO `billitems` VALUES(1945, 5, 11);
-INSERT INTO `billitems` VALUES(1946, 5, 11);
-INSERT INTO `billitems` VALUES(1947, 5, 11);
-INSERT INTO `billitems` VALUES(1948, 5, 11);
-INSERT INTO `billitems` VALUES(1949, 5, 11);
-INSERT INTO `billitems` VALUES(1950, 5, 11);
-INSERT INTO `billitems` VALUES(1951, 5, 11);
-INSERT INTO `billitems` VALUES(1952, 5, 11);
-INSERT INTO `billitems` VALUES(1953, 5, 11);
-INSERT INTO `billitems` VALUES(1954, 5, 11);
-INSERT INTO `billitems` VALUES(1955, 5, 11);
-INSERT INTO `billitems` VALUES(1956, 5, 11);
-INSERT INTO `billitems` VALUES(1957, 5, 11);
-INSERT INTO `billitems` VALUES(1958, 5, 11);
-INSERT INTO `billitems` VALUES(1959, 5, 11);
-INSERT INTO `billitems` VALUES(1960, 5, 11);
-INSERT INTO `billitems` VALUES(1961, 5, 11);
-INSERT INTO `billitems` VALUES(1962, 5, 11);
-INSERT INTO `billitems` VALUES(1963, 5, 11);
-INSERT INTO `billitems` VALUES(1964, 5, 11);
-INSERT INTO `billitems` VALUES(1965, 5, 11);
-INSERT INTO `billitems` VALUES(1966, 5, 11);
-INSERT INTO `billitems` VALUES(1967, 5, 11);
-INSERT INTO `billitems` VALUES(1968, 5, 11);
-INSERT INTO `billitems` VALUES(1969, 5, 11);
-INSERT INTO `billitems` VALUES(1970, 5, 11);
-INSERT INTO `billitems` VALUES(1971, 5, 11);
-INSERT INTO `billitems` VALUES(1972, 5, 11);
-INSERT INTO `billitems` VALUES(1973, 5, 11);
-INSERT INTO `billitems` VALUES(1974, 5, 11);
-INSERT INTO `billitems` VALUES(1975, 5, 11);
-INSERT INTO `billitems` VALUES(1976, 5, 11);
-INSERT INTO `billitems` VALUES(1977, 5, 11);
-INSERT INTO `billitems` VALUES(1978, 5, 11);
-INSERT INTO `billitems` VALUES(1979, 5, 11);
-INSERT INTO `billitems` VALUES(1980, 5, 11);
-INSERT INTO `billitems` VALUES(1981, 5, 11);
-INSERT INTO `billitems` VALUES(1982, 5, 11);
-INSERT INTO `billitems` VALUES(1983, 5, 11);
-INSERT INTO `billitems` VALUES(1984, 5, 11);
-INSERT INTO `billitems` VALUES(1985, 5, 11);
-INSERT INTO `billitems` VALUES(1986, 5, 11);
-INSERT INTO `billitems` VALUES(1987, 5, 11);
-INSERT INTO `billitems` VALUES(1988, 5, 11);
-INSERT INTO `billitems` VALUES(1989, 5, 11);
-INSERT INTO `billitems` VALUES(1990, 5, 11);
-INSERT INTO `billitems` VALUES(1991, 5, 11);
-INSERT INTO `billitems` VALUES(1992, 5, 11);
-INSERT INTO `billitems` VALUES(1993, 5, 11);
-INSERT INTO `billitems` VALUES(1994, 5, 11);
-INSERT INTO `billitems` VALUES(1995, 5, 11);
-INSERT INTO `billitems` VALUES(1996, 5, 11);
-INSERT INTO `billitems` VALUES(1997, 5, 11);
-INSERT INTO `billitems` VALUES(1998, 5, 11);
-INSERT INTO `billitems` VALUES(1999, 5, 11);
-INSERT INTO `billitems` VALUES(2000, 5, 11);
-INSERT INTO `billitems` VALUES(2001, 5, 11);
-INSERT INTO `billitems` VALUES(2002, 5, 11);
-INSERT INTO `billitems` VALUES(2003, 5, 11);
-INSERT INTO `billitems` VALUES(2004, 5, 11);
-INSERT INTO `billitems` VALUES(2005, 5, 11);
-INSERT INTO `billitems` VALUES(2006, 5, 11);
-INSERT INTO `billitems` VALUES(2007, 5, 11);
-INSERT INTO `billitems` VALUES(2008, 5, 11);
-INSERT INTO `billitems` VALUES(2009, 5, 11);
-INSERT INTO `billitems` VALUES(2010, 5, 11);
-INSERT INTO `billitems` VALUES(2011, 5, 11);
-INSERT INTO `billitems` VALUES(2012, 5, 11);
-INSERT INTO `billitems` VALUES(2013, 5, 11);
-INSERT INTO `billitems` VALUES(2014, 5, 11);
-INSERT INTO `billitems` VALUES(2015, 5, 11);
-INSERT INTO `billitems` VALUES(2016, 5, 11);
-INSERT INTO `billitems` VALUES(2017, 5, 11);
-INSERT INTO `billitems` VALUES(2018, 5, 11);
-INSERT INTO `billitems` VALUES(2019, 5, 11);
-INSERT INTO `billitems` VALUES(2020, 5, 11);
-INSERT INTO `billitems` VALUES(2021, 5, 11);
-INSERT INTO `billitems` VALUES(2022, 5, 11);
-INSERT INTO `billitems` VALUES(2023, 5, 11);
-INSERT INTO `billitems` VALUES(2024, 5, 11);
-INSERT INTO `billitems` VALUES(2025, 5, 11);
-INSERT INTO `billitems` VALUES(2026, 5, 11);
-INSERT INTO `billitems` VALUES(2027, 5, 11);
-INSERT INTO `billitems` VALUES(2028, 5, 11);
-INSERT INTO `billitems` VALUES(2029, 5, 11);
-INSERT INTO `billitems` VALUES(2030, 5, 11);
-INSERT INTO `billitems` VALUES(2031, 5, 11);
-INSERT INTO `billitems` VALUES(2032, 5, 11);
-INSERT INTO `billitems` VALUES(2033, 5, 11);
-INSERT INTO `billitems` VALUES(2034, 5, 11);
-INSERT INTO `billitems` VALUES(2035, 5, 11);
-INSERT INTO `billitems` VALUES(2036, 5, 11);
-INSERT INTO `billitems` VALUES(2037, 5, 11);
-INSERT INTO `billitems` VALUES(2038, 5, 11);
-INSERT INTO `billitems` VALUES(2039, 5, 11);
-INSERT INTO `billitems` VALUES(2040, 5, 11);
-INSERT INTO `billitems` VALUES(2041, 5, 11);
-INSERT INTO `billitems` VALUES(2042, 5, 11);
-INSERT INTO `billitems` VALUES(2043, 5, 11);
-INSERT INTO `billitems` VALUES(2044, 5, 11);
-INSERT INTO `billitems` VALUES(2045, 5, 11);
-INSERT INTO `billitems` VALUES(2046, 5, 11);
-INSERT INTO `billitems` VALUES(2047, 5, 11);
-INSERT INTO `billitems` VALUES(2048, 5, 11);
-INSERT INTO `billitems` VALUES(2049, 5, 11);
-INSERT INTO `billitems` VALUES(2050, 5, 11);
-INSERT INTO `billitems` VALUES(2051, 5, 11);
-INSERT INTO `billitems` VALUES(2052, 5, 11);
-INSERT INTO `billitems` VALUES(2053, 5, 11);
-INSERT INTO `billitems` VALUES(2054, 5, 11);
-INSERT INTO `billitems` VALUES(2055, 5, 11);
-INSERT INTO `billitems` VALUES(2056, 5, 11);
-INSERT INTO `billitems` VALUES(2057, 5, 11);
-INSERT INTO `billitems` VALUES(2058, 5, 11);
-INSERT INTO `billitems` VALUES(2059, 5, 11);
-INSERT INTO `billitems` VALUES(2060, 5, 11);
-INSERT INTO `billitems` VALUES(2061, 5, 11);
-INSERT INTO `billitems` VALUES(2062, 5, 11);
-INSERT INTO `billitems` VALUES(2063, 5, 11);
-INSERT INTO `billitems` VALUES(2064, 5, 11);
-INSERT INTO `billitems` VALUES(2065, 5, 11);
-INSERT INTO `billitems` VALUES(2066, 5, 11);
-INSERT INTO `billitems` VALUES(2067, 5, 11);
-INSERT INTO `billitems` VALUES(2068, 5, 11);
-INSERT INTO `billitems` VALUES(2069, 5, 11);
-INSERT INTO `billitems` VALUES(2070, 5, 11);
-INSERT INTO `billitems` VALUES(2071, 5, 11);
-INSERT INTO `billitems` VALUES(2072, 5, 11);
-INSERT INTO `billitems` VALUES(2073, 5, 11);
-INSERT INTO `billitems` VALUES(2074, 5, 11);
-INSERT INTO `billitems` VALUES(2075, 5, 11);
-INSERT INTO `billitems` VALUES(2076, 5, 11);
-INSERT INTO `billitems` VALUES(2077, 5, 11);
-INSERT INTO `billitems` VALUES(2078, 5, 11);
-INSERT INTO `billitems` VALUES(2079, 5, 11);
-INSERT INTO `billitems` VALUES(2080, 5, 11);
-INSERT INTO `billitems` VALUES(2081, 5, 11);
-INSERT INTO `billitems` VALUES(2082, 5, 11);
-INSERT INTO `billitems` VALUES(2083, 5, 11);
-INSERT INTO `billitems` VALUES(2084, 5, 11);
-INSERT INTO `billitems` VALUES(2085, 5, 11);
-INSERT INTO `billitems` VALUES(2086, 5, 11);
-INSERT INTO `billitems` VALUES(2087, 5, 11);
-INSERT INTO `billitems` VALUES(2088, 5, 11);
-INSERT INTO `billitems` VALUES(2089, 5, 11);
-INSERT INTO `billitems` VALUES(2090, 5, 11);
-INSERT INTO `billitems` VALUES(2091, 5, 11);
-INSERT INTO `billitems` VALUES(2092, 5, 11);
-INSERT INTO `billitems` VALUES(2093, 5, 11);
-INSERT INTO `billitems` VALUES(2094, 5, 11);
-INSERT INTO `billitems` VALUES(2095, 5, 11);
-INSERT INTO `billitems` VALUES(2096, 5, 11);
-INSERT INTO `billitems` VALUES(2097, 5, 11);
-INSERT INTO `billitems` VALUES(2098, 5, 11);
-INSERT INTO `billitems` VALUES(2099, 5, 11);
-INSERT INTO `billitems` VALUES(2100, 5, 11);
-INSERT INTO `billitems` VALUES(2101, 5, 11);
-INSERT INTO `billitems` VALUES(2102, 5, 11);
-INSERT INTO `billitems` VALUES(2103, 5, 11);
-INSERT INTO `billitems` VALUES(2104, 5, 11);
-INSERT INTO `billitems` VALUES(2105, 5, 11);
-INSERT INTO `billitems` VALUES(2106, 5, 11);
-INSERT INTO `billitems` VALUES(2107, 5, 11);
-INSERT INTO `billitems` VALUES(2108, 5, 11);
-INSERT INTO `billitems` VALUES(2109, 5, 11);
-INSERT INTO `billitems` VALUES(2110, 5, 11);
-INSERT INTO `billitems` VALUES(2111, 5, 11);
-INSERT INTO `billitems` VALUES(2112, 5, 11);
-INSERT INTO `billitems` VALUES(2113, 5, 11);
-INSERT INTO `billitems` VALUES(2114, 5, 11);
-INSERT INTO `billitems` VALUES(2115, 5, 11);
-INSERT INTO `billitems` VALUES(2116, 5, 11);
-INSERT INTO `billitems` VALUES(2117, 5, 11);
-INSERT INTO `billitems` VALUES(2118, 5, 11);
-INSERT INTO `billitems` VALUES(2119, 5, 11);
-INSERT INTO `billitems` VALUES(2120, 5, 11);
-INSERT INTO `billitems` VALUES(2121, 5, 11);
-INSERT INTO `billitems` VALUES(2122, 5, 11);
-INSERT INTO `billitems` VALUES(2123, 5, 11);
-INSERT INTO `billitems` VALUES(2124, 5, 11);
-INSERT INTO `billitems` VALUES(2125, 5, 11);
-INSERT INTO `billitems` VALUES(2126, 5, 11);
-INSERT INTO `billitems` VALUES(2127, 5, 11);
-INSERT INTO `billitems` VALUES(2128, 5, 11);
-INSERT INTO `billitems` VALUES(2129, 5, 11);
-INSERT INTO `billitems` VALUES(2130, 5, 11);
-INSERT INTO `billitems` VALUES(2131, 5, 11);
-INSERT INTO `billitems` VALUES(2132, 5, 11);
-INSERT INTO `billitems` VALUES(2133, 5, 11);
-INSERT INTO `billitems` VALUES(2134, 5, 11);
-INSERT INTO `billitems` VALUES(2135, 5, 11);
-INSERT INTO `billitems` VALUES(2136, 5, 11);
-INSERT INTO `billitems` VALUES(2137, 5, 11);
-INSERT INTO `billitems` VALUES(2138, 5, 11);
-INSERT INTO `billitems` VALUES(2139, 5, 11);
-INSERT INTO `billitems` VALUES(2140, 5, 11);
-INSERT INTO `billitems` VALUES(2141, 5, 11);
-INSERT INTO `billitems` VALUES(2142, 5, 11);
-INSERT INTO `billitems` VALUES(2143, 5, 11);
-INSERT INTO `billitems` VALUES(2144, 5, 11);
-INSERT INTO `billitems` VALUES(2145, 5, 11);
-INSERT INTO `billitems` VALUES(2146, 5, 11);
-INSERT INTO `billitems` VALUES(2147, 5, 11);
-INSERT INTO `billitems` VALUES(2148, 5, 11);
-INSERT INTO `billitems` VALUES(2149, 5, 11);
-INSERT INTO `billitems` VALUES(2150, 5, 11);
-INSERT INTO `billitems` VALUES(2151, 5, 11);
-INSERT INTO `billitems` VALUES(2152, 5, 11);
-INSERT INTO `billitems` VALUES(2153, 5, 11);
-INSERT INTO `billitems` VALUES(2154, 5, 11);
-INSERT INTO `billitems` VALUES(2155, 5, 11);
-INSERT INTO `billitems` VALUES(2156, 5, 11);
-INSERT INTO `billitems` VALUES(2157, 5, 11);
-INSERT INTO `billitems` VALUES(2158, 5, 11);
-INSERT INTO `billitems` VALUES(2159, 5, 11);
-INSERT INTO `billitems` VALUES(2160, 5, 11);
-INSERT INTO `billitems` VALUES(2161, 5, 11);
+INSERT INTO `billitems` (`idBillitem`, `idDish`, `idBill`) VALUES
+(16, 7, 10),
+(17, 7, 10),
+(18, 7, 10),
+(19, 7, 10),
+(20, 7, 10),
+(21, 7, 10),
+(22, 7, 10),
+(23, 7, 10),
+(24, 7, 10),
+(25, 7, 10),
+(26, 7, 10),
+(27, 7, 10),
+(28, 7, 10),
+(29, 4, 10),
+(30, 4, 10),
+(31, 4, 10),
+(32, 4, 10),
+(33, 4, 10),
+(34, 4, 10),
+(35, 4, 10),
+(36, 4, 10),
+(37, 4, 10),
+(38, 4, 10),
+(39, 4, 10),
+(40, 4, 10),
+(41, 4, 10),
+(42, 4, 10),
+(43, 6, 10),
+(44, 6, 10),
+(45, 6, 10),
+(46, 6, 10),
+(47, 6, 10),
+(48, 6, 10),
+(49, 6, 10),
+(50, 6, 10),
+(51, 6, 10),
+(52, 6, 10),
+(53, 6, 10),
+(54, 6, 10),
+(55, 1, 11),
+(56, 1, 11),
+(57, 1, 11),
+(58, 1, 11),
+(59, 1, 11),
+(60, 1, 11),
+(61, 1, 11),
+(62, 1, 11),
+(63, 1, 11),
+(64, 1, 11),
+(65, 1, 11),
+(66, 1, 11),
+(67, 1, 11),
+(68, 1, 11),
+(69, 1, 11),
+(70, 1, 11),
+(71, 1, 11),
+(72, 1, 11),
+(73, 1, 11),
+(74, 1, 11),
+(75, 1, 11),
+(76, 1, 11),
+(77, 1, 11),
+(78, 1, 11),
+(79, 1, 11),
+(80, 1, 11),
+(81, 1, 11),
+(82, 1, 11),
+(83, 1, 11),
+(84, 1, 11),
+(85, 1, 11),
+(86, 1, 11),
+(87, 1, 11),
+(88, 1, 11),
+(89, 1, 11),
+(90, 1, 11),
+(91, 1, 11),
+(92, 1, 11),
+(93, 1, 11),
+(94, 1, 11),
+(95, 1, 11),
+(96, 1, 11),
+(97, 1, 11),
+(98, 1, 11),
+(99, 1, 11),
+(100, 1, 11),
+(101, 1, 11),
+(102, 1, 11),
+(103, 1, 11),
+(104, 1, 11),
+(105, 1, 11),
+(106, 1, 11),
+(107, 1, 11),
+(108, 1, 11),
+(109, 1, 11),
+(110, 1, 11),
+(111, 1, 11),
+(112, 1, 11),
+(113, 1, 11),
+(114, 1, 11),
+(115, 1, 11),
+(116, 1, 11),
+(117, 1, 11),
+(118, 1, 11),
+(119, 1, 11),
+(120, 1, 11),
+(121, 1, 11),
+(122, 1, 11),
+(123, 1, 11),
+(124, 1, 11),
+(125, 1, 11),
+(126, 1, 11),
+(127, 1, 11),
+(128, 1, 11),
+(129, 1, 11),
+(130, 1, 11),
+(131, 1, 11),
+(132, 1, 11),
+(133, 1, 11),
+(134, 1, 11),
+(135, 1, 11),
+(136, 1, 11),
+(137, 1, 11),
+(138, 1, 11),
+(139, 1, 11),
+(140, 1, 11),
+(141, 1, 11),
+(142, 1, 11),
+(143, 1, 11),
+(144, 1, 11),
+(145, 1, 11),
+(146, 1, 11),
+(147, 1, 11),
+(148, 1, 11),
+(149, 1, 11),
+(150, 1, 11),
+(151, 1, 11),
+(152, 1, 11),
+(153, 1, 11),
+(154, 1, 11),
+(155, 1, 11),
+(156, 1, 11),
+(157, 1, 11),
+(158, 1, 11),
+(159, 1, 11),
+(160, 1, 11),
+(161, 1, 11),
+(162, 1, 11),
+(163, 1, 11),
+(164, 1, 11),
+(165, 1, 11),
+(166, 1, 11),
+(167, 1, 11),
+(168, 1, 11),
+(169, 1, 11),
+(170, 1, 11),
+(171, 1, 11),
+(172, 1, 11),
+(173, 1, 11),
+(174, 1, 11),
+(175, 1, 11),
+(176, 1, 11),
+(177, 1, 11),
+(178, 5, 11),
+(179, 5, 11),
+(180, 5, 11),
+(181, 5, 11),
+(182, 5, 11),
+(183, 5, 11),
+(184, 5, 11),
+(185, 5, 11),
+(186, 5, 11),
+(187, 5, 11),
+(188, 5, 11),
+(189, 5, 11),
+(190, 5, 11),
+(191, 5, 11),
+(192, 5, 11),
+(193, 5, 11),
+(194, 5, 11),
+(195, 5, 11),
+(196, 5, 11),
+(197, 5, 11),
+(198, 5, 11),
+(199, 5, 11),
+(200, 5, 11),
+(201, 5, 11),
+(202, 5, 11),
+(203, 5, 11),
+(204, 5, 11),
+(205, 5, 11),
+(206, 5, 11),
+(207, 5, 11),
+(208, 5, 11),
+(209, 5, 11),
+(210, 5, 11),
+(211, 5, 11),
+(212, 5, 11),
+(213, 5, 11),
+(214, 5, 11),
+(215, 5, 11),
+(216, 5, 11),
+(217, 5, 11),
+(218, 5, 11),
+(219, 5, 11),
+(220, 5, 11),
+(221, 5, 11),
+(222, 5, 11),
+(223, 5, 11),
+(224, 5, 11),
+(225, 5, 11),
+(226, 5, 11),
+(227, 5, 11),
+(228, 5, 11),
+(229, 5, 11),
+(230, 5, 11),
+(231, 5, 11),
+(232, 5, 11),
+(233, 5, 11),
+(234, 5, 11),
+(235, 5, 11),
+(236, 5, 11),
+(237, 5, 11),
+(238, 5, 11),
+(239, 5, 11),
+(240, 5, 11),
+(241, 5, 11),
+(242, 5, 11),
+(243, 5, 11),
+(244, 5, 11),
+(245, 5, 11),
+(246, 5, 11),
+(247, 5, 11),
+(248, 5, 11),
+(249, 5, 11),
+(250, 5, 11),
+(251, 5, 11),
+(252, 5, 11),
+(253, 5, 11),
+(254, 5, 11),
+(255, 5, 11),
+(256, 5, 11),
+(257, 5, 11),
+(258, 5, 11),
+(259, 5, 11),
+(260, 5, 11),
+(261, 5, 11),
+(262, 5, 11),
+(263, 5, 11),
+(264, 5, 11),
+(265, 5, 11),
+(266, 5, 11),
+(267, 5, 11),
+(268, 5, 11),
+(269, 5, 11),
+(270, 5, 11),
+(271, 5, 11),
+(272, 5, 11),
+(273, 5, 11),
+(274, 5, 11),
+(275, 5, 11),
+(276, 5, 11),
+(277, 5, 11),
+(278, 5, 11),
+(279, 5, 11),
+(280, 5, 11),
+(281, 5, 11),
+(282, 5, 11),
+(283, 5, 11),
+(284, 5, 11),
+(285, 5, 11),
+(286, 5, 11),
+(287, 5, 11),
+(288, 5, 11),
+(289, 5, 11),
+(290, 5, 11),
+(291, 5, 11),
+(292, 5, 11),
+(293, 5, 11),
+(294, 5, 11),
+(295, 5, 11),
+(296, 5, 11),
+(297, 5, 11),
+(298, 5, 11),
+(299, 5, 11),
+(300, 5, 11),
+(301, 5, 11),
+(302, 5, 11),
+(303, 5, 11),
+(304, 5, 11),
+(305, 5, 11),
+(306, 5, 11),
+(307, 5, 11),
+(308, 5, 11),
+(309, 5, 11),
+(310, 5, 11),
+(311, 5, 11),
+(312, 5, 11),
+(313, 5, 11),
+(314, 5, 11),
+(315, 5, 11),
+(316, 5, 11),
+(317, 5, 11),
+(318, 5, 11),
+(319, 5, 11),
+(320, 5, 11),
+(321, 5, 11),
+(322, 5, 11),
+(323, 5, 11),
+(324, 5, 11),
+(325, 5, 11),
+(326, 5, 11),
+(327, 5, 11),
+(328, 5, 11),
+(329, 5, 11),
+(330, 5, 11),
+(331, 5, 11),
+(332, 5, 11),
+(333, 5, 11),
+(334, 5, 11),
+(335, 5, 11),
+(336, 5, 11),
+(337, 5, 11),
+(338, 5, 11),
+(339, 5, 11),
+(340, 5, 11),
+(341, 5, 11),
+(342, 5, 11),
+(343, 5, 11),
+(344, 5, 11),
+(345, 5, 11),
+(346, 5, 11),
+(347, 5, 11),
+(348, 5, 11),
+(349, 5, 11),
+(350, 5, 11),
+(351, 5, 11),
+(352, 5, 11),
+(353, 5, 11),
+(354, 5, 11),
+(355, 5, 11),
+(356, 5, 11),
+(357, 5, 11),
+(358, 5, 11),
+(359, 5, 11),
+(360, 5, 11),
+(361, 5, 11),
+(362, 5, 11),
+(363, 5, 11),
+(364, 5, 11),
+(365, 5, 11),
+(366, 5, 11),
+(367, 5, 11),
+(368, 5, 11),
+(369, 5, 11),
+(370, 5, 11),
+(371, 5, 11),
+(372, 5, 11),
+(373, 5, 11),
+(374, 5, 11),
+(375, 5, 11),
+(376, 5, 11),
+(377, 5, 11),
+(378, 5, 11),
+(379, 5, 11),
+(380, 5, 11),
+(381, 5, 11),
+(382, 5, 11),
+(383, 5, 11),
+(384, 5, 11),
+(385, 5, 11),
+(386, 5, 11),
+(387, 5, 11),
+(388, 5, 11),
+(389, 5, 11),
+(390, 5, 11),
+(391, 5, 11),
+(392, 5, 11),
+(393, 5, 11),
+(394, 5, 11),
+(395, 5, 11),
+(396, 5, 11),
+(397, 5, 11),
+(398, 5, 11),
+(399, 5, 11),
+(400, 5, 11),
+(401, 5, 11),
+(402, 5, 11),
+(403, 5, 11),
+(404, 5, 11),
+(405, 5, 11),
+(406, 5, 11),
+(407, 5, 11),
+(408, 5, 11),
+(409, 5, 11),
+(410, 5, 11),
+(411, 5, 11),
+(412, 5, 11),
+(413, 5, 11),
+(414, 5, 11),
+(415, 5, 11),
+(416, 5, 11),
+(417, 5, 11),
+(418, 5, 11),
+(419, 5, 11),
+(420, 5, 11),
+(421, 5, 11),
+(422, 5, 11),
+(423, 5, 11),
+(424, 5, 11),
+(425, 5, 11),
+(426, 5, 11),
+(427, 5, 11),
+(428, 5, 11),
+(429, 5, 11),
+(430, 5, 11),
+(431, 5, 11),
+(432, 5, 11),
+(433, 5, 11),
+(434, 5, 11),
+(435, 5, 11),
+(436, 5, 11),
+(437, 5, 11),
+(438, 5, 11),
+(439, 5, 11),
+(440, 5, 11),
+(441, 5, 11),
+(442, 5, 11),
+(443, 5, 11),
+(444, 5, 11),
+(445, 5, 11),
+(446, 5, 11),
+(447, 5, 11),
+(448, 5, 11),
+(449, 5, 11),
+(450, 5, 11),
+(451, 5, 11),
+(452, 5, 11),
+(453, 5, 11),
+(454, 5, 11),
+(455, 5, 11),
+(456, 5, 11),
+(457, 5, 11),
+(458, 5, 11),
+(459, 5, 11),
+(460, 5, 11),
+(461, 5, 11),
+(462, 5, 11),
+(463, 5, 11),
+(464, 5, 11),
+(465, 5, 11),
+(466, 5, 11),
+(467, 5, 11),
+(468, 5, 11),
+(469, 5, 11),
+(470, 5, 11),
+(471, 5, 11),
+(472, 5, 11),
+(473, 5, 11),
+(474, 5, 11),
+(475, 5, 11),
+(476, 5, 11),
+(477, 5, 11),
+(478, 5, 11),
+(479, 5, 11),
+(480, 5, 11),
+(481, 5, 11),
+(482, 5, 11),
+(483, 5, 11),
+(484, 5, 11),
+(485, 5, 11),
+(486, 5, 11),
+(487, 5, 11),
+(488, 5, 11),
+(489, 5, 11),
+(490, 5, 11),
+(491, 5, 11),
+(492, 5, 11),
+(493, 5, 11),
+(494, 5, 11),
+(495, 5, 11),
+(496, 5, 11),
+(497, 5, 11),
+(498, 5, 11),
+(499, 5, 11),
+(500, 5, 11),
+(501, 5, 11),
+(502, 5, 11),
+(503, 5, 11),
+(504, 5, 11),
+(505, 5, 11),
+(506, 5, 11),
+(507, 5, 11),
+(508, 5, 11),
+(509, 5, 11),
+(510, 5, 11),
+(511, 5, 11),
+(512, 5, 11),
+(513, 5, 11),
+(514, 5, 11),
+(515, 5, 11),
+(516, 5, 11),
+(517, 5, 11),
+(518, 5, 11),
+(519, 5, 11),
+(520, 5, 11),
+(521, 5, 11),
+(522, 5, 11),
+(523, 5, 11),
+(524, 5, 11),
+(525, 5, 11),
+(526, 5, 11),
+(527, 5, 11),
+(528, 5, 11),
+(529, 5, 11),
+(530, 5, 11),
+(531, 5, 11),
+(532, 5, 11),
+(533, 5, 11),
+(534, 5, 11),
+(535, 5, 11),
+(536, 5, 11),
+(537, 5, 11),
+(538, 5, 11),
+(539, 5, 11),
+(540, 5, 11),
+(541, 5, 11),
+(542, 5, 11),
+(543, 5, 11),
+(544, 5, 11),
+(545, 5, 11),
+(546, 5, 11),
+(547, 5, 11),
+(548, 5, 11),
+(549, 5, 11),
+(550, 5, 11),
+(551, 5, 11),
+(552, 5, 11),
+(553, 5, 11),
+(554, 5, 11),
+(555, 5, 11),
+(556, 5, 11),
+(557, 5, 11),
+(558, 5, 11),
+(559, 5, 11),
+(560, 5, 11),
+(561, 5, 11),
+(562, 5, 11),
+(563, 5, 11),
+(564, 5, 11),
+(565, 5, 11),
+(566, 5, 11),
+(567, 5, 11),
+(568, 5, 11),
+(569, 5, 11),
+(570, 5, 11),
+(571, 5, 11),
+(572, 5, 11),
+(573, 5, 11),
+(574, 5, 11),
+(575, 5, 11),
+(576, 5, 11),
+(577, 5, 11),
+(578, 5, 11),
+(579, 5, 11),
+(580, 5, 11),
+(581, 5, 11),
+(582, 5, 11),
+(583, 5, 11),
+(584, 5, 11),
+(585, 5, 11),
+(586, 5, 11),
+(587, 5, 11),
+(588, 5, 11),
+(589, 5, 11),
+(590, 5, 11),
+(591, 5, 11),
+(592, 5, 11),
+(593, 5, 11),
+(594, 5, 11),
+(595, 5, 11),
+(596, 5, 11),
+(597, 5, 11),
+(598, 5, 11),
+(599, 5, 11),
+(600, 5, 11),
+(601, 5, 11),
+(602, 5, 11),
+(603, 5, 11),
+(604, 5, 11),
+(605, 5, 11),
+(606, 5, 11),
+(607, 5, 11),
+(608, 5, 11),
+(609, 5, 11),
+(610, 5, 11),
+(611, 5, 11),
+(612, 5, 11),
+(613, 5, 11),
+(614, 5, 11),
+(615, 5, 11),
+(616, 5, 11),
+(617, 5, 11),
+(618, 5, 11),
+(619, 5, 11),
+(620, 5, 11),
+(621, 5, 11),
+(622, 5, 11),
+(623, 5, 11),
+(624, 5, 11),
+(625, 5, 11),
+(626, 5, 11),
+(627, 5, 11),
+(628, 5, 11),
+(629, 5, 11),
+(630, 5, 11),
+(631, 5, 11),
+(632, 5, 11),
+(633, 5, 11),
+(634, 5, 11),
+(635, 5, 11),
+(636, 5, 11),
+(637, 5, 11),
+(638, 5, 11),
+(639, 5, 11),
+(640, 5, 11),
+(641, 5, 11),
+(642, 5, 11),
+(643, 5, 11),
+(644, 5, 11),
+(645, 5, 11),
+(646, 5, 11),
+(647, 5, 11),
+(648, 5, 11),
+(649, 5, 11),
+(650, 5, 11),
+(651, 5, 11),
+(652, 5, 11),
+(653, 5, 11),
+(654, 5, 11),
+(655, 5, 11),
+(656, 5, 11),
+(657, 5, 11),
+(658, 5, 11),
+(659, 5, 11),
+(660, 5, 11),
+(661, 5, 11),
+(662, 5, 11),
+(663, 5, 11),
+(664, 5, 11),
+(665, 5, 11),
+(666, 5, 11),
+(667, 5, 11),
+(668, 5, 11),
+(669, 5, 11),
+(670, 5, 11),
+(671, 5, 11),
+(672, 5, 11),
+(673, 5, 11),
+(674, 5, 11),
+(675, 5, 11),
+(676, 5, 11),
+(677, 5, 11),
+(678, 5, 11),
+(679, 5, 11),
+(680, 5, 11),
+(681, 5, 11),
+(682, 5, 11),
+(683, 5, 11),
+(684, 5, 11),
+(685, 5, 11),
+(686, 5, 11),
+(687, 5, 11),
+(688, 5, 11),
+(689, 5, 11),
+(690, 5, 11),
+(691, 5, 11),
+(692, 5, 11),
+(693, 5, 11),
+(694, 5, 11),
+(695, 5, 11),
+(696, 5, 11),
+(697, 5, 11),
+(698, 5, 11),
+(699, 5, 11),
+(700, 5, 11),
+(701, 5, 11),
+(702, 5, 11),
+(703, 5, 11),
+(704, 5, 11),
+(705, 5, 11),
+(706, 5, 11),
+(707, 5, 11),
+(708, 5, 11),
+(709, 5, 11),
+(710, 5, 11),
+(711, 5, 11),
+(712, 5, 11),
+(713, 5, 11),
+(714, 5, 11),
+(715, 5, 11),
+(716, 5, 11),
+(717, 5, 11),
+(718, 5, 11),
+(719, 5, 11),
+(720, 5, 11),
+(721, 5, 11),
+(722, 5, 11),
+(723, 5, 11),
+(724, 5, 11),
+(725, 5, 11),
+(726, 5, 11),
+(727, 5, 11),
+(728, 5, 11),
+(729, 5, 11),
+(730, 5, 11),
+(731, 5, 11),
+(732, 5, 11),
+(733, 5, 11),
+(734, 5, 11),
+(735, 5, 11),
+(736, 5, 11),
+(737, 5, 11),
+(738, 5, 11),
+(739, 5, 11),
+(740, 5, 11),
+(741, 5, 11),
+(742, 5, 11),
+(743, 5, 11),
+(744, 5, 11),
+(745, 5, 11),
+(746, 5, 11),
+(747, 5, 11),
+(748, 5, 11),
+(749, 5, 11),
+(750, 5, 11),
+(751, 5, 11),
+(752, 5, 11),
+(753, 5, 11),
+(754, 5, 11),
+(755, 5, 11),
+(756, 5, 11),
+(757, 5, 11),
+(758, 5, 11),
+(759, 5, 11),
+(760, 5, 11),
+(761, 5, 11),
+(762, 5, 11),
+(763, 5, 11),
+(764, 5, 11),
+(765, 5, 11),
+(766, 5, 11),
+(767, 5, 11),
+(768, 5, 11),
+(769, 5, 11),
+(770, 5, 11),
+(771, 5, 11),
+(772, 5, 11),
+(773, 5, 11),
+(774, 5, 11),
+(775, 5, 11),
+(776, 5, 11),
+(777, 5, 11),
+(778, 5, 11),
+(779, 5, 11),
+(780, 5, 11),
+(781, 5, 11),
+(782, 5, 11),
+(783, 5, 11),
+(784, 5, 11),
+(785, 5, 11),
+(786, 5, 11),
+(787, 5, 11),
+(788, 5, 11),
+(789, 5, 11),
+(790, 5, 11),
+(791, 5, 11),
+(792, 5, 11),
+(793, 5, 11),
+(794, 5, 11),
+(795, 5, 11),
+(796, 5, 11),
+(797, 5, 11),
+(798, 5, 11),
+(799, 5, 11),
+(800, 5, 11),
+(801, 5, 11),
+(802, 5, 11),
+(803, 5, 11),
+(804, 5, 11),
+(805, 5, 11),
+(806, 5, 11),
+(807, 5, 11),
+(808, 5, 11),
+(809, 5, 11),
+(810, 5, 11),
+(811, 5, 11),
+(812, 5, 11),
+(813, 5, 11),
+(814, 5, 11),
+(815, 5, 11),
+(816, 5, 11),
+(817, 5, 11),
+(818, 5, 11),
+(819, 5, 11),
+(820, 5, 11),
+(821, 5, 11),
+(822, 5, 11),
+(823, 5, 11),
+(824, 5, 11),
+(825, 5, 11),
+(826, 5, 11),
+(827, 5, 11),
+(828, 5, 11),
+(829, 5, 11),
+(830, 5, 11),
+(831, 5, 11),
+(832, 5, 11),
+(833, 5, 11),
+(834, 5, 11),
+(835, 5, 11),
+(836, 5, 11),
+(837, 5, 11),
+(838, 5, 11),
+(839, 5, 11),
+(840, 5, 11),
+(841, 5, 11),
+(842, 5, 11),
+(843, 5, 11),
+(844, 5, 11),
+(845, 5, 11),
+(846, 5, 11),
+(847, 5, 11),
+(848, 5, 11),
+(849, 5, 11),
+(850, 5, 11),
+(851, 5, 11),
+(852, 5, 11),
+(853, 5, 11),
+(854, 5, 11),
+(855, 5, 11),
+(856, 5, 11),
+(857, 5, 11),
+(858, 5, 11),
+(859, 5, 11),
+(860, 5, 11),
+(861, 5, 11),
+(862, 5, 11),
+(863, 5, 11),
+(864, 5, 11),
+(865, 5, 11),
+(866, 5, 11),
+(867, 5, 11),
+(868, 5, 11),
+(869, 5, 11),
+(870, 5, 11),
+(871, 5, 11),
+(872, 5, 11),
+(873, 5, 11),
+(874, 5, 11),
+(875, 5, 11),
+(876, 5, 11),
+(877, 5, 11),
+(878, 5, 11),
+(879, 5, 11),
+(880, 5, 11),
+(881, 5, 11),
+(882, 5, 11),
+(883, 5, 11),
+(884, 5, 11),
+(885, 5, 11),
+(886, 5, 11),
+(887, 5, 11),
+(888, 5, 11),
+(889, 5, 11),
+(890, 5, 11),
+(891, 5, 11),
+(892, 5, 11),
+(893, 5, 11),
+(894, 5, 11),
+(895, 5, 11),
+(896, 5, 11),
+(897, 5, 11),
+(898, 5, 11),
+(899, 5, 11),
+(900, 5, 11),
+(901, 5, 11),
+(902, 5, 11),
+(903, 5, 11),
+(904, 5, 11),
+(905, 5, 11),
+(906, 5, 11),
+(907, 5, 11),
+(908, 5, 11),
+(909, 5, 11),
+(910, 5, 11),
+(911, 5, 11),
+(912, 5, 11),
+(913, 5, 11),
+(914, 5, 11),
+(915, 5, 11),
+(916, 5, 11),
+(917, 5, 11),
+(918, 5, 11),
+(919, 5, 11),
+(920, 5, 11),
+(921, 5, 11),
+(922, 5, 11),
+(923, 5, 11),
+(924, 5, 11),
+(925, 5, 11),
+(926, 5, 11),
+(927, 5, 11),
+(928, 5, 11),
+(929, 5, 11),
+(930, 5, 11),
+(931, 5, 11),
+(932, 5, 11),
+(933, 5, 11),
+(934, 5, 11),
+(935, 5, 11),
+(936, 5, 11),
+(937, 5, 11),
+(938, 5, 11),
+(939, 5, 11),
+(940, 5, 11),
+(941, 5, 11),
+(942, 5, 11),
+(943, 5, 11),
+(944, 5, 11),
+(945, 5, 11),
+(946, 5, 11),
+(947, 5, 11),
+(948, 5, 11),
+(949, 5, 11),
+(950, 5, 11),
+(951, 5, 11),
+(952, 5, 11),
+(953, 5, 11),
+(954, 5, 11),
+(955, 5, 11),
+(956, 5, 11),
+(957, 5, 11),
+(958, 5, 11),
+(959, 5, 11),
+(960, 5, 11),
+(961, 5, 11),
+(962, 5, 11),
+(963, 5, 11),
+(964, 5, 11),
+(965, 5, 11),
+(966, 5, 11),
+(967, 5, 11),
+(968, 5, 11),
+(969, 5, 11),
+(970, 5, 11),
+(971, 5, 11),
+(972, 5, 11),
+(973, 5, 11),
+(974, 5, 11),
+(975, 5, 11),
+(976, 5, 11),
+(977, 5, 11),
+(978, 5, 11),
+(979, 5, 11),
+(980, 5, 11),
+(981, 5, 11),
+(982, 5, 11),
+(983, 5, 11),
+(984, 5, 11),
+(985, 5, 11),
+(986, 5, 11),
+(987, 5, 11),
+(988, 5, 11),
+(989, 5, 11),
+(990, 5, 11),
+(991, 5, 11),
+(992, 5, 11),
+(993, 5, 11),
+(994, 5, 11),
+(995, 5, 11),
+(996, 5, 11),
+(997, 5, 11),
+(998, 5, 11),
+(999, 5, 11),
+(1000, 5, 11),
+(1001, 5, 11),
+(1002, 5, 11),
+(1003, 5, 11),
+(1004, 5, 11),
+(1005, 5, 11),
+(1006, 5, 11),
+(1007, 5, 11),
+(1008, 5, 11),
+(1009, 5, 11),
+(1010, 5, 11),
+(1011, 5, 11),
+(1012, 5, 11),
+(1013, 5, 11),
+(1014, 5, 11),
+(1015, 5, 11),
+(1016, 5, 11),
+(1017, 5, 11),
+(1018, 5, 11),
+(1019, 5, 11),
+(1020, 5, 11),
+(1021, 5, 11),
+(1022, 5, 11),
+(1023, 5, 11),
+(1024, 5, 11),
+(1025, 5, 11),
+(1026, 5, 11),
+(1027, 5, 11),
+(1028, 5, 11),
+(1029, 5, 11),
+(1030, 5, 11),
+(1031, 5, 11),
+(1032, 5, 11),
+(1033, 5, 11),
+(1034, 5, 11),
+(1035, 5, 11),
+(1036, 5, 11),
+(1037, 5, 11),
+(1038, 5, 11),
+(1039, 5, 11),
+(1040, 5, 11),
+(1041, 5, 11),
+(1042, 5, 11),
+(1043, 5, 11),
+(1044, 5, 11),
+(1045, 5, 11),
+(1046, 5, 11),
+(1047, 5, 11),
+(1048, 5, 11),
+(1049, 5, 11),
+(1050, 5, 11),
+(1051, 5, 11),
+(1052, 5, 11),
+(1053, 5, 11),
+(1054, 5, 11),
+(1055, 5, 11),
+(1056, 5, 11),
+(1057, 5, 11),
+(1058, 5, 11),
+(1059, 5, 11),
+(1060, 5, 11),
+(1061, 5, 11),
+(1062, 5, 11),
+(1063, 5, 11),
+(1064, 5, 11),
+(1065, 5, 11),
+(1066, 5, 11),
+(1067, 5, 11),
+(1068, 5, 11),
+(1069, 5, 11),
+(1070, 5, 11),
+(1071, 5, 11),
+(1072, 5, 11),
+(1073, 5, 11),
+(1074, 5, 11),
+(1075, 5, 11),
+(1076, 5, 11),
+(1077, 5, 11),
+(1078, 5, 11),
+(1079, 5, 11),
+(1080, 5, 11),
+(1081, 5, 11),
+(1082, 5, 11),
+(1083, 5, 11),
+(1084, 5, 11),
+(1085, 5, 11),
+(1086, 5, 11),
+(1087, 5, 11),
+(1088, 5, 11),
+(1089, 5, 11),
+(1090, 5, 11),
+(1091, 5, 11),
+(1092, 5, 11),
+(1093, 5, 11),
+(1094, 5, 11),
+(1095, 5, 11),
+(1096, 5, 11),
+(1097, 5, 11),
+(1098, 5, 11),
+(1099, 5, 11),
+(1100, 5, 11),
+(1101, 5, 11),
+(1102, 5, 11),
+(1103, 5, 11),
+(1104, 5, 11),
+(1105, 5, 11),
+(1106, 5, 11),
+(1107, 5, 11),
+(1108, 5, 11),
+(1109, 5, 11),
+(1110, 5, 11),
+(1111, 5, 11),
+(1112, 5, 11),
+(1113, 5, 11),
+(1114, 5, 11),
+(1115, 5, 11),
+(1116, 5, 11),
+(1117, 5, 11),
+(1118, 5, 11),
+(1119, 5, 11),
+(1120, 5, 11),
+(1121, 5, 11),
+(1122, 5, 11),
+(1123, 5, 11),
+(1124, 5, 11),
+(1125, 5, 11),
+(1126, 5, 11),
+(1127, 5, 11),
+(1128, 5, 11),
+(1129, 5, 11),
+(1130, 5, 11),
+(1131, 5, 11),
+(1132, 5, 11),
+(1133, 5, 11),
+(1134, 5, 11),
+(1135, 5, 11),
+(1136, 5, 11),
+(1137, 5, 11),
+(1138, 5, 11),
+(1139, 5, 11),
+(1140, 5, 11),
+(1141, 5, 11),
+(1142, 5, 11),
+(1143, 5, 11),
+(1144, 5, 11),
+(1145, 5, 11),
+(1146, 5, 11),
+(1147, 5, 11),
+(1148, 5, 11),
+(1149, 5, 11),
+(1150, 5, 11),
+(1151, 5, 11),
+(1152, 5, 11),
+(1153, 5, 11),
+(1154, 5, 11),
+(1155, 5, 11),
+(1156, 5, 11),
+(1157, 5, 11),
+(1158, 5, 11),
+(1159, 5, 11),
+(1160, 5, 11),
+(1161, 5, 11),
+(1162, 5, 11),
+(1163, 5, 11),
+(1164, 5, 11),
+(1165, 5, 11),
+(1166, 5, 11),
+(1167, 5, 11),
+(1168, 5, 11),
+(1169, 5, 11),
+(1170, 5, 11),
+(1171, 5, 11),
+(1172, 5, 11),
+(1173, 5, 11),
+(1174, 5, 11),
+(1175, 5, 11),
+(1176, 5, 11),
+(1177, 5, 11),
+(1178, 5, 11),
+(1179, 5, 11),
+(1180, 5, 11),
+(1181, 5, 11),
+(1182, 5, 11),
+(1183, 5, 11),
+(1184, 5, 11),
+(1185, 5, 11),
+(1186, 5, 11),
+(1187, 5, 11),
+(1188, 5, 11),
+(1189, 5, 11),
+(1190, 5, 11),
+(1191, 5, 11),
+(1192, 5, 11),
+(1193, 5, 11),
+(1194, 5, 11),
+(1195, 5, 11),
+(1196, 5, 11),
+(1197, 5, 11),
+(1198, 5, 11),
+(1199, 5, 11),
+(1200, 5, 11),
+(1201, 5, 11),
+(1202, 5, 11),
+(1203, 5, 11),
+(1204, 5, 11),
+(1205, 5, 11),
+(1206, 5, 11),
+(1207, 5, 11),
+(1208, 5, 11),
+(1209, 5, 11),
+(1210, 5, 11),
+(1211, 5, 11),
+(1212, 5, 11),
+(1213, 5, 11),
+(1214, 5, 11),
+(1215, 5, 11),
+(1216, 5, 11),
+(1217, 5, 11),
+(1218, 5, 11),
+(1219, 5, 11),
+(1220, 5, 11),
+(1221, 5, 11),
+(1222, 5, 11),
+(1223, 5, 11),
+(1224, 5, 11),
+(1225, 5, 11),
+(1226, 5, 11),
+(1227, 5, 11),
+(1228, 5, 11),
+(1229, 5, 11),
+(1230, 5, 11),
+(1231, 5, 11),
+(1232, 5, 11),
+(1233, 5, 11),
+(1234, 5, 11),
+(1235, 5, 11),
+(1236, 5, 11),
+(1237, 5, 11),
+(1238, 5, 11),
+(1239, 5, 11),
+(1240, 5, 11),
+(1241, 5, 11),
+(1242, 5, 11),
+(1243, 5, 11),
+(1244, 5, 11),
+(1245, 5, 11),
+(1246, 5, 11),
+(1247, 5, 11),
+(1248, 5, 11),
+(1249, 5, 11),
+(1250, 5, 11),
+(1251, 5, 11),
+(1252, 5, 11),
+(1253, 5, 11),
+(1254, 5, 11),
+(1255, 5, 11),
+(1256, 5, 11),
+(1257, 5, 11),
+(1258, 5, 11),
+(1259, 5, 11),
+(1260, 5, 11),
+(1261, 5, 11),
+(1262, 5, 11),
+(1263, 5, 11),
+(1264, 5, 11),
+(1265, 5, 11),
+(1266, 5, 11),
+(1267, 5, 11),
+(1268, 5, 11),
+(1269, 5, 11),
+(1270, 5, 11),
+(1271, 5, 11),
+(1272, 5, 11),
+(1273, 5, 11),
+(1274, 5, 11),
+(1275, 5, 11),
+(1276, 5, 11),
+(1277, 5, 11),
+(1278, 5, 11),
+(1279, 5, 11),
+(1280, 5, 11),
+(1281, 5, 11),
+(1282, 5, 11),
+(1283, 5, 11),
+(1284, 5, 11),
+(1285, 5, 11),
+(1286, 5, 11),
+(1287, 5, 11),
+(1288, 5, 11),
+(1289, 5, 11),
+(1290, 5, 11),
+(1291, 5, 11),
+(1292, 5, 11),
+(1293, 5, 11),
+(1294, 5, 11),
+(1295, 5, 11),
+(1296, 5, 11),
+(1297, 5, 11),
+(1298, 5, 11),
+(1299, 5, 11),
+(1300, 5, 11),
+(1301, 5, 11),
+(1302, 5, 11),
+(1303, 5, 11),
+(1304, 5, 11),
+(1305, 5, 11),
+(1306, 5, 11),
+(1307, 5, 11),
+(1308, 5, 11),
+(1309, 5, 11),
+(1310, 5, 11),
+(1311, 5, 11),
+(1312, 5, 11),
+(1313, 5, 11),
+(1314, 5, 11),
+(1315, 5, 11),
+(1316, 5, 11),
+(1317, 5, 11),
+(1318, 5, 11),
+(1319, 5, 11),
+(1320, 5, 11),
+(1321, 5, 11),
+(1322, 5, 11),
+(1323, 5, 11),
+(1324, 5, 11),
+(1325, 5, 11),
+(1326, 5, 11),
+(1327, 5, 11),
+(1328, 5, 11),
+(1329, 5, 11),
+(1330, 5, 11),
+(1331, 5, 11),
+(1332, 5, 11),
+(1333, 5, 11),
+(1334, 5, 11),
+(1335, 5, 11),
+(1336, 5, 11),
+(1337, 5, 11),
+(1338, 5, 11),
+(1339, 5, 11),
+(1340, 5, 11),
+(1341, 5, 11),
+(1342, 5, 11),
+(1343, 5, 11),
+(1344, 5, 11),
+(1345, 5, 11),
+(1346, 5, 11),
+(1347, 5, 11),
+(1348, 5, 11),
+(1349, 5, 11),
+(1350, 5, 11),
+(1351, 5, 11),
+(1352, 5, 11),
+(1353, 5, 11),
+(1354, 5, 11),
+(1355, 5, 11),
+(1356, 5, 11),
+(1357, 5, 11),
+(1358, 5, 11),
+(1359, 5, 11),
+(1360, 5, 11),
+(1361, 5, 11),
+(1362, 5, 11),
+(1363, 5, 11),
+(1364, 5, 11),
+(1365, 5, 11),
+(1366, 5, 11),
+(1367, 5, 11),
+(1368, 5, 11),
+(1369, 5, 11),
+(1370, 5, 11),
+(1371, 5, 11),
+(1372, 5, 11),
+(1373, 5, 11),
+(1374, 5, 11),
+(1375, 5, 11),
+(1376, 5, 11),
+(1377, 5, 11),
+(1378, 5, 11),
+(1379, 5, 11),
+(1380, 5, 11),
+(1381, 5, 11),
+(1382, 5, 11),
+(1383, 5, 11),
+(1384, 5, 11),
+(1385, 5, 11),
+(1386, 5, 11),
+(1387, 5, 11),
+(1388, 5, 11),
+(1389, 5, 11),
+(1390, 5, 11),
+(1391, 5, 11),
+(1392, 5, 11),
+(1393, 5, 11),
+(1394, 5, 11),
+(1395, 5, 11),
+(1396, 5, 11),
+(1397, 5, 11),
+(1398, 5, 11),
+(1399, 5, 11),
+(1400, 5, 11),
+(1401, 5, 11),
+(1402, 5, 11),
+(1403, 5, 11),
+(1404, 5, 11),
+(1405, 5, 11),
+(1406, 5, 11),
+(1407, 5, 11),
+(1408, 5, 11),
+(1409, 5, 11),
+(1410, 5, 11),
+(1411, 5, 11),
+(1412, 5, 11),
+(1413, 5, 11),
+(1414, 5, 11),
+(1415, 5, 11),
+(1416, 5, 11),
+(1417, 5, 11),
+(1418, 5, 11),
+(1419, 5, 11),
+(1420, 5, 11),
+(1421, 5, 11),
+(1422, 5, 11),
+(1423, 5, 11),
+(1424, 5, 11),
+(1425, 5, 11),
+(1426, 5, 11),
+(1427, 5, 11),
+(1428, 5, 11),
+(1429, 5, 11),
+(1430, 5, 11),
+(1431, 5, 11),
+(1432, 5, 11),
+(1433, 5, 11),
+(1434, 5, 11),
+(1435, 5, 11),
+(1436, 5, 11),
+(1437, 5, 11),
+(1438, 5, 11),
+(1439, 5, 11),
+(1440, 5, 11),
+(1441, 5, 11),
+(1442, 5, 11),
+(1443, 5, 11),
+(1444, 5, 11),
+(1445, 5, 11),
+(1446, 5, 11),
+(1447, 5, 11),
+(1448, 5, 11),
+(1449, 5, 11),
+(1450, 5, 11),
+(1451, 5, 11),
+(1452, 5, 11),
+(1453, 5, 11),
+(1454, 5, 11),
+(1455, 5, 11),
+(1456, 5, 11),
+(1457, 5, 11),
+(1458, 5, 11),
+(1459, 5, 11),
+(1460, 5, 11),
+(1461, 5, 11),
+(1462, 5, 11),
+(1463, 5, 11),
+(1464, 5, 11),
+(1465, 5, 11),
+(1466, 5, 11),
+(1467, 5, 11),
+(1468, 5, 11),
+(1469, 5, 11),
+(1470, 5, 11),
+(1471, 5, 11),
+(1472, 5, 11),
+(1473, 5, 11),
+(1474, 5, 11),
+(1475, 5, 11),
+(1476, 5, 11),
+(1477, 5, 11),
+(1478, 5, 11),
+(1479, 5, 11),
+(1480, 5, 11),
+(1481, 5, 11),
+(1482, 5, 11),
+(1483, 5, 11),
+(1484, 5, 11),
+(1485, 5, 11),
+(1486, 5, 11),
+(1487, 5, 11),
+(1488, 5, 11),
+(1489, 5, 11),
+(1490, 5, 11),
+(1491, 5, 11),
+(1492, 5, 11),
+(1493, 5, 11),
+(1494, 5, 11),
+(1495, 5, 11),
+(1496, 5, 11),
+(1497, 5, 11),
+(1498, 5, 11),
+(1499, 5, 11),
+(1500, 5, 11),
+(1501, 5, 11),
+(1502, 5, 11),
+(1503, 5, 11),
+(1504, 5, 11),
+(1505, 5, 11),
+(1506, 5, 11),
+(1507, 5, 11),
+(1508, 5, 11),
+(1509, 5, 11),
+(1510, 5, 11),
+(1511, 5, 11),
+(1512, 5, 11),
+(1513, 5, 11),
+(1514, 5, 11),
+(1515, 5, 11),
+(1516, 5, 11),
+(1517, 5, 11),
+(1518, 5, 11),
+(1519, 5, 11),
+(1520, 5, 11),
+(1521, 5, 11),
+(1522, 5, 11),
+(1523, 5, 11),
+(1524, 5, 11),
+(1525, 5, 11),
+(1526, 5, 11),
+(1527, 5, 11),
+(1528, 5, 11),
+(1529, 5, 11),
+(1530, 5, 11),
+(1531, 5, 11),
+(1532, 5, 11),
+(1533, 5, 11),
+(1534, 5, 11),
+(1535, 5, 11),
+(1536, 5, 11),
+(1537, 5, 11),
+(1538, 5, 11),
+(1539, 5, 11),
+(1540, 5, 11),
+(1541, 5, 11),
+(1542, 5, 11),
+(1543, 5, 11),
+(1544, 5, 11),
+(1545, 5, 11),
+(1546, 5, 11),
+(1547, 5, 11),
+(1548, 5, 11),
+(1549, 5, 11),
+(1550, 5, 11),
+(1551, 5, 11),
+(1552, 5, 11),
+(1553, 5, 11),
+(1554, 5, 11),
+(1555, 5, 11),
+(1556, 5, 11),
+(1557, 5, 11),
+(1558, 5, 11),
+(1559, 5, 11),
+(1560, 5, 11),
+(1561, 5, 11),
+(1562, 5, 11),
+(1563, 5, 11),
+(1564, 5, 11),
+(1565, 5, 11),
+(1566, 5, 11),
+(1567, 5, 11),
+(1568, 5, 11),
+(1569, 5, 11),
+(1570, 5, 11),
+(1571, 5, 11),
+(1572, 5, 11),
+(1573, 5, 11),
+(1574, 5, 11),
+(1575, 5, 11),
+(1576, 5, 11),
+(1577, 5, 11),
+(1578, 5, 11),
+(1579, 5, 11),
+(1580, 5, 11),
+(1581, 5, 11),
+(1582, 5, 11),
+(1583, 5, 11),
+(1584, 5, 11),
+(1585, 5, 11),
+(1586, 5, 11),
+(1587, 5, 11),
+(1588, 5, 11),
+(1589, 5, 11),
+(1590, 5, 11),
+(1591, 5, 11),
+(1592, 5, 11),
+(1593, 5, 11),
+(1594, 5, 11),
+(1595, 5, 11),
+(1596, 5, 11),
+(1597, 5, 11),
+(1598, 5, 11),
+(1599, 5, 11),
+(1600, 5, 11),
+(1601, 5, 11),
+(1602, 5, 11),
+(1603, 5, 11),
+(1604, 5, 11),
+(1605, 5, 11),
+(1606, 5, 11),
+(1607, 5, 11),
+(1608, 5, 11),
+(1609, 5, 11),
+(1610, 5, 11),
+(1611, 5, 11),
+(1612, 5, 11),
+(1613, 5, 11),
+(1614, 5, 11),
+(1615, 5, 11),
+(1616, 5, 11),
+(1617, 5, 11),
+(1618, 5, 11),
+(1619, 5, 11),
+(1620, 5, 11),
+(1621, 5, 11),
+(1622, 5, 11),
+(1623, 5, 11),
+(1624, 5, 11),
+(1625, 5, 11),
+(1626, 5, 11),
+(1627, 5, 11),
+(1628, 5, 11),
+(1629, 5, 11),
+(1630, 5, 11),
+(1631, 5, 11),
+(1632, 5, 11),
+(1633, 5, 11),
+(1634, 5, 11),
+(1635, 5, 11),
+(1636, 5, 11),
+(1637, 5, 11),
+(1638, 5, 11),
+(1639, 5, 11),
+(1640, 5, 11),
+(1641, 5, 11),
+(1642, 5, 11),
+(1643, 5, 11),
+(1644, 5, 11),
+(1645, 5, 11),
+(1646, 5, 11),
+(1647, 5, 11),
+(1648, 5, 11),
+(1649, 5, 11),
+(1650, 5, 11),
+(1651, 5, 11),
+(1652, 5, 11),
+(1653, 5, 11),
+(1654, 5, 11),
+(1655, 5, 11),
+(1656, 5, 11),
+(1657, 5, 11),
+(1658, 5, 11),
+(1659, 5, 11),
+(1660, 5, 11),
+(1661, 5, 11),
+(1662, 5, 11),
+(1663, 5, 11),
+(1664, 5, 11),
+(1665, 5, 11),
+(1666, 5, 11),
+(1667, 5, 11),
+(1668, 5, 11),
+(1669, 5, 11),
+(1670, 5, 11),
+(1671, 5, 11),
+(1672, 5, 11),
+(1673, 5, 11),
+(1674, 5, 11),
+(1675, 5, 11),
+(1676, 5, 11),
+(1677, 5, 11),
+(1678, 5, 11),
+(1679, 5, 11),
+(1680, 5, 11),
+(1681, 5, 11),
+(1682, 5, 11),
+(1683, 5, 11),
+(1684, 5, 11),
+(1685, 5, 11),
+(1686, 5, 11),
+(1687, 5, 11),
+(1688, 5, 11),
+(1689, 5, 11),
+(1690, 5, 11),
+(1691, 5, 11),
+(1692, 5, 11),
+(1693, 5, 11),
+(1694, 5, 11),
+(1695, 5, 11),
+(1696, 5, 11),
+(1697, 5, 11),
+(1698, 5, 11),
+(1699, 5, 11),
+(1700, 5, 11),
+(1701, 5, 11),
+(1702, 5, 11),
+(1703, 5, 11),
+(1704, 5, 11),
+(1705, 5, 11),
+(1706, 5, 11),
+(1707, 5, 11),
+(1708, 5, 11),
+(1709, 5, 11),
+(1710, 5, 11),
+(1711, 5, 11),
+(1712, 5, 11),
+(1713, 5, 11),
+(1714, 5, 11),
+(1715, 5, 11),
+(1716, 5, 11),
+(1717, 5, 11),
+(1718, 5, 11),
+(1719, 5, 11),
+(1720, 5, 11),
+(1721, 5, 11),
+(1722, 5, 11),
+(1723, 5, 11),
+(1724, 5, 11),
+(1725, 5, 11),
+(1726, 5, 11),
+(1727, 5, 11),
+(1728, 5, 11),
+(1729, 5, 11),
+(1730, 5, 11),
+(1731, 5, 11),
+(1732, 5, 11),
+(1733, 5, 11),
+(1734, 5, 11),
+(1735, 5, 11),
+(1736, 5, 11),
+(1737, 5, 11),
+(1738, 5, 11),
+(1739, 5, 11),
+(1740, 5, 11),
+(1741, 5, 11),
+(1742, 5, 11),
+(1743, 5, 11),
+(1744, 5, 11),
+(1745, 5, 11),
+(1746, 5, 11),
+(1747, 5, 11),
+(1748, 5, 11),
+(1749, 5, 11),
+(1750, 5, 11),
+(1751, 5, 11),
+(1752, 5, 11),
+(1753, 5, 11),
+(1754, 5, 11),
+(1755, 5, 11),
+(1756, 5, 11),
+(1757, 5, 11),
+(1758, 5, 11),
+(1759, 5, 11),
+(1760, 5, 11),
+(1761, 5, 11),
+(1762, 5, 11),
+(1763, 5, 11),
+(1764, 5, 11),
+(1765, 5, 11),
+(1766, 5, 11),
+(1767, 5, 11),
+(1768, 5, 11),
+(1769, 5, 11),
+(1770, 5, 11),
+(1771, 5, 11),
+(1772, 5, 11),
+(1773, 5, 11),
+(1774, 5, 11),
+(1775, 5, 11),
+(1776, 5, 11),
+(1777, 5, 11),
+(1778, 5, 11),
+(1779, 5, 11),
+(1780, 5, 11),
+(1781, 5, 11),
+(1782, 5, 11),
+(1783, 5, 11),
+(1784, 5, 11),
+(1785, 5, 11),
+(1786, 5, 11),
+(1787, 5, 11),
+(1788, 5, 11),
+(1789, 5, 11),
+(1790, 5, 11),
+(1791, 5, 11),
+(1792, 5, 11),
+(1793, 5, 11),
+(1794, 5, 11),
+(1795, 5, 11),
+(1796, 5, 11),
+(1797, 5, 11),
+(1798, 5, 11),
+(1799, 5, 11),
+(1800, 5, 11),
+(1801, 5, 11),
+(1802, 5, 11),
+(1803, 5, 11),
+(1804, 5, 11),
+(1805, 5, 11),
+(1806, 5, 11),
+(1807, 5, 11),
+(1808, 5, 11),
+(1809, 5, 11),
+(1810, 5, 11),
+(1811, 5, 11),
+(1812, 5, 11),
+(1813, 5, 11),
+(1814, 5, 11),
+(1815, 5, 11),
+(1816, 5, 11),
+(1817, 5, 11),
+(1818, 5, 11),
+(1819, 5, 11),
+(1820, 5, 11),
+(1821, 5, 11),
+(1822, 5, 11),
+(1823, 5, 11),
+(1824, 5, 11),
+(1825, 5, 11),
+(1826, 5, 11),
+(1827, 5, 11),
+(1828, 5, 11),
+(1829, 5, 11),
+(1830, 5, 11),
+(1831, 5, 11),
+(1832, 5, 11),
+(1833, 5, 11),
+(1834, 5, 11),
+(1835, 5, 11),
+(1836, 5, 11),
+(1837, 5, 11),
+(1838, 5, 11),
+(1839, 5, 11),
+(1840, 5, 11),
+(1841, 5, 11),
+(1842, 5, 11),
+(1843, 5, 11),
+(1844, 5, 11),
+(1845, 5, 11),
+(1846, 5, 11),
+(1847, 5, 11),
+(1848, 5, 11),
+(1849, 5, 11),
+(1850, 5, 11),
+(1851, 5, 11),
+(1852, 5, 11),
+(1853, 5, 11),
+(1854, 5, 11),
+(1855, 5, 11),
+(1856, 5, 11),
+(1857, 5, 11),
+(1858, 5, 11),
+(1859, 5, 11),
+(1860, 5, 11),
+(1861, 5, 11),
+(1862, 5, 11),
+(1863, 5, 11),
+(1864, 5, 11),
+(1865, 5, 11),
+(1866, 5, 11),
+(1867, 5, 11),
+(1868, 5, 11),
+(1869, 5, 11),
+(1870, 5, 11),
+(1871, 5, 11),
+(1872, 5, 11),
+(1873, 5, 11),
+(1874, 5, 11),
+(1875, 5, 11),
+(1876, 5, 11),
+(1877, 5, 11),
+(1878, 5, 11),
+(1879, 5, 11),
+(1880, 5, 11),
+(1881, 5, 11),
+(1882, 5, 11),
+(1883, 5, 11),
+(1884, 5, 11),
+(1885, 5, 11),
+(1886, 5, 11),
+(1887, 5, 11),
+(1888, 5, 11),
+(1889, 5, 11),
+(1890, 5, 11),
+(1891, 5, 11),
+(1892, 5, 11),
+(1893, 5, 11),
+(1894, 5, 11),
+(1895, 5, 11),
+(1896, 5, 11),
+(1897, 5, 11),
+(1898, 5, 11),
+(1899, 5, 11),
+(1900, 5, 11),
+(1901, 5, 11),
+(1902, 5, 11),
+(1903, 5, 11),
+(1904, 5, 11),
+(1905, 5, 11),
+(1906, 5, 11),
+(1907, 5, 11),
+(1908, 5, 11),
+(1909, 5, 11),
+(1910, 5, 11),
+(1911, 5, 11),
+(1912, 5, 11),
+(1913, 5, 11),
+(1914, 5, 11),
+(1915, 5, 11),
+(1916, 5, 11),
+(1917, 5, 11),
+(1918, 5, 11),
+(1919, 5, 11),
+(1920, 5, 11),
+(1921, 5, 11),
+(1922, 5, 11),
+(1923, 5, 11),
+(1924, 5, 11),
+(1925, 5, 11),
+(1926, 5, 11),
+(1927, 5, 11),
+(1928, 5, 11),
+(1929, 5, 11),
+(1930, 5, 11),
+(1931, 5, 11),
+(1932, 5, 11),
+(1933, 5, 11),
+(1934, 5, 11),
+(1935, 5, 11),
+(1936, 5, 11),
+(1937, 5, 11),
+(1938, 5, 11),
+(1939, 5, 11),
+(1940, 5, 11),
+(1941, 5, 11),
+(1942, 5, 11),
+(1943, 5, 11),
+(1944, 5, 11),
+(1945, 5, 11),
+(1946, 5, 11),
+(1947, 5, 11),
+(1948, 5, 11),
+(1949, 5, 11),
+(1950, 5, 11),
+(1951, 5, 11),
+(1952, 5, 11),
+(1953, 5, 11),
+(1954, 5, 11),
+(1955, 5, 11),
+(1956, 5, 11),
+(1957, 5, 11),
+(1958, 5, 11),
+(1959, 5, 11),
+(1960, 5, 11),
+(1961, 5, 11),
+(1962, 5, 11),
+(1963, 5, 11),
+(1964, 5, 11),
+(1965, 5, 11),
+(1966, 5, 11),
+(1967, 5, 11),
+(1968, 5, 11),
+(1969, 5, 11),
+(1970, 5, 11),
+(1971, 5, 11),
+(1972, 5, 11),
+(1973, 5, 11),
+(1974, 5, 11),
+(1975, 5, 11),
+(1976, 5, 11),
+(1977, 5, 11),
+(1978, 5, 11),
+(1979, 5, 11),
+(1980, 5, 11),
+(1981, 5, 11),
+(1982, 5, 11),
+(1983, 5, 11),
+(1984, 5, 11),
+(1985, 5, 11),
+(1986, 5, 11),
+(1987, 5, 11),
+(1988, 5, 11),
+(1989, 5, 11),
+(1990, 5, 11),
+(1991, 5, 11),
+(1992, 5, 11),
+(1993, 5, 11),
+(1994, 5, 11),
+(1995, 5, 11),
+(1996, 5, 11),
+(1997, 5, 11),
+(1998, 5, 11),
+(1999, 5, 11),
+(2000, 5, 11),
+(2001, 5, 11),
+(2002, 5, 11),
+(2003, 5, 11),
+(2004, 5, 11),
+(2005, 5, 11),
+(2006, 5, 11),
+(2007, 5, 11),
+(2008, 5, 11),
+(2009, 5, 11),
+(2010, 5, 11),
+(2011, 5, 11),
+(2012, 5, 11),
+(2013, 5, 11),
+(2014, 5, 11),
+(2015, 5, 11),
+(2016, 5, 11),
+(2017, 5, 11),
+(2018, 5, 11),
+(2019, 5, 11),
+(2020, 5, 11),
+(2021, 5, 11),
+(2022, 5, 11),
+(2023, 5, 11),
+(2024, 5, 11),
+(2025, 5, 11),
+(2026, 5, 11),
+(2027, 5, 11),
+(2028, 5, 11),
+(2029, 5, 11),
+(2030, 5, 11),
+(2031, 5, 11),
+(2032, 5, 11),
+(2033, 5, 11),
+(2034, 5, 11),
+(2035, 5, 11),
+(2036, 5, 11),
+(2037, 5, 11),
+(2038, 5, 11),
+(2039, 5, 11),
+(2040, 5, 11),
+(2041, 5, 11),
+(2042, 5, 11),
+(2043, 5, 11),
+(2044, 5, 11),
+(2045, 5, 11),
+(2046, 5, 11),
+(2047, 5, 11),
+(2048, 5, 11),
+(2049, 5, 11),
+(2050, 5, 11),
+(2051, 5, 11),
+(2052, 5, 11),
+(2053, 5, 11),
+(2054, 5, 11),
+(2055, 5, 11),
+(2056, 5, 11),
+(2057, 5, 11),
+(2058, 5, 11),
+(2059, 5, 11),
+(2060, 5, 11),
+(2061, 5, 11),
+(2062, 5, 11),
+(2063, 5, 11),
+(2064, 5, 11),
+(2065, 5, 11),
+(2066, 5, 11),
+(2067, 5, 11),
+(2068, 5, 11),
+(2069, 5, 11),
+(2070, 5, 11),
+(2071, 5, 11),
+(2072, 5, 11),
+(2073, 5, 11),
+(2074, 5, 11),
+(2075, 5, 11),
+(2076, 5, 11),
+(2077, 5, 11),
+(2078, 5, 11),
+(2079, 5, 11),
+(2080, 5, 11),
+(2081, 5, 11),
+(2082, 5, 11),
+(2083, 5, 11),
+(2084, 5, 11),
+(2085, 5, 11),
+(2086, 5, 11),
+(2087, 5, 11),
+(2088, 5, 11),
+(2089, 5, 11),
+(2090, 5, 11),
+(2091, 5, 11),
+(2092, 5, 11),
+(2093, 5, 11),
+(2094, 5, 11),
+(2095, 5, 11),
+(2096, 5, 11),
+(2097, 5, 11),
+(2098, 5, 11),
+(2099, 5, 11),
+(2100, 5, 11),
+(2101, 5, 11),
+(2102, 5, 11),
+(2103, 5, 11),
+(2104, 5, 11),
+(2105, 5, 11),
+(2106, 5, 11),
+(2107, 5, 11),
+(2108, 5, 11),
+(2109, 5, 11),
+(2110, 5, 11),
+(2111, 5, 11),
+(2112, 5, 11),
+(2113, 5, 11),
+(2114, 5, 11),
+(2115, 5, 11),
+(2116, 5, 11),
+(2117, 5, 11),
+(2118, 5, 11),
+(2119, 5, 11),
+(2120, 5, 11),
+(2121, 5, 11),
+(2122, 5, 11),
+(2123, 5, 11),
+(2124, 5, 11),
+(2125, 5, 11),
+(2126, 5, 11),
+(2127, 5, 11),
+(2128, 5, 11),
+(2129, 5, 11),
+(2130, 5, 11),
+(2131, 5, 11),
+(2132, 5, 11),
+(2133, 5, 11),
+(2134, 5, 11),
+(2135, 5, 11),
+(2136, 5, 11),
+(2137, 5, 11),
+(2138, 5, 11),
+(2139, 5, 11),
+(2140, 5, 11),
+(2141, 5, 11),
+(2142, 5, 11),
+(2143, 5, 11),
+(2144, 5, 11),
+(2145, 5, 11),
+(2146, 5, 11),
+(2147, 5, 11),
+(2148, 5, 11),
+(2149, 5, 11),
+(2150, 5, 11),
+(2151, 5, 11),
+(2152, 5, 11),
+(2153, 5, 11),
+(2154, 5, 11),
+(2155, 5, 11),
+(2156, 5, 11),
+(2157, 5, 11),
+(2158, 5, 11),
+(2159, 5, 11),
+(2160, 5, 11),
+(2161, 5, 11);
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `bills`
 --
--- Creación: 16-11-2011 a las 23:43:50
---
 
-CREATE TABLE `bills` (
+CREATE TABLE IF NOT EXISTS `bills` (
   `idBill` int(11) NOT NULL AUTO_INCREMENT,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `idRestaurant` int(11) NOT NULL,
@@ -2205,18 +2208,17 @@ CREATE TABLE `bills` (
 -- Volcar la base de datos para la tabla `bills`
 --
 
-INSERT INTO `bills` VALUES(10, '2011-11-17 01:16:42', 4, 4, 'La carne bieeen blandita :P', 1);
-INSERT INTO `bills` VALUES(11, '2011-11-17 01:43:34', 4, 4, 'Si, son muchas gelatinas. Es que tengo hambre :)', 0);
+INSERT INTO `bills` (`idBill`, `timestamp`, `idRestaurant`, `idClient`, `specialNote`, `served`) VALUES
+(10, '2011-11-17 01:16:42', 4, 4, 'La carne bieeen blandita :P', 1),
+(11, '2011-11-17 01:43:34', 4, 4, 'Si, son muchas gelatinas. Es que tengo hambre :)', 0);
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `categories`
 --
--- Creación: 05-11-2011 a las 16:06:51
---
 
-CREATE TABLE `categories` (
+CREATE TABLE IF NOT EXISTS `categories` (
   `idCategory` int(11) NOT NULL AUTO_INCREMENT,
   `category` varchar(255) NOT NULL DEFAULT '',
   `idRestaurant` int(11) DEFAULT NULL,
@@ -2228,21 +2230,20 @@ CREATE TABLE `categories` (
 -- Volcar la base de datos para la tabla `categories`
 --
 
-INSERT INTO `categories` VALUES(1, 'Otro', 4);
-INSERT INTO `categories` VALUES(2, 'Entradas', 4);
-INSERT INTO `categories` VALUES(3, 'Sin Categoría', 5);
-INSERT INTO `categories` VALUES(4, 'Postres', 4);
-INSERT INTO `categories` VALUES(5, 'Carnes', 4);
+INSERT INTO `categories` (`idCategory`, `category`, `idRestaurant`) VALUES
+(1, 'Otro', 4),
+(2, 'Entradas', 4),
+(3, 'Sin CategorÃ­a', 5),
+(4, 'Postres', 4),
+(5, 'Carnes', 4);
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `clients`
 --
--- Creación: 04-11-2011 a las 15:54:16
---
 
-CREATE TABLE `clients` (
+CREATE TABLE IF NOT EXISTS `clients` (
   `idClient` int(11) NOT NULL AUTO_INCREMENT,
   `firstName` varchar(255) NOT NULL,
   `lastName` varchar(255) NOT NULL,
@@ -2259,19 +2260,18 @@ CREATE TABLE `clients` (
 -- Volcar la base de datos para la tabla `clients`
 --
 
-INSERT INTO `clients` VALUES(4, 'Celso Ulises', 'Juarez Ramirez', '3124890', 'Armeria 577-A', 'Colima', '28046', 7);
-INSERT INTO `clients` VALUES(5, '123', '123', '123', '123', '123', '123', 9);
-INSERT INTO `clients` VALUES(6, '123', '123', '123', '123', '123', '123', 10);
+INSERT INTO `clients` (`idClient`, `firstName`, `lastName`, `telephone`, `address`, `city`, `cp`, `idUser`) VALUES
+(4, 'Celso Ulises', 'Juarez Ramirez', '3124890', 'Armeria 577-A', 'Colima', '28046', 7),
+(5, '123', '123', '123', '123', '123', '123', 9),
+(6, '123', '123', '123', '123', '123', '123', 10);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `dishComments`
---
--- Creación: 04-11-2011 a las 15:54:46
+-- Estructura de tabla para la tabla `dishcomments`
 --
 
-CREATE TABLE `dishComments` (
+CREATE TABLE IF NOT EXISTS `dishcomments` (
   `idDishComment` int(11) NOT NULL AUTO_INCREMENT,
   `idDish` int(11) NOT NULL,
   `idClient` int(11) NOT NULL,
@@ -2282,7 +2282,7 @@ CREATE TABLE `dishComments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Volcar la base de datos para la tabla `dishComments`
+-- Volcar la base de datos para la tabla `dishcomments`
 --
 
 
@@ -2291,15 +2291,14 @@ CREATE TABLE `dishComments` (
 --
 -- Estructura de tabla para la tabla `dishes`
 --
--- Creación: 10-11-2011 a las 16:21:18
---
 
-CREATE TABLE `dishes` (
+CREATE TABLE IF NOT EXISTS `dishes` (
   `idDish` int(11) NOT NULL AUTO_INCREMENT,
   `dish` varchar(255) NOT NULL,
   `price` float NOT NULL,
   `idCategory` int(11) NOT NULL,
   `image` varchar(255) NOT NULL,
+  `description` text NOT NULL,
   PRIMARY KEY (`idDish`),
   KEY `idCategory` (`idCategory`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
@@ -2308,11 +2307,12 @@ CREATE TABLE `dishes` (
 -- Volcar la base de datos para la tabla `dishes`
 --
 
-INSERT INTO `dishes` VALUES(1, 'Torta Ahogada', 25, 2, '');
-INSERT INTO `dishes` VALUES(4, 'Pollo', 135, 1, '');
-INSERT INTO `dishes` VALUES(5, 'Gelatina', 20, 4, '');
-INSERT INTO `dishes` VALUES(6, 'Jericalla', 12, 4, '');
-INSERT INTO `dishes` VALUES(7, 'carne', 12, 5, '');
+INSERT INTO `dishes` (`idDish`, `dish`, `price`, `idCategory`, `image`, `description`) VALUES
+(1, 'Torta Ahogada', 25, 2, 'jpg', ''),
+(4, 'Pollo', 135, 1, '', ''),
+(5, 'Gelatina', 20, 4, 'gif', 'Rica gelatina con la receta secreta!'),
+(6, 'Jericalla', 12, 4, '', ''),
+(7, 'carne', 12, 5, '', '');
 
 --
 -- (Evento) desencadenante `dishes`
@@ -2331,12 +2331,10 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `dishScores`
---
--- Creación: 04-11-2011 a las 16:07:28
+-- Estructura de tabla para la tabla `dishscores`
 --
 
-CREATE TABLE `dishScores` (
+CREATE TABLE IF NOT EXISTS `dishscores` (
   `idDishScore` int(11) NOT NULL AUTO_INCREMENT,
   `score` int(11) NOT NULL,
   `idDish` int(11) NOT NULL,
@@ -2347,19 +2345,17 @@ CREATE TABLE `dishScores` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Volcar la base de datos para la tabla `dishScores`
+-- Volcar la base de datos para la tabla `dishscores`
 --
 
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `restaurantComments`
---
--- Creación: 04-11-2011 a las 16:07:50
+-- Estructura de tabla para la tabla `restaurantcomments`
 --
 
-CREATE TABLE `restaurantComments` (
+CREATE TABLE IF NOT EXISTS `restaurantcomments` (
   `idRestaurantComment` int(11) NOT NULL AUTO_INCREMENT,
   `idRestaurant` int(11) NOT NULL,
   `idClient` int(11) NOT NULL,
@@ -2370,7 +2366,7 @@ CREATE TABLE `restaurantComments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Volcar la base de datos para la tabla `restaurantComments`
+-- Volcar la base de datos para la tabla `restaurantcomments`
 --
 
 
@@ -2379,10 +2375,8 @@ CREATE TABLE `restaurantComments` (
 --
 -- Estructura de tabla para la tabla `restaurants`
 --
--- Creación: 04-11-2011 a las 16:08:08
---
 
-CREATE TABLE `restaurants` (
+CREATE TABLE IF NOT EXISTS `restaurants` (
   `idRestaurant` int(11) NOT NULL AUTO_INCREMENT,
   `restaurant` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
@@ -2391,7 +2385,7 @@ CREATE TABLE `restaurants` (
   `telephone` varchar(10) NOT NULL,
   `idType` int(11) NOT NULL,
   `idUser` int(11) NOT NULL,
-  `logo` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`idRestaurant`),
   KEY `idUser` (`idUser`),
   KEY `idType` (`idType`)
@@ -2401,11 +2395,12 @@ CREATE TABLE `restaurants` (
 -- Volcar la base de datos para la tabla `restaurants`
 --
 
-INSERT INTO `restaurants` VALUES(1, 'Loncheria CJuarez', 'Armeria 577A', 'Colima', '28046', '3124890', 4, 3, NULL);
-INSERT INTO `restaurants` VALUES(2, 'Jashi', 'Av. Gonzalo de Sandoval #396', 'Colima', 'CP1', '3133131', 1, 3, 'jashi');
-INSERT INTO `restaurants` VALUES(3, 'Restaurante 2', 'Calle 2', 'Ciudad 2', 'CP2', 'telefono2', 1, 10, 'logo2');
-INSERT INTO `restaurants` VALUES(4, 'Tortas Don Panchito', 'Armeria 577', 'Colima', '28046', '3124980', 4, 11, NULL);
-INSERT INTO `restaurants` VALUES(5, 'C', 'C', 'C', 'C', 'C', 2, 3, 'jashi');
+INSERT INTO `restaurants` (`idRestaurant`, `restaurant`, `address`, `city`, `cp`, `telephone`, `idType`, `idUser`, `image`) VALUES
+(1, 'Loncheria CJuarez', 'Armeria 577A', 'Colima', '28046', '3124890', 4, 3, NULL),
+(2, 'Jashi', 'Av. Gonzalo de Sandoval #396', 'Colima', 'CP1', '3133131', 1, 3, 'jashi'),
+(3, 'Restaurante 2', 'Calle 2', 'Ciudad 2', 'CP2', 'telefono2', 1, 10, 'logo2'),
+(4, 'Tortas Don Panchito', 'Armeria 577', 'Colima', '28046', '3124980', 4, 11, 'jpg'),
+(5, 'C', 'C', 'C', 'C', 'C', 2, 3, 'jashi');
 
 --
 -- (Evento) desencadenante `restaurants`
@@ -2413,19 +2408,17 @@ INSERT INTO `restaurants` VALUES(5, 'C', 'C', 'C', 'C', 'C', 2, 3, 'jashi');
 DROP TRIGGER IF EXISTS `addCategory`;
 DELIMITER //
 CREATE TRIGGER `addCategory` AFTER INSERT ON `restaurants`
- FOR EACH ROW INSERT INTO categories(category,idRestaurant) VALUES('Sin Categoría',NEW.idRestaurant)
+ FOR EACH ROW INSERT INTO categories(category,idRestaurant) VALUES('Sin CategorÃ­a',NEW.idRestaurant)
 //
 DELIMITER ;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `restaurantScores`
---
--- Creación: 04-11-2011 a las 16:08:20
+-- Estructura de tabla para la tabla `restaurantscores`
 --
 
-CREATE TABLE `restaurantScores` (
+CREATE TABLE IF NOT EXISTS `restaurantscores` (
   `idRestaurantScore` int(11) NOT NULL AUTO_INCREMENT,
   `score` int(11) NOT NULL,
   `idRestaurant` int(11) NOT NULL,
@@ -2436,7 +2429,7 @@ CREATE TABLE `restaurantScores` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Volcar la base de datos para la tabla `restaurantScores`
+-- Volcar la base de datos para la tabla `restaurantscores`
 --
 
 
@@ -2445,10 +2438,8 @@ CREATE TABLE `restaurantScores` (
 --
 -- Estructura de tabla para la tabla `types`
 --
--- Creación: 04-11-2011 a las 16:08:34
---
 
-CREATE TABLE `types` (
+CREATE TABLE IF NOT EXISTS `types` (
   `idType` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(255) NOT NULL,
   PRIMARY KEY (`idType`)
@@ -2458,22 +2449,21 @@ CREATE TABLE `types` (
 -- Volcar la base de datos para la tabla `types`
 --
 
-INSERT INTO `types` VALUES(1, 'Comida Mexicana');
-INSERT INTO `types` VALUES(2, 'Comida Japonesa');
-INSERT INTO `types` VALUES(3, 'Comida China');
-INSERT INTO `types` VALUES(4, 'Lonchería');
-INSERT INTO `types` VALUES(5, 'Taquería');
-INSERT INTO `types` VALUES(6, 'Cenaduría');
+INSERT INTO `types` (`idType`, `type`) VALUES
+(1, 'Comida Mexicana'),
+(2, 'Comida Japonesa'),
+(3, 'Comida China'),
+(4, 'LoncherÃ­a'),
+(5, 'TaquerÃ­a'),
+(6, 'CenadurÃ­a');
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `users`
 --
--- Creación: 04-11-2011 a las 16:09:16
---
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `idUser` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
@@ -2485,11 +2475,12 @@ CREATE TABLE `users` (
 -- Volcar la base de datos para la tabla `users`
 --
 
-INSERT INTO `users` VALUES(3, 'cjrestaurant', 'd7a1a57441231c54643567a8c2a6f29736016e76bf6579d4b');
-INSERT INTO `users` VALUES(7, '123', 'c7d6220335bade9a8783431fb1e1bc9282e7b023ddb45fb80');
-INSERT INTO `users` VALUES(9, '1234', '162c1c5c51d88b92666bb8f05452840ef8d23f03f91d23102');
-INSERT INTO `users` VALUES(10, '12345', '88718cc506e0fe6fb4f74d5fdb460abaec664c30ac004a420');
-INSERT INTO `users` VALUES(11, '333', 'c45986e1ac2a1a3d316fd6a6bdbf391505bbb16f9a2bf1814');
+INSERT INTO `users` (`idUser`, `username`, `password`) VALUES
+(3, 'cjrestaurant', 'd7a1a57441231c54643567a8c2a6f29736016e76bf6579d4b'),
+(7, '123', 'c7d6220335bade9a8783431fb1e1bc9282e7b023ddb45fb80'),
+(9, '1234', '162c1c5c51d88b92666bb8f05452840ef8d23f03f91d23102'),
+(10, '12345', '88718cc506e0fe6fb4f74d5fdb460abaec664c30ac004a420'),
+(11, '333', 'c45986e1ac2a1a3d316fd6a6bdbf391505bbb16f9a2bf1814');
 
 --
 -- Filtros para las tablas descargadas (dump)
@@ -2522,9 +2513,9 @@ ALTER TABLE `clients`
   ADD CONSTRAINT `clients_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `users` (`idUser`);
 
 --
--- Filtros para la tabla `dishComments`
+-- Filtros para la tabla `dishcomments`
 --
-ALTER TABLE `dishComments`
+ALTER TABLE `dishcomments`
   ADD CONSTRAINT `dishComments_ibfk_1` FOREIGN KEY (`idDish`) REFERENCES `dishes` (`idDish`),
   ADD CONSTRAINT `dishComments_ibfk_2` FOREIGN KEY (`idClient`) REFERENCES `clients` (`idClient`);
 
@@ -2535,16 +2526,16 @@ ALTER TABLE `dishes`
   ADD CONSTRAINT `dishes_ibfk_2` FOREIGN KEY (`idCategory`) REFERENCES `categories` (`idCategory`);
 
 --
--- Filtros para la tabla `dishScores`
+-- Filtros para la tabla `dishscores`
 --
-ALTER TABLE `dishScores`
+ALTER TABLE `dishscores`
   ADD CONSTRAINT `dishScores_ibfk_1` FOREIGN KEY (`idDish`) REFERENCES `dishes` (`idDish`),
   ADD CONSTRAINT `dishScores_ibfk_2` FOREIGN KEY (`idClient`) REFERENCES `clients` (`idClient`);
 
 --
--- Filtros para la tabla `restaurantComments`
+-- Filtros para la tabla `restaurantcomments`
 --
-ALTER TABLE `restaurantComments`
+ALTER TABLE `restaurantcomments`
   ADD CONSTRAINT `restaurantComments_ibfk_1` FOREIGN KEY (`idRestaurant`) REFERENCES `restaurants` (`idRestaurant`),
   ADD CONSTRAINT `restaurantComments_ibfk_2` FOREIGN KEY (`idClient`) REFERENCES `clients` (`idClient`);
 
@@ -2556,8 +2547,8 @@ ALTER TABLE `restaurants`
   ADD CONSTRAINT `restaurants_ibfk_2` FOREIGN KEY (`idType`) REFERENCES `types` (`idType`);
 
 --
--- Filtros para la tabla `restaurantScores`
+-- Filtros para la tabla `restaurantscores`
 --
-ALTER TABLE `restaurantScores`
+ALTER TABLE `restaurantscores`
   ADD CONSTRAINT `restaurantScores_ibfk_1` FOREIGN KEY (`idRestaurant`) REFERENCES `restaurants` (`idRestaurant`),
   ADD CONSTRAINT `restaurantScores_ibfk_2` FOREIGN KEY (`idClient`) REFERENCES `clients` (`idClient`);

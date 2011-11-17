@@ -9,12 +9,19 @@
 				$this->redirect("restaurantes");
 			} else {
 				$dish = new dish();
-				$sql = "SELECT * 
-						FROM dishes 
-						INNER JOIN restaurants 
-						ON dishes.idRestaurant = restaurants.idRestaurant 
-						WHERE idDish=$id";
-				$this->view->dish = $dish->findBySql($sql);
+				$sql = "SELECT idDish, dish, price, image, description, category, restaurants.restaurant, address, city, cp, telephone, idType, idUser, logo 
+						FROM (
+   							SELECT idDish, dish, price, image, description, categories.idCategory, category, idRestaurant
+   							FROM dishes
+   							INNER JOIN categories
+   							ON dishes.idCategory = categories.idCategory
+   							WHERE idDish=$id
+						) as D
+						INNER JOIN restaurants
+						ON D.idRestaurant = restaurants.idRestaurant";
+				$platillo = $dish->findBySql($sql);
+				$this->view->dish = $platillo;
+				$this->title_for_layout("Platillo: " . $platillo["dish"]);
       			$this->render();				
 			}
 		}

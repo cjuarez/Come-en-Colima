@@ -14,11 +14,16 @@
 					$orderBy = " ORDER BY restaurant";
 				}
 			}
-			$this->view->restaurantes = $restaurant->findAllBySql("SELECT * FROM  
+			$restaurantes = $restaurant->findAllBySql("SELECT * FROM  
 																		restaurants 
 																	INNER JOIN 
 																		types 
 																	ON restaurants.idType = types.idType$orderBy");
+			foreach ($restaurantes as $key => &$r) {
+				$r["logo"] = "restaurantes/" . $r["idRestaurant"] . "." . $r["image"];
+			}
+			$this->view->imageIfError = Path . "/app/views/images/restaurant_unavailable.jpg";
+			$this->view->restaurantes = $restaurantes;
       		$this->render();
 		}
 		
@@ -35,6 +40,9 @@
 						ORDER BY category";
 				$platillo = new dish();
 				$this->view->menu = $platillo->findAllBySql($sql);
+				
+				$restaurant = new restaurant();
+				$this->view->restaurant = $restaurant->find($id);
 				$this->render();
 			} else {
 				$this->redirect("restaurantes");

@@ -7,7 +7,10 @@
 	foreach ($restaurantes as $key => $restaurant) { ?>
 		<div class="restaurant">
 			<div class="left">
-				<?php echo $this->html->imagePars($restaurant['logo'].".jpg",'alt="logo" width="100"'); ?>
+				<?php
+					 
+					echo $this->html->imagePars($restaurant['logo'],"alt=\"logo\" width=\"100\" onerror=\"this.src='$imageIfError'\""); 
+				?>
 			</div>
 			<div class="right">
 				<h3><?php echo $restaurant["restaurant"]; ?></h3>

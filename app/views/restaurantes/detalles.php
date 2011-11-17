@@ -1,7 +1,10 @@
 <div id="restaurant">
 	<div id="left">
-		<?php //echo $this->html->imagePars($restaurant['logo'].".jpg",'width="100px"'); ?>
-		<img src="http://2.bp.blogspot.com/_5QkmVki3PDY/TOhbnO7TbTI/AAAAAAAAAAU/5oB6cCFnFE8/S660/LOGO%2BMODIFICADO.jpg" alt=""/>
+		
+		<?php $image = "restaurantes/" . $restaurant["idRestaurant"] . "." . $restaurant["image"];
+		$imageIfError = Path."/app/views/images/restaurant_unavailable.jpg";
+		echo $this->html->imagePars($image,"width=\"200\" onerror=\"this.src='$imageIfError';\"");
+		 ?>
 	</div>
 	<div id="right">
 		<h3>Jashi Sushi</h3>
@@ -39,14 +42,14 @@ foreach ($menu as $key => $dish) {
 </form>
 <br/>
 <div id="comments">
+	<div id="previousComments">
 	<div id="comment">
-		<p>Cliente 1 escribió:<br/>
-		Mal restaurante, mal servicio.<br/>
-		El 22 de septiembre a las 12:03 am
+		
 	</div>
+	</div>
+	<label for="comentario">Comentario:</label>
 	<div id="newComment">
-		<textarea cols="100" rows="10" name="">
-			Me gusta este restaurante, pero deberian poner más mesas
+		<textarea id="comentario" cols="80" rows="10" name="">
 		</textarea>
 	</div>
 	<input type="button" name="btnEnviar" value="Enviar" onclick="">
