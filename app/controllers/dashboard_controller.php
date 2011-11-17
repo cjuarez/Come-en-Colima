@@ -40,21 +40,30 @@
 		public function misPedidos($id = null) {
 			$this->view->menu = $this->_menuClient;
 			$pedido = new bill();
-			$this->view->pedidos = $pedido->findAllBySql("SELECT * 
-														FROM (
-															SELECT bills.*,restaurants.restaurant 
-															FROM bills 
-															INNER JOIN restaurants 
-															ON bills.idRestaurant = restaurants.idRestaurant
-															) as bills
-														INNER JOIN (
-															SELECT dishes.dish,dishes.price,billItems.idBill 
-															FROM billItems 
-															INNER JOIN dishes 
-															ON billItems.idDish=dishes.idDish
-															) as dishes
-														ON bills.idBill = dishes.idBill
-														ORDER BY bills.idBill");
+			$idClient = $_SESSION["idClient"];
+			$pedidos = $pedido->findAllBySql("SELECT bills.idBill, restaurant, bills.timestamp, bills.idRestaurant, bills.idClient, bills.specialNote, bills.served, dish, count(dish) as cantidad, sum(price) as price 
+												FROM (
+														SELECT bills.*,restaurants.restaurant 
+														FROM bills 
+														INNER JOIN restaurants 
+														ON bills.idRestaurant = restaurants.idRestaurant
+													) as bills
+													INNER JOIN (
+														SELECT dishes.dish,dishes.price,billitems.idBill 
+														FROM billitems 
+														INNER JOIN dishes 
+														ON billitems.idDish=dishes.idDish
+													) as dishes
+													ON bills.idBill = dishes.idBill
+													WHERE bills.idClient = $idClient
+													GROUP BY dish
+													ORDER BY bills.idBill");
+			
+			foreach ($pedidos as $key => &$p) {
+				$pedido->find($p["idBill"]);
+				$p["total"] = $pedido->getTotal();
+			}
+			$this->view->pedidos = $pedidos;
 			$this->render();
 		}
 		
@@ -134,10 +143,37 @@
 		}
 		
 		public function pedidos($id = null) {
+			$this->view->menu = $this->_menuRestaurant;
 			$pedido = new bill();
+			$idRestaurant = $_SESSION["idRestaurant"];
+			$pedidos = $pedido->findAllBySql("SELECT bills.idBill, client, bills.telephone, bills.address, bills.city, bills.cp, bills.timestamp, bills.idRestaurant, bills.idClient, bills.specialNote, bills.served, dish, count(dish) as cantidad, sum(price) as price 
+											FROM (
+												SELECT bills.*,CONCAT(clients.firstName,' ',clients.lastName) as client, telephone, address, city, cp
+												FROM bills 
+												INNER JOIN clients 
+												ON bills.idClient = clients.idClient
+											) as bills
+											INNER JOIN (
+												SELECT dishes.dish,dishes.price,billitems.idBill 
+												FROM billitems 
+												INNER JOIN dishes 
+												ON billitems.idDish=dishes.idDish
+											) as dishes
+											ON bills.idBill = dishes.idBill
+											WHERE bills.idRestaurant = $idRestaurant
+											GROUP BY dish
+											ORDER BY bills.idBill");
+			
+			foreach ($pedidos as $key => &$p) {
+				$pedido->find($p["idBill"]);
+				$p["total"] = $pedido->getTotal();
+			}
+			$this->view->pedidos = $pedidos;
+			$this->render();
 		}
 		
 		public function hacerPedido($id = null) {
+			$this->view->menu = $this->_menuRestaurant;
 			if ($this->data) {
 				$this->view->idRestaurant = $id;
 				$platillo = new dish();
@@ -151,16 +187,45 @@
 		}
 		
 		public function completarPedido($id = null) {
+			$this->view->menu = $this->_menuClient;
 			if ($this->data){
 				$cuenta = new bill();
-				$elemento = new billitem();
-				$this->data["idClient"] = $_SESSION["idClient"];
-				var_dump($this->data);
+				$datosCuenta = array(
+					"idRestaurant" 	=> $this->data["idRestaurant"],
+					"idClient" 		=> $_SESSION["idClient"],
+					"specialNote"	=> $this->data["specialNote"],
+					"timestamp"		=> date("Y-m-d H:i:s",strtotime("now"))
+				);
+				$cuenta->prepareFromArray($datosCuenta);
+				$idCuenta = $cuenta->save();
+				$this->view->cuenta = $cuenta;
+				
 				foreach ($this->data as $idDish => $cantidad) {
-					
+					if (is_numeric($idDish)) {
+						for ($i=1; $i <= $cantidad; $i++) { 
+							$elemento = new billitem();
+							$datosElemento = array(
+								"idBill" => $idCuenta,
+								"idDish" => $idDish 
+							);
+							$elemento->prepareFromArray($datosElemento);
+							$elemento->save();
+						}
+					}
 				}
 			}
+		$this->render();
 		}
+		
+	public function marcarComoAtendido($id=null){
+		if ($id!=null) {
+			$bill = new bill();
+			$bill->find($id);
+			$bill->served = 1;
+			$bill->save();
+		}
+		$this->redirect("dashboard/pedidos");
+	}
 		
 	}
 ?>

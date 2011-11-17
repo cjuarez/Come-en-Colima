@@ -146,15 +146,16 @@ ul.verticalMenu{
 
 /*misPedidos.php*/
 div.pedido{
-	width:400px;
+	width:500px;
 	padding-left:20px;
 	padding-right:20px;
 	padding-bottom:10px;
 	margin-left:auto;
 	margin-right:auto;
-	border-bottom:1px solid;
+	border:1px solid;
 	text-align:left;
 	border-radius:10px;
+	margin-bottom:20px;
 }
 
 
@@ -165,6 +166,19 @@ div.timestamp{
 div.notas{
 	border:1px solid;
 	padding:5px;
+}
+
+div.notas div.left{
+	float:left;
+	width:20%;
+	text-align:right;
+	margin-right:5px;
+}
+
+div.notas div.right{
+	float:left;
+	width:75%;
+	margin-left:5px;
 }
 
 big.alert{
@@ -194,12 +208,18 @@ div.item{
 
 div.item div.left{
 	float:left;
-	width:50%;
+	width:33%;
+}
+
+div.item div.center{
+	float:left;
+	width:33%;
+	text-align:center;
 }
 
 div.item div.right{
-	float:right;
-	width:50%;
+	float:left;
+	width:33%;
 	text-align:right;
 }
 

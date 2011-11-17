@@ -1,3 +1,5 @@
+<?php $this->renderElement("dashboard_menu"); ?>
+<div id="subContent">
 <?php echo $this->html->form("dashboard/completarPedido", "POST"); ?>
 <table id="cuenta">
 	<thead>
@@ -30,6 +32,8 @@
 		</tr>
 	</tfoot>
 </table>
+<textarea cols="50" rows="5" name="specialNote">
+</textarea>
 <input type="hidden" name="idRestaurant" value="<?php echo $idRestaurant; ?>">
 <button type="submit" value="Confirmar el Pedido"> Confirmar el Pedido </button>
 </form>
@@ -47,3 +51,4 @@ window.onload = function () {
 	}
 }
 </script>
+</div>
