@@ -24,6 +24,10 @@
 			}
 			$this->view->imageIfError = Path . "/app/views/images/restaurant_unavailable.jpg";
 			$this->view->restaurantes = $restaurantes;
+			
+			$tipo = new type();
+			$this->view->tipos=$tipo->findAll("idType, type");
+			$this->view->cps = $restaurant->findAll("DISTINCT cp");
       		$this->render();
 		}
 		

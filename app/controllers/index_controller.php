@@ -51,11 +51,25 @@
 					"telephone" => $this->data["telephone"],
 					"idType" => $this->data["idType"],
 					"city" => $this->data["city"],
-					"idUser" => $idUser,
-					"logo" => $this->data["logo"]
+					"idUser" => $idUser
 				);
 				$restaurant = new restaurant();
 				$restaurant->prepareFromArray($datosRestaurant);
+				$idRestaurant = $restaurant->save();
+				$nombre_archivo = $_FILES['logo']['name'];
+				$elementosNombre = explode(".",$nombre_archivo);
+				$extension_archivo = $elementosNombre[1];
+				$tipo_archivo = $_FILES['logo']['type']; 
+				$tamano_archivo = $_FILES['logo']['size']; 
+				if (!(($extension_archivo == "gif" || $extension_archivo == "jpeg" || $extension_archivo == "jpg" || $extension_archivo == "png") && ($tamano_archivo < 3145729))) { 
+				   	echo "La extensión o el tamaño de los archivos no es correcta."; 
+				} else {
+					if (move_uploaded_file($_FILES['logo']['tmp_name'],getcwd(). "/app/views/images/restaurantes/".$idRestaurant.".".$extension_archivo)){ 
+				   	} else { 
+				      	 echo "Ocurrió algún error al subir el fichero. No pudo guardarse."; 
+				   	} 
+				}
+				$restaurant->image = $extension_archivo;
 				$restaurant->save();
 			} else {
 				$datosCliente = array(
@@ -71,9 +85,10 @@
 				$client->prepareFromArray($datosCliente);
 				$client->save();
 			}
-		} else{
+		} else {
 			$this->redirect("index/registro");
 		}
+		$this->redirect("index");
 		}
 	
 		private function isLoggedIn() {

@@ -1,12 +1,24 @@
+function initMenu() {
+$('div#nav #menu ul').hide();
+$('div#nav #menu li a').click(
+function() {
+$(this).next().slideToggle('slow');
+}
+);
+}
+$(document).ready(function() {initMenu();});
+
+
+
 function hideInputsForRegistration (radioSelected){
 	if (radioSelected.value == 1){
-		document.getElementById("datosCliente").style.display = 'none';
-		document.getElementById("datosEnComun").style.display = 'block';
-		document.getElementById("datosRestaurante").style.display = 'block';
+		$('#datosCliente').hide('slow');
+		$('#datosEnComun').show('slow');
+		$('#datosRestaurante').show('slow');
 	} else {
-		document.getElementById("datosCliente").style.display = 'block';
-		document.getElementById("datosEnComun").style.display = 'block';
-		document.getElementById("datosRestaurante").style.display = 'none';
+		$('#datosCliente').show('slow');
+		$('#datosEnComun').show('slow');
+		$('#datosRestaurante').hide('slow');
 	};
 };
 

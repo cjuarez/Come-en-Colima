@@ -72,13 +72,37 @@
 			$this->view->menu = $this->_menuRestaurant;
 			$restaurant = new restaurant();
 			if ($this->data) {
+				$data = array(
+					"restaurant" 	=> $this->data["restaurant"],
+					"address" 		=> $this->data["address"],
+					"city" 			=> $this->data["city"],
+					"cp"			=> $this->data["cp"],
+					"telephone"		=> $this->data["telephone"],
+					"idType"		=> $this->data["idType"]
+				);
 				$restaurant->find($_SESSION["idRestaurant"]);
-				$restaurant->prepareFromArray($this->data);
+				$restaurant->prepareFromArray($data);
+				$nombre_archivo = $_FILES['logo']['name'];
+				$elementosNombre = explode(".",$nombre_archivo);
+				$extension_archivo = $elementosNombre[1];
+				$tipo_archivo = $_FILES['logo']['type']; 
+				$tamano_archivo = $_FILES['logo']['size']; 
+if (!(($extension_archivo=="gif"||$extension_archivo=="jpeg"||$extension_archivo=="jpg"||$extension_archivo=="png")&&($tamano_archivo<3145729))) { echo "La extensión o el tamaño de los archivos no es correcta."; 
+} else {
+if (move_uploaded_file($_FILES['logo']['tmp_name'],getcwd(). "/app/views/images/restaurantes/".$restaurant->idRestaurant.".".$extension_archivo)){ 
+} else { 
+echo "Ocurrió algún error al subir el fichero. No pudo guardarse."; 
+} 
+}
+				$restaurant->image = $extension_archivo;
 				$restaurant->save();
 			}
 			$tipo = new type();
 			$this->view->tipos = $tipo->findAll();
-			$this->view->restaurante = $restaurant->find($_SESSION["idRestaurant"]);
+			$restaurante = $restaurant->find($_SESSION["idRestaurant"]);
+			$restaurante["logo"] = "restaurantes/" . $restaurante["idRestaurant"] . "." . $restaurante["image"];
+			$this->view->imageIfError = Path . "/app/views/images/restaurant_unavailable.jpg";
+			$this->view->restaurante = $restaurante;
 			$this->render();
 		}
 		

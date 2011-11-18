@@ -1,4 +1,4 @@
-<?php echo $this->html->form("index/register/"); ?>
+<?php echo $this->html->form("index/register/","POST","enctype=\"multipart/form-data\""); ?>
 <div id="datosUser">
 	<label for="username">Nombre de Usuario</label><br/>
 	<input type="text" id="username" dojoType="dijit.form.TextBox" name="username"/>
@@ -34,6 +34,7 @@
 		<?php } ?>
 	</select><br/>
 	<label for="logo">Logo del restaurante:</label><br/>
+	 <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
 	<input id="logo" type="file" name="logo" /><br/>
 </div>
 

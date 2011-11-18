@@ -1,4 +1,8 @@
 <?php header( 'Content-type: text/html; charset=iso-8859-1' );?>
+<div id="nav">
+	<?php echo $this->renderElement("filtros"); ?>
+</div>
+<div id="subContent">
 <div id="busqueda">
 	<input type="text" class="login" name="buscar" /> <input type="button" name="btnBuscar" value="Buscar"> 
 </div>
@@ -22,3 +26,6 @@
 		</div>
 	<?php } ?>
 </div>
+</div>
+<div id="clear">
+	</div>

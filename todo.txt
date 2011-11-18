@@ -1,0 +1,4 @@
+-Si un restaurante no tiene menu, que lo diga y no muestre los botones de hacer pedido
+-Cuando el login es incorrecto mostrarlo
+-El listado de restaurantes con paginación
+-Hacer que funcionen los filtros

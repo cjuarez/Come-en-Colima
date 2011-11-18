@@ -22,7 +22,7 @@ class user extends models {
 										INNER JOIN clients 
 										ON users.idUser=clients.idUser 
 										WHERE users.username='$username' AND users.password='$hashedPassword'");
-			$restaurant = $this->findBySql("SELECT users.idUser, users.username, restaurants.idRestaurant, restaurants.telephone, restaurants.address, restaurants.city, restaurants.cp, restaurants.logo, restaurants.idType												
+			$restaurant = $this->findBySql("SELECT users.idUser, users.username, restaurants.idRestaurant, restaurants.telephone, restaurants.address, restaurants.city, restaurants.cp, restaurants.image, restaurants.idType												
 										FROM users
 										INNER JOIN restaurants													
 										ON users.idUser=restaurants.idUser 													
