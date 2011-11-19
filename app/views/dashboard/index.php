@@ -2,5 +2,5 @@
 <div id="subContent">
 	
 </div>
-<div id="clear">
+<div class="clear">
 </div>

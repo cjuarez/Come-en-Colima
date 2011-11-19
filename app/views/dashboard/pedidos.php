@@ -21,7 +21,7 @@
 					X<?php echo $pedidos[$i]["cantidad"]; ?>
 				</div>
 				<div class="right"><?php echo $pedidos[$i]["price"]; ?></div>
-				<div id="clear"></div>
+				<div class="clear"></div>
 			</div>
 			<?php
 			$siguienteIdBill = (isset($pedidos[$i+1])) ? $pedidos[$i+1]["idBill"] : -1;
@@ -43,7 +43,7 @@
 						<?php echo $pedidos[$i]["city"]; ?><br/>
 						<?php echo $pedidos[$i]["cp"]; ?><br/>
 					</div>
-					<div id="clear">
+					<div class="clear">
 					</div>
 				</div>
 				<big class="titulo"> Notas: </big>

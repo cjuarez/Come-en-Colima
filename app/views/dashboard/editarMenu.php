@@ -6,7 +6,7 @@
 	</div>
 	<?php if (isset($dishAEditar)) { ?>
 			<div id="edicion">
-				<?php echo $this->html->form("dashboard/editDish/"); ?>
+				<?php echo $this->html->form("dashboard/editDish/","POST","enctype=\"multipart/form-data\""); ?>
 				<input type="hidden" name="idDish" value="<?php echo $dishAEditar['idDish']; ?>">
 				<table>
 					<tr>
@@ -29,8 +29,16 @@
 							</select>
 						</td>
 						<td>
-							<?php echo $this->html->imagePars($dishAEditar["image"],"width='50'"); ?>
+							<?php echo $this->html->imagePars("platillos/".$dishAEditar["idDish"].".".$dishAEditar["image"],"width=\"70\" onerror=\"this.src='$imageIfError'\""); ?>
 							<input type="file" name="image">
+						</td>
+					</tr>
+					<tr>
+						<th colspan="4">Descripción</th>
+					</tr>
+					<tr>
+						<td colspan="4">
+							<textarea name="description" cols="70" rows="3"><?php echo $dishAEditar["description"]; ?></textarea>
 						</td>
 					</tr>
 				</table>
@@ -39,7 +47,7 @@
 			</div>
 	<?php } elseif (isset($add)) { ?>
 		<div id="agregar">
-			<?php echo $this->html->form("dashboard/addDish/"); ?>
+			<?php echo $this->html->form("dashboard/addDish/","POST","enctype=\"multipart/form-data\""); ?>
 			<table>
 				<tr>
 					<th colspan="4">Agregar Platillo</th>
@@ -64,6 +72,14 @@
 						<input type="file" name="image">
 					</td>
 				</tr>
+				<tr>
+						<th colspan="4">Descripción</th>
+					</tr>
+					<tr>
+						<td colspan="4">
+							<textarea name="description" cols="70" rows="3"></textarea>
+						</td>
+					</tr>
 			</table>
 			<button type="submit" dojoType="dijit.form.Button">Agregar</button>
 			</form>
@@ -109,7 +125,7 @@
 			<tr>
 				<td><?php echo $platillo["dish"]; ?></td>
 				<td><?php echo $platillo["price"]; ?></td>
-				<td><?php echo $this->html->image($platillo["image"]); ?></td>
+				<td><?php echo $this->html->imagePars("platillos/".$platillo["idDish"].".".$platillo["image"],"width=\"70\" onerror=\"this.src='$imageIfError'\""); ?></td>
 				<td>
 					<input type="button" value="Editar" 	onclick="document.location = '<?php echo $platillo["idDish"]; ?>';">
 					<input type="button" value="Eliminar" 	onclick="document.location = '../delDish/<?php echo $platillo["idDish"]; ?>';">
@@ -118,5 +134,6 @@
 		<?php
 		 }
 		?>
+		</table>
 	</div>
 </div>

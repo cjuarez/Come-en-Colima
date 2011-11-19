@@ -1,24 +1,23 @@
 <div id="restaurant">
 	<div id="left">
 		
-		<?php $image = "restaurantes/" . $restaurant["idRestaurant"] . "." . $restaurant["image"];
-		$imageIfError = Path."/app/views/images/restaurant_unavailable.jpg";
+		<?php
 		echo $this->html->imagePars($image,"width=\"200\" onerror=\"this.src='$imageIfError';\"");
 		 ?>
 	</div>
 	<div id="right">
-		<h3>Jashi Sushi</h3>
-		<h4>Comida Oriental</h4>
-		<h4>Tel: 3123131</h4>
-		<h4>Av. Gonzalo de Sandoval #396</h4>
+		<h3><?php echo $restaurant["restaurant"]; ?></h3>
+		<strong><?php echo $restaurant["type"]; ?></strong><br/><br/>
+		<strong>Teléfono:</strong> <?php echo $restaurant["telephone"]; ?><br/><br/>
+		<strong>Dirección:</strong><?php echo $restaurant["address"]; ?><br/><br/>
 	</div>
-	<div id="masInfo">
+	<div class="clear">
 	</div>
 </div>
 <?php echo $this->html->form("dashboard/hacerPedido/$idRestaurant","POST","name=\"pedido\""); ?>
 <table id="food-menu">
 <tr>
-	<?php echo (isset($_SESSION["idUser"])) ? "<th>Seleccionar</th>" : "" ?>
+	<?php echo (isset($_SESSION["idClient"])) ? "<th>Seleccionar</th>" : "" ?>
 	<th>Platillo</th>
 	<th>Precio</th>
 </tr>
@@ -32,26 +31,27 @@ foreach ($menu as $key => $dish) {
 		</tr>
 	<?php } ?>
 	<tr>
-		<?php echo (isset($_SESSION["idUser"])) ? "<td>".$this->html->checkBox($dish["idDish"]) . "</td>" : "" ?>
+		<?php echo (isset($_SESSION["idClient"])) ? "<td>".$this->html->checkBox($dish["idDish"]) . "</td>" : "" ?>
 		<td><?php echo $this->html->linkTo($dish["dish"],"platillo/".$dish["idDish"]); ?></td>
 		<td><?php echo "$" . $dish["price"]; ?></td>
 	</tr>
 <?php } ?>
 </table>
-<button type="submit" value="Realizar Pedido"> Realizar Pedido </button>
+<?php echo (isset($_SESSION["idClient"])) ? '<button type="submit" value="Realizar Pedido"> Realizar Pedido </button>' : "" ?>
 </form>
 <br/>
+<?php echo $this->html->form("dashboard/commentRestaurant/".$restaurant["idRestaurant"],"POST","name=\"comentario\""); ?>
+
 <div id="comments">
 	<div id="previousComments">
-	<div id="comment">
-		
+		<div id="comentario"></div>
 	</div>
-	</div>
-	<label for="comentario">Comentario:</label>
+	<label for="comment">Comentario:</label>
+	<input type="hidden" name="idRestaurant" value="<?php echo $restaurant["idRestaurant"]; ?>">
 	<div id="newComment">
-		<textarea id="comentario" cols="80" rows="10" name="">
-		</textarea>
+		<textarea id="comment" cols="80" rows="10" name="comment"></textarea>
 	</div>
-	<input type="button" name="btnEnviar" value="Enviar" onclick="">
+	<input type="submit" id="btnComentar" value="Comentar">
+</form>
 </div>
 

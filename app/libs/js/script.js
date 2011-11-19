@@ -12,13 +12,13 @@ $(document).ready(function() {initMenu();});
 
 function hideInputsForRegistration (radioSelected){
 	if (radioSelected.value == 1){
-		$('#datosCliente').hide('slow');
-		$('#datosEnComun').show('slow');
-		$('#datosRestaurante').show('slow');
+		$('#datosCliente').slideUp('slow');
+		$('#datosEnComun').slideDown('slow');
+		$('#datosRestaurante').slideDown('slow');
 	} else {
-		$('#datosCliente').show('slow');
-		$('#datosEnComun').show('slow');
-		$('#datosRestaurante').hide('slow');
+		$('#datosCliente').slideDown('slow');
+		$('#datosEnComun').slideDown('slow');
+		$('#datosRestaurante').slideUp('slow');
 	};
 };
 
@@ -48,33 +48,24 @@ function calculateTotal(){
 	document.getElementById('total').innerHTML = total;
 }
 
-/*
-function validateIfUserExists(){
-	var availabilityNode = dojo.byId("isAvailable");
-	var usernameNode = dojo.byId("username");
-	var value = dojo.trim(usernameNode.value);
-	if(value != "") {
-		dojo.xhrPost({
-			url: "../checkIfAvailable",
-			timeout: 2000,
-			content: {
-				username: value
-				},
-				load: function(result) {
-					if(result == "disponible") {
-						availabilityNode.innerHTML = "Nombre disponible";
-						availabilityNode.style.color = "green";
+  $(document).ready(function() {
+        $("div#datosUser input#username").keyup(function() {
+        	var username = $('div#datosUser input#username').val();
+        	var url = "../checkIfAvailable/"+username;
+        	$.get(url, username.value, function(data) {
+        		if(data == "disponible") {
+						$('div#datosUser input#username').css('background-color', '#A0D4A4');
 					} else {
-						availabilityNode.innerHTML = "Nombre no disponible.";
-						availabilityNode.style.color = "red";
+						$('div#datosUser input#username').css('background-color', '#FF9A9A');
 					}
-				}
-		});
-	} else {
-		availabilityNode.innerHTML = "";
-	}
-}
+        	});
+        });
+        
+        $()
+    });
 
+
+/*
 dojo.ready(function(){
 	dojo.require("dijit.form.NumberTextBox");
 	dojo.require("dijit.form.TextBox");

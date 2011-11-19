@@ -9,7 +9,7 @@
 				$this->redirect("restaurantes");
 			} else {
 				$dish = new dish();
-				$sql = "SELECT idDish, dish, price, image, description, category, restaurants.restaurant, address, city, cp, telephone, idType, idUser, logo 
+				$sql = "SELECT idDish, dish, price, D.image, description, category, restaurants.restaurant, address, city, cp, telephone, idType, idUser 
 						FROM (
    							SELECT idDish, dish, price, image, description, categories.idCategory, category, idRestaurant
    							FROM dishes
@@ -25,5 +25,20 @@
       			$this->render();				
 			}
 		}
+		
+		public function commentDish($id=null){
+			if ($this->data){
+				$datos = array(
+					"comment" 	=> $this->data["comment"],
+					"idClient"	=> $_SESSION["idClient"],
+					"idDish"	=> $this->data["idDish"],
+					"timestamp"	=> date("Y-m-d H:i:s",strtotime("now"))
+				);
+				$comment = new dishcomment();
+				$comment->prepareFromArray($datos);
+				$comment->save();
+				$this->redirect(($id!=null)?"platillo/index/$id":"platillo");
+			}
+	}
 	}
 ?>

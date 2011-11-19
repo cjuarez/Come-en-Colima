@@ -21,11 +21,11 @@
 				<h4><?php echo $restaurant["type"]; ?></h4>
 				<h4><?php echo $this->html->linkTo("Ver Detalles", "restaurantes/detalles/".$restaurant['idRestaurant']); ?></h4>
 			</div>
-			<div class="masInfo">
+			<div class="clear">
 			</div>
 		</div>
 	<?php } ?>
 </div>
 </div>
-<div id="clear">
+<div class="clear">
 	</div>

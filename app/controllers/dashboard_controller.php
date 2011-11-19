@@ -82,20 +82,22 @@
 				);
 				$restaurant->find($_SESSION["idRestaurant"]);
 				$restaurant->prepareFromArray($data);
-				$nombre_archivo = $_FILES['logo']['name'];
-				$elementosNombre = explode(".",$nombre_archivo);
-				$extension_archivo = $elementosNombre[1];
-				$tipo_archivo = $_FILES['logo']['type']; 
-				$tamano_archivo = $_FILES['logo']['size']; 
-if (!(($extension_archivo=="gif"||$extension_archivo=="jpeg"||$extension_archivo=="jpg"||$extension_archivo=="png")&&($tamano_archivo<3145729))) { echo "La extensión o el tamaño de los archivos no es correcta."; 
-} else {
-if (move_uploaded_file($_FILES['logo']['tmp_name'],getcwd(). "/app/views/images/restaurantes/".$restaurant->idRestaurant.".".$extension_archivo)){ 
-} else { 
-echo "Ocurrió algún error al subir el fichero. No pudo guardarse."; 
-} 
-}
-				$restaurant->image = $extension_archivo;
-				$restaurant->save();
+				if ($_FILES['logo']['size']>0){
+					$nombre_archivo = $_FILES['logo']['name'];
+					$elementosNombre = explode(".",$nombre_archivo);
+					$extension_archivo = $elementosNombre[1];
+					$tipo_archivo = $_FILES['logo']['type']; 
+					$tamano_archivo = $_FILES['logo']['size']; 
+						if (!(($extension_archivo=="gif"||$extension_archivo=="jpeg"||$extension_archivo=="jpg"||$extension_archivo=="png")&&($tamano_archivo<3145729))) { echo "La extensión o el tamaño de los archivos no es correcta."; 
+						} else {
+							if (move_uploaded_file($_FILES['logo']['tmp_name'],getcwd(). "/app/views/images/restaurantes/".$restaurant->idRestaurant.".".$extension_archivo)){ 
+							} else { 
+								echo "Ocurrió algún error al subir el fichero. No pudo guardarse."; 
+							} 
+						}
+						$restaurant->image = $extension_archivo;
+						$restaurant->save();
+				}
 			}
 			$tipo = new type();
 			$this->view->tipos = $tipo->findAll();
@@ -126,6 +128,7 @@ echo "Ocurrió algún error al subir el fichero. No pudo guardarse.";
 					ON dishes.idCategory=categories.idCategory
 					WHERE idRestaurant=" . $_SESSION['idRestaurant'] . " ORDER BY dishes.idCategory";
 			$this->view->platillos = $dish->findAllBySql($sql);
+			$this->view->imageIfError = Path . "/app/views/images/food_unavailable.gif";
 			$this->render();
 		}
 		
@@ -151,8 +154,15 @@ echo "Ocurrió algún error al subir el fichero. No pudo guardarse.";
 		public function addDish($id = null){
 			if ($this->data){
 				$dish = new dish();
-				$dish->prepareFromArray($this->data);
+				$datos = $this->data;
+				unset($datos["image"]);
+				$dish->prepareFromArray($datos);
 				$dish->save();
+				if ($_FILES['logo']['size']>0){
+					$extension = $this->saveImageFile("image",MAX_IMAGE_SIZE,getcwd()."/app/views/images/platillos/".$dish->idDish);
+					$dish->image = $extension;
+					$dish->save();
+				}
 			}
 			$this->redirect("dashboard/editarMenu");
 		}
@@ -248,8 +258,40 @@ echo "Ocurrió algún error al subir el fichero. No pudo guardarse.";
 			$bill->served = 1;
 			$bill->save();
 		}
-		$this->redirect("dashboard/pedidos");
+		$this->redirect("dashboard/pedidos" );
+			}
+
+	private function saveImageFile($inputName, $maxSize, $destination){
+		$nombre_archivo = $_FILES[$inputName]['name'];
+		$elementosNombre = explode(".",$nombre_archivo);
+		$extension_archivo = $elementosNombre[1];
+		$tipo_archivo = $_FILES[$inputName]['type'];
+		$tamano_archivo = $_FILES[$inputName]['size'];
+		if (!(($extension_archivo=="gif"||$extension_archivo=="jpeg"||$extension_archivo=="jpg"||$extension_archivo=="png")&&($tamano_archivo<=$maxSize))) {
+			echo "La extensión o el tamaño de los archivos no es correcta.";
+		} else {
+			if (move_uploaded_file($_FILES[$inputName]['tmp_name'],$destination.".".$extension_archivo)){
+				return $extension_archivo;
+			} else {
+				echo "Ocurrió algún error al subir el fichero. No pudo guardarse.";
+			}
+		}
 	}
-		
+	
+	public function commentRestaurant($id=null){
+			if ($this->data){
+				$datos = array(
+					"comment" 		=> $this->data["comment"],
+					"idClient"		=> $_SESSION["idClient"],
+					"idRestaurant"	=> $this->data["idRestaurant"],
+					"timestamp"		=> date("Y-m-d H:i:s",strtotime("now"))
+				);
+				$comment = new restaurantcomment();
+				$comment->prepareFromArray($datos);
+				$comment->save();
+				$this->redirect(($id!=null)?"restaurantes/detalles/$id":"restaurantes");
+			}
 	}
+
+}
 ?>

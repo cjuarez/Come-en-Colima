@@ -45,8 +45,15 @@
 				$platillo = new dish();
 				$this->view->menu = $platillo->findAllBySql($sql);
 				
-				$restaurant = new restaurant();
-				$this->view->restaurant = $restaurant->find($id);
+				$restaurante = new restaurant();
+				$restaurant = $restaurante->findBySql("SELECT restaurants.*, types.type 
+														FROM restaurants
+														INNER JOIN types
+														ON restaurants.idType=types.idType
+														WHERE restaurants.idRestaurant = 12");
+				$this->view->restaurant = $restaurant;
+				$this->view->image = "restaurantes/" . $restaurant["idRestaurant"] . "." . $restaurant["image"];
+				$this->view->imageIfError = Path."/app/views/images/restaurant_unavailable.jpg";
 				$this->render();
 			} else {
 				$this->redirect("restaurantes");

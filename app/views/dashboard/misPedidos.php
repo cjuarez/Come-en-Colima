@@ -1,4 +1,4 @@
-<?php header( 'Content-type: text/html; charset=iso-8859-1' );?>
+
 <?php $this->renderElement("dashboard_menu"); ?>
 <div id="subContent">
 	<div id="listado">
@@ -22,7 +22,7 @@
 					X<?php echo $pedidos[$i]["cantidad"]; ?>
 				</div>
 				<div class="right"><?php echo $pedidos[$i]["price"]; ?></div>
-				<div id="clear"></div>
+				<div class="clear"></div>
 			</div>
 			<?php
 			$siguienteIdBill = (isset($pedidos[$i+1])) ? $pedidos[$i+1]["idBill"] : -1;

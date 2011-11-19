@@ -11,14 +11,14 @@
 </div>
 <div id="comments">
 	<div id="previousComments">
-	<div id="comment">
-		
+	<div id="comentario"></div>
 	</div>
-	</div>
-	<label for="comentario">Comentario:</label>
+	<?php echo $this->html->form("platillo/commentDish/".$dish["idDish"]); ?>
+	<label for="comment">Comentario:</label>
 	<div id="newComment">
-		<textarea id="comentario" cols="80" rows="10" name="">
-		</textarea>
+		<input type="hidden" name="idDish" value="<?php echo $dish["idDish"]; ?>">
+		<textarea id="comment" cols="80" rows="10" name="comment"></textarea>
 	</div>
-	<input type="button" name="btnEnviar" value="Enviar" onclick="">
+	<input type="submit" value="Enviar">
+</form>
 </div>

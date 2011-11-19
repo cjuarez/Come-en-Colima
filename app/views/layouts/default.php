@@ -22,14 +22,11 @@
 				<div id="mainContent">
             		<?php echo $content_for_layout ?>
         		</div>
-				<div id="clear">
+				<div class="clear">
 				</div>
 			</div>
 		</div>
 		<div id="footer">
-			asdasd
-			asdasd
-			asdd
 		</div>
 	</div>
     </body>

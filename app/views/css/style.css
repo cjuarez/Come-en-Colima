@@ -123,7 +123,7 @@ div.restaurant div.right {
 	float:left;
 }
 
-div.restaurant div.masInfo,div#clear {
+div.restaurant div.masInfo,div.clear {
 	clear:both;
 }
 

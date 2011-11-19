@@ -30,7 +30,11 @@
 					$this->redirect("index");
 				} 
 			}
-			$this->render();
+			if ($this->detect_mobile()){
+				$this->view->setLayout("mobile");
+			} else {
+				$this->render();
+			}
 		}
 		
 		public function logout($id = null){
@@ -56,21 +60,23 @@
 				$restaurant = new restaurant();
 				$restaurant->prepareFromArray($datosRestaurant);
 				$idRestaurant = $restaurant->save();
-				$nombre_archivo = $_FILES['logo']['name'];
-				$elementosNombre = explode(".",$nombre_archivo);
-				$extension_archivo = $elementosNombre[1];
-				$tipo_archivo = $_FILES['logo']['type']; 
-				$tamano_archivo = $_FILES['logo']['size']; 
-				if (!(($extension_archivo == "gif" || $extension_archivo == "jpeg" || $extension_archivo == "jpg" || $extension_archivo == "png") && ($tamano_archivo < 3145729))) { 
-				   	echo "La extensión o el tamaño de los archivos no es correcta."; 
-				} else {
-					if (move_uploaded_file($_FILES['logo']['tmp_name'],getcwd(). "/app/views/images/restaurantes/".$idRestaurant.".".$extension_archivo)){ 
-				   	} else { 
-				      	 echo "Ocurrió algún error al subir el fichero. No pudo guardarse."; 
-				   	} 
+				if ($_FILES['logo']['size']>0){
+					$nombre_archivo = $_FILES['logo']['name'];
+					$elementosNombre = explode(".",$nombre_archivo);
+					$extension_archivo = $elementosNombre[1];
+					$tipo_archivo = $_FILES['logo']['type']; 
+					$tamano_archivo = $_FILES['logo']['size']; 
+					if (!(($extension_archivo == "gif" || $extension_archivo == "jpeg" || $extension_archivo == "jpg" || $extension_archivo == "png") && ($tamano_archivo < 3145729))) { 
+					   	echo "La extensión o el tamaño de los archivos no es correcta."; 
+					} else {
+						if (move_uploaded_file($_FILES['logo']['tmp_name'],getcwd(). "/app/views/images/restaurantes/".$idRestaurant.".".$extension_archivo)){ 
+					   	} else { 
+					      	 echo "Ocurrió algún error al subir el fichero. No pudo guardarse."; 
+					   	} 
+					}
+					$restaurant->image = $extension_archivo;
+					$restaurant->save();
 				}
-				$restaurant->image = $extension_archivo;
-				$restaurant->save();
 			} else {
 				$datosCliente = array(
 					"firstName" => $this->data["firstName"],
@@ -97,13 +103,13 @@
 			}
 		}
 		
-		public function checkIfAvailable($id = null){
-			if ($this->data) {
-				$usuario = new user();
-				$usuarios = $usuario->findAllBy("username",$this->data["username"]);
-				echo (count($usuarios)>0) ? "no disponible" : "disponible";
+		public function checkIfAvailable($username = null){
+			if ($username=="" || $username == null) {
+				echo "no disponible";
 			} else {
-				$this->redirect("index/registro");
+				$usuario = new user();
+				$usuarios = $usuario->findAllBy("username",$username);
+				echo (count($usuarios)>0) ? "no disponible" : "disponible";
 			}
 		}
 	}
