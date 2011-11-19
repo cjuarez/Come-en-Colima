@@ -13,12 +13,17 @@
 	<div id="previousComments">
 	<div id="comentario"></div>
 	</div>
-	<?php echo $this->html->form("platillo/commentDish/".$dish["idDish"]); ?>
-	<label for="comment">Comentario:</label>
-	<div id="newComment">
-		<input type="hidden" name="idDish" value="<?php echo $dish["idDish"]; ?>">
-		<textarea id="comment" cols="80" rows="10" name="comment"></textarea>
-	</div>
-	<input type="submit" value="Enviar">
-</form>
+	<?php if (isset($_SESSION["idUser"])): ?>
+		<?php echo $this->html->form("platillo/commentDish/".$dish["idDish"]); ?>
+			<label for="comment">Comentario:</label>
+			<div id="newComment">
+				<input type="hidden" name="idDish" value="<?php echo $dish["idDish"]; ?>">
+				<textarea id="comment" cols="50" rows="10" name="comment"></textarea>
+			</div>
+			<input type="submit" value="Enviar">
+		</form>	
+		<?php echo $this->renderElement("scoring"); ?>
+	<?php else: ?>
+		<?php echo $this->html->linkTo("Para hacer comentarios necesitas una cuenta.","index/registro"); ?>
+	<?php endif ?>
 </div>

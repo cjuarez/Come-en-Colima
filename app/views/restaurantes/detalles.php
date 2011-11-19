@@ -40,18 +40,22 @@ foreach ($menu as $key => $dish) {
 <?php echo (isset($_SESSION["idClient"])) ? '<button type="submit" value="Realizar Pedido"> Realizar Pedido </button>' : "" ?>
 </form>
 <br/>
-<?php echo $this->html->form("dashboard/commentRestaurant/".$restaurant["idRestaurant"],"POST","name=\"comentario\""); ?>
-
 <div id="comments">
 	<div id="previousComments">
 		<div id="comentario"></div>
 	</div>
+	<?php if (isset($_SESSION["idUser"])): ?>
+		<?php echo $this->html->form("dashboard/commentRestaurant/".$restaurant["idRestaurant"],"POST","name=\"comentario\""); ?>
 	<label for="comment">Comentario:</label>
 	<input type="hidden" name="idRestaurant" value="<?php echo $restaurant["idRestaurant"]; ?>">
 	<div id="newComment">
-		<textarea id="comment" cols="80" rows="10" name="comment"></textarea>
+		<textarea id="comment" cols="50" rows="10" name="comment"></textarea>
 	</div>
 	<input type="submit" id="btnComentar" value="Comentar">
-</form>
+	</form>
+	<?php echo $this->renderElement("scoring"); ?>
+	<?php else: ?>
+		<?php echo $this->html->linkTo("Para hacer comentarios necesitas una cuenta.","index/registro"); ?>
+	<?php endif ?>
 </div>
 

@@ -1,0 +1,38 @@
+Como usuario sin cuenta (anonimo):
+	-Iniciar Sesión
+	-Crear Cuenta de Restaurante
+	-Crear Cuenta de Cliente
+	-Ver listado de restaurantes
+	-Ver detalles (menu) de un restaurante
+	-Ver detalles de un platillo
+	-Leer acerca de la página
+	
+Como usuario Cliente:
+	-Leer acerca de la página
+	-Ver listado de restaurantes
+	-Buscar restaurante 				(Todavia no implementado)
+	-Filtrar restuarante por tipo 		(Todavia no implementado)
+	-Ver detalles (menu) de un restaurante
+	-Hacer un pedido de un restaurante
+	-Ver detalles de un platillo
+	-Editar datos personales
+	-Ver listado de pedidos realizados
+	-Cerrar Sesión
+	-Comentar restaurante
+	-Comentar platillo
+	-Puntuar restaurante				
+	-Puntuar platillo					
+	
+Como usuario Restaurante:
+	-Leer acerca de la página
+	-Ver listado de restaurantes
+	-Buscar restaurante 				(Todavia no implementado)
+	-Filtrar restaurante por tipo		(Todavia no implementado)
+	-Ver detalles (menu) de un restaurante
+	-Ver detalles de un platillo
+	-Editar datos del restaurante
+	-Crear/Editar menú
+	-Ver listado de pedidos recibidos
+	-Cerrar Sesión
+	-Comentar restaurante propio 		(Todavia no implementado)
+	-Comentar platillo propio 			(Todavia no implementado)

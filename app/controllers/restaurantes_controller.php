@@ -54,9 +54,44 @@
 				$this->view->restaurant = $restaurant;
 				$this->view->image = "restaurantes/" . $restaurant["idRestaurant"] . "." . $restaurant["image"];
 				$this->view->imageIfError = Path."/app/views/images/restaurant_unavailable.jpg";
+				$scoreRestaurant = new restaurantscore();
+				$score = $scoreRestaurant->findBySql("SELECT score
+													FROM restaurantscores
+													WHERE idRestaurant = $id
+													AND idClient = " . $_SESSION["idClient"]);
+				$this->view->initialScore = ($score["score"]!="") ? $score["score"] : 0;
+				$this->view->scoreUrl = "../../scoreRestaurant/$id,";
 				$this->render();
 			} else {
 				$this->redirect("restaurantes");
+			}
+		}
+		
+		public function scoreRestaurant($param = null){
+			$params = explode(",", $param);
+			if ($param!=null) {
+				$id 	= $params[0];
+				$score 	= $params[1];
+				if ($score!=null and isset($_SESSION["idClient"])) {
+					$scoreRestaurant = new restaurantscore();
+					$sql = "SELECT * 
+							FROM restaurantscores
+							WHERE idRestaurant = $id
+							AND idClient = " . $_SESSION["idClient"];
+					$antiguos = $scoreRestaurant->findAllBySql($sql);
+					if (count($antiguos)>0){
+						$scoreRestaurant->findBySql($sql);
+						$scoreRestaurant->score = $score;
+						$scoreRestaurant->save();
+					} else {
+						$scoreRestaurant = new restaurantscore();
+						$scoreRestaurant->score 		= $score;
+						$scoreRestaurant->idRestaurant 	= $id;
+						$scoreRestaurant->idClient		= $_SESSION["idClient"];
+						$scoreRestaurant->save();
+					}
+					
+				}
 			}
 		}
 	}

@@ -28,10 +28,6 @@ html,body {
 	width:100%;
 }
 
-span#isAvailable{
-
-}
-
 #datosRestaurante, #datosEnComun, #datosCliente{
 	display:none;
 }
@@ -129,6 +125,27 @@ div.restaurant div.masInfo,div.clear {
 
 div#comments {
 	border:1px solid;
+	position:relative;
+}
+
+div#comments div#scoring{
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+
+div#scoring div#score{
+	float:right;
+	width:120px;
+}
+
+div#scoring div#hint{
+	float:left;
+	width:80px;
+}
+
+div#comments select{
+	display:none;
 }
 
 div#comments input{

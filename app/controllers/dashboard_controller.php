@@ -207,7 +207,7 @@
 		}
 		
 		public function hacerPedido($id = null) {
-			$this->view->menu = $this->_menuRestaurant;
+			$this->view->menu = $this->_menuClient;
 			if ($this->data) {
 				$this->view->idRestaurant = $id;
 				$platillo = new dish();

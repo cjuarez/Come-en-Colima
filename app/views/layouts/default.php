@@ -8,6 +8,7 @@
 		<?php echo $this->html->includeJs("jquery"); ?>
  		<?php echo $this->html->includeCss("style"); ?>
 		<?php echo $this->html->includeJs("script"); ?>
+		<?php echo $this->html->includeJs("jquery.raty"); ?>
 	</head>
     <body class="tundra">
 	<div id="container">
