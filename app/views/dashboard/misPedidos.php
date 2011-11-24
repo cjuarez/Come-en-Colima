@@ -9,7 +9,7 @@
 				if ($pedidos[$i]["idBill"]!=$anteriorIdBill){?>
 					<div class="pedido">
 						<div class="timestamp">
-							<?php echo $pedidos[$i]["timestamp"]; ?>
+							<?php echo $this->format_date($pedidos[$i]["timestamp"],"spanish"); ?>
 						</div>
 						<big class="restaurante"><?php echo "Restaurante: " . $pedidos[$i]["restaurant"]; ?></big><br/>	
 				<?php }
@@ -19,9 +19,9 @@
 					<?php echo $pedidos[$i]["dish"]; ?>
 				</div>
 				<div class="center">
-					X<?php echo $pedidos[$i]["cantidad"]; ?>
+					X <?php echo $pedidos[$i]["cantidad"]; ?>
 				</div>
-				<div class="right"><?php echo $pedidos[$i]["price"]; ?></div>
+				<div class="right">$<?php echo $pedidos[$i]["price"]; ?></div>
 				<div class="clear"></div>
 			</div>
 			<?php

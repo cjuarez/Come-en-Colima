@@ -1,4 +1,5 @@
-<div id="scoring">
+<?php if (isset($_SESSION["idClient"])): ?>
+	<div id="scoring">
 	<div id="hint">
 		<?php switch ($initialScore) {
 		case '5':
@@ -42,3 +43,4 @@ $(function() {
 });
 });
 </script>
+<?php endif ?>

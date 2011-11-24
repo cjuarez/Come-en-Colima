@@ -9,6 +9,7 @@
  		<?php echo $this->html->includeCss("style"); ?>
 		<?php echo $this->html->includeJs("script"); ?>
 		<?php echo $this->html->includeJs("jquery.raty"); ?>
+		<?php echo $this->html->includeCss("jqpagination"); ?>
 	</head>
     <body class="tundra">
 	<div id="container">

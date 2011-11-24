@@ -277,21 +277,5 @@
 			}
 		}
 	}
-	
-	public function commentRestaurant($id=null){
-			if ($this->data){
-				$datos = array(
-					"comment" 		=> $this->data["comment"],
-					"idClient"		=> $_SESSION["idClient"],
-					"idRestaurant"	=> $this->data["idRestaurant"],
-					"timestamp"		=> date("Y-m-d H:i:s",strtotime("now"))
-				);
-				$comment = new restaurantcomment();
-				$comment->prepareFromArray($datos);
-				$comment->save();
-				$this->redirect(($id!=null)?"restaurantes/detalles/$id":"restaurantes");
-			}
-	}
-
 }
 ?>

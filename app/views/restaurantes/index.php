@@ -4,7 +4,10 @@
 </div>
 <div id="subContent">
 <div id="busqueda">
-	<input type="text" class="login" name="buscar" /> <input type="button" name="btnBuscar" value="Buscar"> 
+	<?php echo $this->html->form("restaurantes/busqueda/"); ?>
+	<input type="text" name="term" value="<?php echo @$term; ?>" /> 
+	<input type="submit" name="btnBuscar" value="Buscar">
+	</form> 
 </div>
 <div id="listado">
 	<?php 
@@ -26,6 +29,26 @@
 		</div>
 	<?php } ?>
 </div>
+<div class="paginationContainer">
+	<div class="gigantic pagination">
+    	<a href="#" class="first" data-action="first">&laquo;</a>
+    	<a href="#" class="previous" data-action="previous">&lsaquo;</a>
+    	<input type="text" readonly="readonly" data-max-page="<?php echo $maxPages; ?>" />
+    	<a href="#" class="next" data-action="next">&rsaquo;</a>
+    	<a href="#" class="last" data-action="last">&raquo;</a>
+	</div>
+	<div class="clear"></div>
+</div>
 </div>
 <div class="clear">
 	</div>
+	<?php echo $this->html->includeJs("jquery.jqpagination"); ?>
+	<script>
+		$('.pagination').jqPagination({
+			current_page: <?php echo (isset($currentPage)) ? $currentPage : "1" ; ?>,
+    		paged: function(page) {
+        		// do something with the page variable
+        		window.location = "<?php echo Path; ?>restaurantes/"+page;
+    		}
+		});
+	</script>

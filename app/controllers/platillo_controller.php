@@ -9,7 +9,7 @@
 				$this->redirect("restaurantes");
 			} else {
 				$dish = new dish();
-				$sql = "SELECT idDish, dish, price, D.image, description, category, restaurants.restaurant, address, city, cp, telephone, idType, idUser 
+				$sql = "SELECT idDish, dish, price, D.image, description, category, restaurants.idRestaurant, restaurants.restaurant, address, city, cp, telephone, idType, idUser 
 						FROM (
    							SELECT idDish, dish, price, image, description, categories.idCategory, category, idRestaurant
    							FROM dishes
@@ -22,13 +22,32 @@
 				$platillo = $dish->findBySql($sql);
 				$this->view->dish = $platillo;
 				$this->title_for_layout("Platillo: " . $platillo["dish"]);
-				$scoreDish = new dishscore();
-				$score = $scoreDish->findBySql("SELECT score
-										FROM dishscores
-										WHERE idDish = $id
-										AND idClient = " . $_SESSION["idClient"]);
-				$this->view->initialScore = ($score["score"]!="") ? $score["score"] : 0;
-				$this->view->scoreUrl = "../scoreDish/$id,";
+				if (isset($_SESSION["idClient"])) {
+					$scoreDish = new dishscore();
+					$score = $scoreDish->findBySql("SELECT score
+													FROM dishscores
+													WHERE idDish = $id
+													AND idClient = " . $_SESSION["idClient"]);
+					$this->view->initialScore = ($score["score"]!="") ? $score["score"] : 0;
+					$this->view->scoreUrl = Path."platillo/scoreDish/$id,";
+				}
+				
+				//comments
+				$comment = new restaurantcomment();
+				$comments = $comment->findAllBySql("SELECT users.username, C. * 
+													FROM users
+													INNER JOIN (
+														SELECT clients.idUser, dishcomments.comment, dishcomments.timestamp
+														FROM dishcomments
+														INNER JOIN clients 
+														ON dishcomments.idClient = clients.idClient
+														WHERE dishcomments.idDish=$id
+													) AS C 
+													ON C.idUser = users.idUser");
+				$this->view->comments = $comments;
+				
+				$restaurante = new restaurant(); 
+				
       			$this->render();				
 			}
 		}
@@ -37,14 +56,14 @@
 			if ($this->data){
 				$datos = array(
 					"comment" 	=> $this->data["comment"],
-					"idClient"	=> $_SESSION["idClient"],
+					"idClient"	=> (isset($_SESSION["idClient"])) ? $_SESSION["idClient"] : '0',
 					"idDish"	=> $this->data["idDish"],
 					"timestamp"	=> date("Y-m-d H:i:s",strtotime("now"))
 				);
 				$comment = new dishcomment();
 				$comment->prepareFromArray($datos);
 				$comment->save();
-				$this->redirect(($id!=null)?"platillo/index/$id":"platillo");
+				$this->redirect(($id!=null)?"platillo/$id":"platillo");
 			}
 		}
 		

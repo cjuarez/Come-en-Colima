@@ -12,7 +12,7 @@
   	Pedro Santana
 	Victor Bracco
 	Victor de la Rocha
-	Jorge Condomí
+	Jorge Condomï¿½
 	Aaron Munguia
 
   =========================== */
@@ -25,6 +25,15 @@ class appviews extends views {
 		parent::__construct();
 	}
 	
+	function format_date($original='', $format="%m/%d/%Y") { 
+	    $format = ($format=='date' ? "%m-%d-%Y" : $format);
+		$format = ($format=='time' ? "%H:%M:%S" : $format);
+		$format = ($format=='spanish' ? "%d/%m/%Y %H:%M" : $format); 
+	    $format = ($format=='datetime' ? "%m-%d-%Y %H:%M:%S" : $format); 
+	    $format = ($format=='mysql-date' ? "%Y-%m-%d" : $format); 
+	    $format = ($format=='mysql-datetime' ? "%Y-%m-%d %H:%M:%S" : $format); 
+	    return (!empty($original) ? strftime($format, strtotime($original)) : "" ); 
+	}
 }
 
 ?>

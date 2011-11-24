@@ -2,3 +2,6 @@
 -Cuando el login es incorrecto mostrarlo
 -El listado de restaurantes con paginación
 -Hacer que funcionen los filtros
+-Formatear las fechas a español y lenguaje natural
+-Cuando se mencione un restuarante (en platillos y en comments) enlazar al mismo.
+ 

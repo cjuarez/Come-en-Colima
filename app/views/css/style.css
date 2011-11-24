@@ -124,9 +124,27 @@ div.restaurant div.masInfo,div.clear {
 }
 
 div#comments {
+	padding-top:10px;
+	width:560px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
 	border:1px solid;
 	position:relative;
+	padding-bottom:50px;
 }
+
+div#comments div#comentario{
+	border:1px solid;
+	margin:20px;
+	padding:10px;
+	text-align:left;
+}
+
+div#comments div#comentario div#commentText{
+	margin:10px 30px;
+}
+
 
 div#comments div#scoring{
 	position:absolute;
@@ -150,8 +168,9 @@ div#comments select{
 
 div#comments input{
 	width:200px;
-	margin-left:500px;
-	margin-bottom:10px;
+	position:absolute;
+	right:10px;
+	bottom:10px;
 }
 
 div#platillo{
