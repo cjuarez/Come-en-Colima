@@ -1,10 +1,10 @@
 function initMenu() {
-$('div#nav #menu ul').hide();
-$('div#nav #menu li a').click(
-function() {
-$(this).next().slideToggle('slow');
-}
-);
+	$('div#nav #menu ul').hide();
+	$('div#nav #menu li a').click(
+		function() {
+			$(this).next().slideToggle('slow');
+		}
+	);
 }
 $(document).ready(function() {initMenu();});
 

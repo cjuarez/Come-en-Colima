@@ -2,7 +2,12 @@
 
 class user extends models {
 	private $SALT_LENGTH = 9;
-
+	
+	public function xssClean($value, $params) {
+		$type = (isset($params[0]))? $params[0] : 'false';
+		return $this->security->clean($value, $type);
+	}
+	
 	public function registerUser($username,$password){
 		$hashedPassword = $this->hashPassword($password);
 		$datos = array(

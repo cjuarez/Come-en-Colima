@@ -5,8 +5,12 @@
 		}
 		
 		public function index ($id=null) {
-			
-      		$this->render();
+			if ($this->detect_mobile()){
+				$view = "mobile/index";
+			} else {
+				$view = "index";
+			}
+      		$this->render($view);
 		}
 		
 		public function registro($id = null) {
@@ -14,7 +18,12 @@
 			$this->view->titulo = "Registro";
 			$tipo = new type();
 			$this->view->tipos = $tipo->findAll();
-			$this->render();
+			if ($this->detect_mobile()){
+				$view = "mobile/registro";
+			} else {
+				$view = "registro";
+			}
+      		$this->render($view);
 		}
 		
 		public function login($id = null) {
@@ -31,10 +40,11 @@
 				} 
 			}
 			if ($this->detect_mobile()){
-				$this->view->setLayout("mobile");
+				$view = "mobile/login";
 			} else {
-				$this->render();
+				$view = "login";
 			}
+      		$this->render($view);
 		}
 		
 		public function logout($id = null){

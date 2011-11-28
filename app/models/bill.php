@@ -1,7 +1,6 @@
 <?php
   class bill extends models {
-
-	public function getTotal(){
+  	public function getTotal(){
 		$sql = "SELECT SUM(price) as total
 				FROM dishes 
 				INNER JOIN billitems 

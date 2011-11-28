@@ -12,7 +12,7 @@
   	Pedro Santana
 	Victor Bracco
 	Victor de la Rocha
-	Jorge Condomí
+	Jorge Condomï¿½
 	Aaron Munguia
 
   =========================== */
@@ -23,6 +23,16 @@ abstract class appcontroller extends controller {
 	
 	public function __construct() {		
 		parent::__construct();
+		if ($this->data){
+			$security = security::getInstance();
+			$this->data = $security->clean($this->data);
+		}
+		
+		if ($this->detect_mobile()){
+				$this->view->setlayout("mobile");
+			} else {
+				$this->view->setlayout("default");
+			}
 	}
 	
 	public function detect_mobile() {
@@ -70,7 +80,11 @@ abstract class appcontroller extends controller {
 	    // But WP7 is also Windows, with a slightly different characteristic
 	    if(strpos($agent, 'windows phone') !== false)
 	        $mobile_browser++;
-
+		
+		// Check if it's on a Mac
+		if(strpos($agent, 'macintosh;') !== false)
+	        $mobile_browser=0;
+		
 	    if($mobile_browser>0)
 	        return true;
 	    else

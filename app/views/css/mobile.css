@@ -1,0 +1,24 @@
+html,body{
+	height:100%;
+}
+
+div#footer{
+	background: url('images/bg_footer.png') repeat-x top left;
+	height:76px;
+	bottom:0;
+	position:absolute;
+	width:100%;
+	border-top:none;
+}
+
+div#content{
+}
+
+div#page{
+	min-height:100%;
+   	position:relative;
+}
+
+div#datosRestaurante, div#datosEnComun, div#datosCliente{
+	display:none;
+}

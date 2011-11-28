@@ -11,7 +11,7 @@
 			$maxPages = $count["total"];
 			$this->view->currentPage = ($page!=null) ? $page : 1;
 			$limit = 10;
-			$this->view->maxPages = round($maxPages / $limit+0.5);
+			$this->view->maxPages = ceil($maxPages / $limit);
 			$inicio = ($page!=null) ? $page*$limit-$limit : 0 ;
 			$restaurantes = $restaurant->findAllBySql("SELECT * 
 														FROM restaurants
@@ -28,7 +28,7 @@
 			$tipo = new type();
 			$this->view->tipos=$tipo->findAll("idType, type");
 			$this->view->cps = $restaurant->findAll("DISTINCT cp");
-      		$this->render();
+			$this->render();
 		}
 		
 		public function busqueda($page=null) {
