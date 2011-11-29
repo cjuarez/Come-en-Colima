@@ -40,11 +40,13 @@ if (count($menu) == 0) { ?>
 		<td><?php echo $this->html->linkTo($dish["dish"],"platillo/".$dish["idDish"]); ?></td>
 		<td><?php echo "$" . $dish["price"]; ?></td>
 	</tr>
-<?php }
-} ?>
+<?php } ?>
 </table>
 <?php echo (isset($_SESSION["idClient"])) ? '<button type="submit" value="Realizar Pedido"> Realizar Pedido </button>' : "" ?>
 </form>
+<?php	} ?>
+
+
 <br/>
 <div id="comments">
 	<div id="previousComments">
@@ -63,7 +65,7 @@ if (count($menu) == 0) { ?>
 		<?php endforeach;
 		} ?>
 	</div>
-	<?php if (isset($_SESSION["idClient"]) || ($_SESSION["idRestaurant"] == $idRestaurant)): ?>
+	<?php if (isset($_SESSION["idClient"]) || ((isset($_SESSION["idRestaurant"])) && ($_SESSION["idRestaurant"]==$idRestaurant))): ?>
 		<?php echo $this->html->form("restaurantes/commentRestaurant/".$restaurant["idRestaurant"]); ?>
 			<label for="comment">Comentario:</label>
 			<input type="hidden" name="idRestaurant" value="<?php echo $restaurant["idRestaurant"]; ?>">

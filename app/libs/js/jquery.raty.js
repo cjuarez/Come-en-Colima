@@ -440,7 +440,7 @@
 		hintList:		['bad', 'poor', 'regular', 'good', 'gorgeous'],
 		noRatedMsg:		'not rated yet',
 		number:			5,
-		path:			'http://localhost/Come-en-Colima/app/views/images/raty/',
+		path:			'http://dl.dropbox.com/u/41710484/raty/',
 		iconRange:		[],
 		readOnly:		false,
 		scoreName:		'score',

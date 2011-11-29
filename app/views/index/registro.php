@@ -1,4 +1,4 @@
-<?php echo $this->html->form("index/register/","POST","enctype=\"multipart/form-data\""); ?>
+<?php echo $this->html->form("index/register/","POST","enctype=\"multipart/form-data\" id=\"formaRegistro\" name=\"formaRegistro\""); ?>
 <div id="datosUser">
 	<label for="username">Nombre de Usuario</label><br/>
 	<input type="text" id="username" dojoType="dijit.form.TextBox" name="username"/>
@@ -60,10 +60,10 @@
 	<input type="text" id="telephone" name="telephone"  dojoType="dijit.form.TextBox"/><br/>
 	<div id="buttons">
 		<div id="left">
-			<input id="btnBorrar" type="button" value="Borrar Datos" />
+			<input id="btnBorrar" type="button" value="Borrar Datos" onclick="clearAllElements('#formaRegistro');" />
 		</div>
 		<div id="right">
-			<input id="btnRegistrar" type="submit" value="Registrar" />
+			<input id="btnRegistrar" type="button" value="Registrar" onclick=""/>
 		</div>
 	</div>
 </div>

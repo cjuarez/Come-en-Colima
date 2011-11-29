@@ -25,7 +25,7 @@
 		<?php endforeach; 
 		}?>
 	</div>
-	<?php if (isset($_SESSION["idClient"]) || ($_SESSION["idRestaurant"] == $dish["idRestaurant"])): ?>
+	<?php if (isset($_SESSION["idClient"]) || ((isset($_SESSION["idRestaurant"])) && ($_SESSION["idRestaurant"]==$dish["idRestaurant"]))): ?>
 		<?php echo $this->html->form("platillo/commentDish/".$dish["idDish"]); ?>
 			<label for="comment">Comentario:</label>
 			<input type="hidden" name="idDish" value="<?php echo $dish["idDish"]; ?>">

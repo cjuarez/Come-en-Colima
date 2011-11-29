@@ -32,11 +32,15 @@
 		</tr>
 	</tfoot>
 </table>
-<textarea cols="50" rows="5" name="specialNote">
+<br/>
+<label for="specialNote" style="text-align:left;">Notas sobre el pedido:</label>
+<textarea cols="50" rows="5" name="specialNote" id="specialNote">
 </textarea>
+<br/>
 <input type="hidden" name="idRestaurant" value="<?php echo $idRestaurant; ?>">
 <button type="submit" value="Confirmar el Pedido"> Confirmar el Pedido </button>
 </form>
+</div>
 <script type="text/javascript" charset="utf-8">
 window.onload = function () {
 	var cuenta = document.getElementById('cuenta');
@@ -51,4 +55,3 @@ window.onload = function () {
 	}
 }
 </script>
-</div>
