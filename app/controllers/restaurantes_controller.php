@@ -5,6 +5,11 @@
 		}
 		
 		public function index ($page=null) {
+			if ($this->detect_mobile()){
+				$view = "mobile/index";
+			} else {
+				$view = "index";
+			}
 			$restaurant = new restaurant();
 						
 			$count = $restaurant->findBySql("SELECT count(*) as total FROM restaurants");
@@ -28,7 +33,7 @@
 			$tipo = new type();
 			$this->view->tipos=$tipo->findAll("idType, type");
 			$this->view->cps = $restaurant->findAll("DISTINCT cp");
-			$this->render();
+			$this->render($view);
 		}
 		
 		public function busqueda($page=null) {

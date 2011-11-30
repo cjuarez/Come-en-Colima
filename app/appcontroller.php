@@ -23,16 +23,28 @@ abstract class appcontroller extends controller {
 	
 	public function __construct() {		
 		parent::__construct();
+		$this->title_for_layout("Come en Colima");
 		if ($this->data){
 			$security = security::getInstance();
-			$this->data = $security->clean($this->data);
+			$this->data = $security->clean($this->data,true);
+			foreach ($this->data as &$a){
+				$a = $this->clean($a);	
+			}
 		}
-		
+				
 		if ($this->detect_mobile()){
 				$this->view->setlayout("mobile");
 			} else {
 				$this->view->setlayout("default");
 			}
+	}
+	
+	function clean($str) {
+		$str = @trim($str);
+		if(get_magic_quotes_gpc()) {
+			$str = stripslashes($str);
+		}
+		return mysql_real_escape_string($str);
 	}
 	
 	public function detect_mobile() {

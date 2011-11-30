@@ -1,5 +1,6 @@
 config.php
 /.settings
+.project
 
 # Compiled source #
 ###################

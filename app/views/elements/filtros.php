@@ -1,4 +1,5 @@
 <h2>Filtros:</h2>
+<!--
 <ul id="menu">
 	<li><a href="#">Tipos de Restaurantes</a>
 		<ul class="submenu">
@@ -14,4 +15,4 @@
 			<?php endforeach ?>
 		</ul>
 	</li>
-</ul>
+</ul> -->

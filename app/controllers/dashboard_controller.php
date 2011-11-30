@@ -96,8 +96,8 @@
 							} 
 						}
 						$restaurant->image = $extension_archivo;
-						$restaurant->save();
 				}
+				$restaurant->save();
 			}
 			$tipo = new type();
 			$this->view->tipos = $tipo->findAll();

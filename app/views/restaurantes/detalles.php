@@ -1,8 +1,7 @@
 <div id="restaurant">
 	<div id="left">
-		
 		<?php
-		echo $this->html->imagePars($image,"width=\"200\" onerror=\"this.src='$imageIfError';\"");
+			echo $this->html->imagePars($image,"width=\"200\" onerror=\"this.src='$imageIfError';\"");
 		 ?>
 	</div>
 	<div id="right">
@@ -25,8 +24,9 @@
 $categoria = "";
 if (count($menu) == 0) { ?>
 	<tr>
-		<td colspan="3">Este restaurante no ha puesto un menú aún</td>
+		<td colspan="2">Este restaurante no ha puesto un menú aún</td>
 	</tr>
+</table>
 <?php } else {
 	foreach ($menu as $key => $dish) { 
 	if ($categoria != $dish["category"]) {
@@ -45,7 +45,6 @@ if (count($menu) == 0) { ?>
 <?php echo (isset($_SESSION["idClient"])) ? '<button type="submit" value="Realizar Pedido"> Realizar Pedido </button>' : "" ?>
 </form>
 <?php	} ?>
-
 
 <br/>
 <div id="comments">
@@ -77,5 +76,5 @@ if (count($menu) == 0) { ?>
 		<?php echo $this->renderElement("scoring"); ?>
 	<?php elseif (!isset($_SESSION["idUser"])): ?>
 		<?php echo $this->html->linkTo("Para hacer comentarios necesitas una cuenta.","index/registro"); ?>
-	<?php endif ?>
+	<?php endif; ?>
 </div>

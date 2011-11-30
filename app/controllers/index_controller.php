@@ -54,17 +54,23 @@
 		
 		public function register($id = null) {
 			if ($this->data){
+				if ($this->detect_mobile()){
+					$view = "mobile/registro";
+				} else {
+					$view = "registro";
+				}
+				$this->view->datos = $this->data;
 				$usuario = new user();
 				$existe = $usuario->findAllBy("username",$this->data["username"]);
 				if ($this->data["password"]!=$this->data["password1"]) {
 					$this->view->mensaje = "Revise que los passwords concuerden.";
-					$this->render("index/registro");
+					$this->render($view);
 				} elseif (count($existe)>0) {
 					$this->view->mensaje = "El nombre de usuario ya existe";
-					$this->render("index/registro");
-				} elseif (($this->data["tipoDeUsuario"]=="1") && ($this->$this->data["idType"]=="-1")) {
+					$this->render($view);
+				} elseif (($this->data["tipoDeUsuario"]=="1") && ($this->data["idType"]=="-1")) {
 					$this->view->mensaje = "Debe elegir un tipo de restaurante";
-					$this->render("index/registro");
+					$this->render($view);
 				}	
 			$user = new user();
 			$idUser = $user->registerUser($this->data["username"],$this->data["password"]);

@@ -12,7 +12,7 @@
   	Pedro Santana
 	Victor Bracco
 	Victor de la Rocha
-	Jorge Condomí
+	Jorge Condomï¿½
 	Aaron Munguia
 
   =========================== */
@@ -58,7 +58,7 @@ class security extends singleton {
 		return preg_replace('/<(.*?)>/ie', "'<'.security::removeBadAtributes('\\1').'>'", $source);
 	}
 
-	private static function removeBadAtributes($sourceTag) {		
+	private static function removeBadAtributes($sourceTag) {
 		$sourceTag = stripslashes($sourceTag);
 		$sourceTag = preg_replace("/security::badAtributes/i", "niceTry", $sourceTag);
 		return $sourceTag;
