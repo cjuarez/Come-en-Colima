@@ -6,7 +6,7 @@
 	</div>
 	<div id="right">
 		<h3><?php echo $restaurant["restaurant"]; ?></h3>
-		<strong><?php echo $restaurant["type"]; ?></strong><br/><br/>
+		<strong><?php echo utf8_encode($restaurant["type"]); ?></strong><br/><br/>
 		<strong>Teléfono:</strong> <?php echo $restaurant["telephone"]; ?><br/><br/>
 		<strong>Dirección:</strong><?php echo $restaurant["address"]; ?><br/><br/>
 	</div>

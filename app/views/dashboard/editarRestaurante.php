@@ -9,7 +9,7 @@
 		<option value="-1">Seleccione un tipo.</option>
 		<?php foreach ($tipos as $key=>$tipo){ ?>
 		<option value="<?php echo $tipo['idType']; ?>" <?php echo ($tipo["idType"]==$restaurante["idType"]) ? "SELECTED" : "" ?>>
-			<?php echo $tipo["type"]; ?>
+			<?php echo utf8_encode($tipo["type"]); ?>
 		</option>
 		<?php } ?>
 	</select><br/>

@@ -36,6 +36,58 @@
 			$this->render($view);
 		}
 		
+		public function filtros($param=null){
+			if ($param!=null){
+				$params = explode(",",$param);
+				switch ($params[0]){
+					case 'tipo':
+						$filtro = "idType";
+						break;
+					case 'cp':
+						$filtro = "cp";
+						break;
+					default:
+						$this->redirect("index");
+				}
+				if (count($params)>1) {
+					$term = $params[1];
+				} else {
+					$this->redirect("index");
+				}
+				$page = null;
+				if (count($params)>2){
+					$page = $params[2];
+				}
+				$restaurant = new restaurant();
+				$limit = 10;
+				$sql = "SELECT count(*) as total
+						FROM restaurants
+						WHERE $filtro LIKE '%$term%'";
+				$count = $restaurant->findBySql($sql);
+				$maxPages = $count["total"];
+				$this->view->currentPage = ($page!=null) ? $page : 1;
+				$this->view->maxPages = ceil($maxPages/$limit);	
+				$inicio = ($page != null) ? $page*$limit-$limit : 0;
+				$sql = "SELECT * 
+						FROM restaurants
+						INNER JOIN types
+						ON restaurants.idType = types.idType
+						WHERE restaurants.$filtro LIKE '%$term%'
+						ORDER BY restaurant
+						LIMIT $inicio,$limit";
+				$restaurantes = $restaurant->findAllBySql($sql);
+				foreach ($restaurantes as $key => &$r) {
+					$r["logo"] = "restaurantes/" . $r["idRestaurant"] . "." . $r["image"];
+				}
+				$this->view->imageIfError = Path . "/app/views/images/restaurant_unavailable.jpg";
+				$this->view->restaurantes = $restaurantes;
+				$tipo = new type();
+				$this->view->tipos=$tipo->findAll("idType, type");
+				$this->view->cps = $restaurant->findAll("DISTINCT cp");
+	      		$this->render('index');
+			}
+		}
+		
 		public function busqueda($page=null) {
 			if ($this->data) {
 				$term = $this->data["term"];

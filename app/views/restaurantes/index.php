@@ -1,4 +1,3 @@
-<?php header( 'Content-type: text/html; charset=iso-8859-1' );?>
 <div id="nav">
 	<?php echo $this->renderElement("filtros"); ?>
 </div>
@@ -21,7 +20,7 @@
 			</div>
 			<div class="right">
 				<h3><?php echo $restaurant["restaurant"]; ?></h3>
-				<h4><?php echo $restaurant["type"]; ?></h4>
+				<h4><?php echo utf8_encode($restaurant["type"]); ?></h4>
 				<h4><?php echo $this->html->linkTo("Ver Detalles", "restaurantes/detalles/".$restaurant['idRestaurant']); ?></h4>
 			</div>
 			<div class="clear">

@@ -25,7 +25,7 @@
 	<select id="idType" name="idType">
 		<option value="-1">Seleccione un tipo.</option>
 		<?php foreach ($tipos as $key=>$tipo){ ?>
-			<option value="<?php echo $tipo['idType']; ?>"><?php echo $tipo["type"]; ?></option>
+			<option value="<?php echo $tipo['idType']; ?>"><?php echo utf8_encode($tipo["type"]); ?></option>
 		<?php } ?>
 	</select><br/>
 	<label for="logo">Logo del restaurante:</label><br/>
